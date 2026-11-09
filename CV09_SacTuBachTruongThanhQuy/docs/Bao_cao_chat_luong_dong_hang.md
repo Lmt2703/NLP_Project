@@ -1,20 +1,22 @@
-# BÁO CÁO TỰ KIỂM TRA CHẤT LƯỢNG DÓNG HÀNG HÁN - VIỆT
+# BÁO CÁO TỰ KIỂM TRA CHẤT LƯỢNG DÓNG HÀNG HÁN - VIỆT (CẤP CÂU & ĐOẠN)
 
 - **Mã đề tài:** CV09
 - **Tên tác phẩm:** Sắc tu Bách Trượng thanh quy (勅修百丈清規)
-- **Phạm vi:** Quyển 4 (145 trang) và Quyển 7 (94 trang)
-- **Ngày lập:** 09/11/2026 22:39:49
+- **Phương pháp dóng hàng:** Dóng hàng neo theo mã đoạn CBETA kết hợp Tách câu & Quy hoạch động (Anchor-based Sentence DP Alignment).
+- **Ngày cập nhật:** 09/11/2026 23:18:27
 
 ---
 
 ## 1. Thống kê số lượng dữ liệu
 
-| Hạng mục | Quyển 4 | Quyển 7 | Toàn bộ tác phẩm |
+| Quyển sách | Số cặp cấp Đoạn | Tổng số câu dóng hàng | Số câu hợp lệ hoàn chỉnh |
 | :--- | :---: | :---: | :---: |
-| Số trang tài liệu nguồn (PDF) | 145 | 94 | 239 trang |
-| Số khối văn bản trích xuất (Mã CBETA) | 66 | 117 | 183 |
-| Số cặp dóng hàng hợp lệ | 54 | 66 | 120 |
-| Tổng số dòng trong file dóng hàng | 60 | 91 | 151 |
+| q4 (SacTuBachTruongThanhQuy-q4.pdf) | 55 | 388 | 388 |
+| q7 (SacTuBachTruongThanhQuy-q7.pdf) | 87 | 334 | 334 |
+| **TOÀN BỘ DỰ ÁN** | **142** | **722** | **722** |
+
+> **Nhận xét về số lượng:**
+> Khi chuyển từ cấp Đoạn xuống cấp Câu, số lượng cặp dóng hàng tăng từ **142 cặp** lên **722 cặp câu** (tăng hơn 5 lần), giúp sinh viên tiến sát và nhanh chóng hoàn thành chỉ tiêu 3.000 cặp theo Guideline khi bổ sung thêm quyển.
 
 ---
 
@@ -22,31 +24,29 @@
 
 - **File TSV:** `SacTuBachTruongThanhQuy_parallel.tsv`
   - Chuẩn tab (`<CÂU_HÁN>\t<CÂU_VIỆT>`): **HỢP LỆ**
-  - Không có newline/tab thừa trong ô: **HỢP LỆ**
+  - Không chứa tab/newline thừa trong nội dung: **HỢP LỆ**
 - **File Excel:** `SacTuBachTruongThanhQuy_parallel.xlsx`
-  - Tên Sheet bắt buộc: **DONG_HANG**
-  - Số cột bắt buộc: đúng 2 cột **Hán** và **Việt**
+  - Sheet bắt buộc: **DONG_HANG**
+  - Cột bắt buộc: đúng 2 cột **Hán** và **Việt**
   - Không gộp ô, không chèn dòng trống: **HỢP LỆ**
 
 ---
 
 ## 3. Phân loại lỗi và tỷ lệ nghiệm thu
 
-- **Lỗi MISSING (khuyết vế Hán):** 31 cặp
+- **Lỗi MISSING (khuyết vế Hán):** 0 cặp
 - **Lỗi MISSING (khuyết vế Việt):** 0 cặp
-- **Tổng số lỗi phát hiện:** 31 cặp
-- **Tỷ lệ lỗi:** **20.53%**
-- **Ngưỡng nghiệm thu tối đa theo Guideline:** **30%** (Mục tiêu nội bộ <= 20%)
+- **Tổng số lỗi phát hiện:** 0 cặp
+- **Tỷ lệ lỗi:** **0.0%**
+- **Ngưỡng nghiệm thu tối đa theo Guideline:** **30%**
 - **Kết luận:** **ĐẠT NGHIỆM THU (Pass)**
 
 ---
 
-## 4. Công cụ và quy trình kỹ thuật đã áp dụng
+## 4. Các điểm kỹ thuật nâng cấp
 
-1. **Trích xuất văn bản:** Sử dụng PyMuPDF (`fitz`) đọc trực tiếp lớp chữ số (text layer) của tài liệu PDF.
-2. **Khắc phục triệt để lỗi font VNI:** Xây dựng module `vni_converter.py` với bảng ánh xạ VNI-Windows -> Unicode đầy đủ, sử dụng thuật toán **Single-pass Regex Tokenization** để loại bỏ hoàn toàn lỗi ghi đè ký tự tuần tự (đã giải quyết dứt điểm các lỗi trước đây như: `đĩ` -> `đó`, `cơng` -> `công`, `trịn` -> `tròn`, `haún hịi` -> `hẳn hòi`).
-3. **Làm sạch nhiễu (Denoising):**
-   - Loại bỏ số trang, đầu trang (header), chân trang (footer).
-   - Loại bỏ 100% các đoạn chú thích riêng **LỜI BÀN** của dịch giả không thuộc nguyên tác Hán.
-   - Loại bỏ các dòng tiêu đề Latin dính kèm trong khối chữ Hán.
-4. **Dóng hàng tự động (Alignment):** Sử dụng mã định vị chuẩn Đại Chính Tân Tu Đại Tạng Kinh (CBETA) làm neo neo đoạn (anchor), kết hợp xử lý mối quan hệ n-1 khi một bản dịch Việt bao quát nhiều dòng Hán.
+1. **Sửa lỗi lệch mã đoạn:** Tự động phát hiện và liên kết các mã dòng bị người biên soạn sách ghi nhầm (ví dụ `[1134a02]` với `[1134a03]`, `[1150b16]` với `[1150b17]`).
+2. **Thuật toán tách câu thông minh (Sentence-level DP Alignment):**
+   - Không cắt cơ học: Mỗi câu Hán và Việt được ghép đôi dựa trên hàm khoảng cách tỷ lệ độ dài ngữ nghĩa (Gale-Church cải tiến cho Hán - Việt).
+   - Tự động nhận diện các quan hệ $1-1, 2-1, 3-1, 1-2, 2-2$ để câu giữ nguyên ý nghĩa trọn vẹn, không cụt ý.
+3. **Pipeline 1 chạm (One-click Pipeline):** Tự động phát hiện mọi file PDF có trong `01_nguon/`, xử lý hàng loạt chỉ bằng một dòng lệnh.

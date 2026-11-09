@@ -1,11 +1,12 @@
 # -*- coding: utf-8 -*-
 """
-Module dóng hàng (alignment) văn bản song ngữ Hán - Việt.
-Tuân thủ Mục 3 & Mục 3.1 theo Guideline đồ án:
-- Định dạng TSV: <CÂU_HÁN>\t<CÂU_VIỆT>
-- Định dạng Excel: Sheet 'DONG_HANG', gồm đúng 2 cột 'Hán' và 'Việt'.
-- Xử lý các mối quan hệ dóng hàng 1-1, n-1, 1-n.
-- Xuất dữ liệu sạch sang 03_text_sach/ (han.txt, viet.txt).
+Module dóng hàng (alignment) văn bản song ngữ Hán - Việt cấp CÂU & ĐOẠN.
+Tuân thủ Bước 6 (Tách câu) & Bước 7 (Dóng hàng) theo Guideline đồ án:
+- "Ưu tiên đơn vị nhỏ nhất có ý nghĩa đầy đủ."
+- "Không chia cơ học theo dấu câu nếu việc chia làm mất quan hệ dịch."
+- Hỗ trợ các quan hệ 1-1, n-1, 1-n, n-m.
+- Sử dụng thuật toán quy hoạch động (Dynamic Programming - Gale-Church cải tiến cho Hán - Việt)
+  để tìm chuỗi ghép câu tối ưu theo tỷ lệ độ dài ngữ nghĩa.
 """
 
 import os
@@ -15,15 +16,117 @@ from typing import List, Dict, Tuple
 from extract_clean import extract_book, is_cjk_char
 
 
-def align_book_records(records: List[Dict[str, str]]) -> List[Dict[str, str]]:
+def split_han_sentences(text: str) -> List[str]:
+    """Tách câu Hán theo các dấu ngắt câu chuẩn 。！？"""
+    if not text:
+        return []
+    raw = [s.strip() for s in re.split(r'([。！？])', text) if s.strip()]
+    sents = []
+    for i in range(0, len(raw), 2):
+        s = raw[i]
+        p = raw[i+1] if i+1 < len(raw) else ''
+        full = (s + p).strip()
+        if full:
+            sents.append(full)
+    return sents
+
+
+def split_viet_sentences(text: str) -> List[str]:
+    """Tách câu tiếng Việt theo các dấu ngắt câu chuẩn .?!"""
+    if not text:
+        return []
+    raw = [s.strip() for s in re.split(r'([.?!])', text) if s.strip()]
+    sents = []
+    for i in range(0, len(raw), 2):
+        s = raw[i]
+        p = raw[i+1] if i+1 < len(raw) else ''
+        full = (s + p).strip()
+        if len(full) > 2:
+            sents.append(full)
+    return sents
+
+
+def align_sentences_in_para(h_text: str, v_text: str) -> List[Tuple[str, str]]:
     """
-    Xử lý dóng hàng và chuẩn hóa các cặp Hán - Việt:
-    - Loại bỏ các dòng tiêu đề Hán sót lại ở cuối vế Việt.
-    - Xử lý các đoạn khuyết hoặc gộp n-1 khi nhiều dòng Hán tương ứng 1 đoạn Việt.
+    Dóng hàng cấp câu bên trong một đoạn song ngữ bằng quy hoạch động (DP).
+    Tối ưu hóa hàm chi phí dựa trên tỷ lệ độ dài ký tự đặc trưng Hán - Việt (~3.8 - 4.5 ký tự Việt/1 chữ Hán).
     """
-    aligned = []
+    hs = split_han_sentences(h_text)
+    vs = split_viet_sentences(v_text)
     
-    # Biến tạm để gộp các dòng Hán liên tiếp nếu vế Việt chưa có hoặc dịch gộp
+    # Nếu một trong hai vế không có câu hoặc chỉ có 1 câu
+    if not hs or not vs:
+        return [(h_text, v_text)]
+    if len(hs) == 1 and len(vs) == 1:
+        return [(hs[0], vs[0])]
+    if len(hs) == 1 or len(vs) == 1:
+        return [(' '.join(hs), ' '.join(vs))]
+        
+    # Hệ số tương quan độ dài: 1 ký tự Hán tương đương ~4.0 ký tự tiếng Việt
+    C = 4.0
+    
+    def cost(h_sub: str, v_sub: str) -> float:
+        lh = len(re.sub(r'[^\w\u4e00-\u9fff]', '', h_sub))
+        lv = len(re.sub(r'[^\w]', '', v_sub))
+        if lh == 0 or lv == 0:
+            return 9999.0
+        expected_lv = lh * C
+        # Chuẩn hóa khoảng cách sai lệch bình phương
+        diff = abs(lv - expected_lv) / (expected_lv ** 0.5 + 1e-5)
+        return float(diff ** 2)
+        
+    N, M = len(hs), len(vs)
+    dp = [[float('inf')] * (M + 1) for _ in range(N + 1)]
+    back = [[None] * (M + 1) for _ in range(N + 1)]
+    dp[0][0] = 0.0
+    
+    # Cho phép các bước chuyển linh hoạt: (số câu Hán, số câu Việt)
+    # 1-1, 2-1, 3-1, 4-1, 5-1 (Hán ngắt ngắn hơn Việt)
+    # 1-2, 2-2, 3-2, 1-3 (Việt ngắt ngắn hơn Hán)
+    moves = [(1, 1), (2, 1), (3, 1), (4, 1), (5, 1), (1, 2), (2, 2), (3, 2), (1, 3)]
+    
+    for i in range(N + 1):
+        for j in range(M + 1):
+            if dp[i][j] == float('inf'):
+                continue
+            for di, dj in moves:
+                ni, nj = i + di, j + dj
+                if ni <= N and nj <= M:
+                    h_sub = ' '.join(hs[i:ni])
+                    v_sub = ' '.join(vs[j:nj])
+                    c = cost(h_sub, v_sub)
+                    if dp[i][j] + c < dp[ni][nj]:
+                        dp[ni][nj] = dp[i][j] + c
+                        back[ni][nj] = (i, j, di, dj)
+                        
+    # Nếu không tìm thấy đường đi khả dĩ, giữ nguyên 1-1 cấp đoạn
+    if dp[N][M] == float('inf'):
+        return [(' '.join(hs), ' '.join(vs))]
+        
+    # Truy vết đường đi tối ưu
+    res = []
+    curr_i, curr_j = N, M
+    while curr_i > 0 or curr_j > 0:
+        b = back[curr_i][curr_j]
+        if not b:
+            break
+        pi, pj, di, dj = b
+        h_chunk = ' '.join(hs[pi:curr_i])
+        v_chunk = ' '.join(vs[pj:curr_j])
+        res.append((h_chunk, v_chunk))
+        curr_i, curr_j = pi, pj
+        
+    res.reverse()
+    return res
+
+
+def align_book_records(records: List[Dict[str, str]], sentence_level: bool = True) -> List[Dict[str, str]]:
+    """
+    Dóng hàng toàn bộ các đoạn trong sách:
+    1. Gộp neo các đoạn Hán liên tiếp nếu đoạn Việt dịch gộp (quan hệ n-1).
+    2. Nếu sentence_level=True: chia nhỏ từng đoạn ra các câu song ngữ tương ứng trọn vẹn nghĩa.
+    """
+    para_aligned = []
     pending_han = []
     pending_tags = []
     
@@ -32,34 +135,26 @@ def align_book_records(records: List[Dict[str, str]]) -> List[Dict[str, str]]:
         han = r["han"].strip()
         viet = r["viet"].strip()
         
-        # Cắt bỏ chữ Hán sót ở cuối vế Việt (thường là tiêu đề mục tiếp theo)
-        if viet:
-            viet = re.sub(r'[\u4e00-\u9fff\s]+$', '', viet).strip()
-            
-        # Nếu cả 2 vế đều có nội dung
         if han and viet:
             if pending_han:
-                # Gộp pending_han vào nếu có
                 han = ' '.join(pending_han) + ' ' + han
                 tag = f"{pending_tags[0]}-{tag}"
                 pending_han = []
                 pending_tags = []
                 
-            aligned.append({
+            para_aligned.append({
                 "tag": tag,
                 "han": han,
                 "viet": viet
             })
         elif han and not viet:
-            # Có Hán nhưng chưa có bản dịch riêng (có thể dịch gộp ở đoạn sau - quan hệ n-1)
             pending_han.append(han)
             pending_tags.append(tag)
         elif not han and viet:
             if pending_han:
-                # Ghép các câu Hán chờ với bản dịch này
                 combined_han = ' '.join(pending_han)
                 combined_tag = f"{pending_tags[0]}-{pending_tags[-1]}" if len(pending_tags) > 1 else pending_tags[0]
-                aligned.append({
+                para_aligned.append({
                     "tag": combined_tag,
                     "han": combined_han,
                     "viet": viet
@@ -67,24 +162,48 @@ def align_book_records(records: List[Dict[str, str]]) -> List[Dict[str, str]]:
                 pending_han = []
                 pending_tags = []
             else:
-                # Bản dịch không có nguyên tác Hán tương ứng
-                aligned.append({
+                para_aligned.append({
                     "tag": tag,
                     "han": "",
                     "viet": viet
                 })
                 
-    # Nếu còn pending_han ở cuối sách
     if pending_han:
         combined_han = ' '.join(pending_han)
         combined_tag = f"{pending_tags[0]}-{pending_tags[-1]}" if len(pending_tags) > 1 else pending_tags[0]
-        aligned.append({
+        para_aligned.append({
             "tag": combined_tag,
             "han": combined_han,
             "viet": ""
         })
         
-    return aligned
+    if not sentence_level:
+        return para_aligned
+        
+    # Tách nhỏ xuống cấp câu
+    sentence_aligned = []
+    for p in para_aligned:
+        h = p["han"].strip()
+        v = p["viet"].strip()
+        tag = p["tag"]
+        
+        if h and v:
+            pairs = align_sentences_in_para(h, v)
+            for idx, (sh, sv) in enumerate(pairs, start=1):
+                sentence_aligned.append({
+                    "tag": f"{tag}_s{idx}",
+                    "han": sh,
+                    "viet": sv
+                })
+        else:
+            # Khuyết 1 vế
+            sentence_aligned.append({
+                "tag": tag,
+                "han": h,
+                "viet": v
+            })
+            
+    return sentence_aligned
 
 
 def export_parallel_data(all_pairs: List[Dict[str, str]], output_tsv: str, output_xlsx: str):
@@ -105,7 +224,7 @@ def export_parallel_data(all_pairs: List[Dict[str, str]], output_tsv: str, outpu
             
     print(f"[+] Đã xuất file TSV: {output_tsv} ({len(all_pairs)} cặp)")
     
-    # 2. Ghi file Excel đúng chuẩn Sheet DONG_HANG và 2 cột 'Hán', 'Việt'
+    # 2. Ghi file Excel
     df = pd.DataFrame([
         {
             "Hán": p['han'].replace('\n', ' ').strip(),
