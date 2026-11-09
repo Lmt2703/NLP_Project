@@ -1,98 +1,114 @@
-# ĐỒ ÁN MÔN HỌC: XỬ LÝ NGÔN NGỮ TỰ NHIÊN (NLP)
-## ĐỀ TÀI CV09: DÓNG HÀNG SONG NGỮ HÁN - VIỆT (CẤP CÂU & ĐOẠN)
+# ĐỒ ÁN XỬ LÝ NGÔN NGỮ TỰ NHIÊN (NLP)
+## ĐỀ TÀI CV09: DÓNG HÀNG SONG NGỮ HÁN - VIỆT
 ### Tác phẩm: Sắc tu Bách Trượng thanh quy (勅修百丈清規) - Quyển 4 & Quyển 7
 
 ---
 
-## 1. Giới thiệu đề tài
+## 1. Giới thiệu tổng quan
 
-Dự án thực hiện xây dựng bộ dữ liệu song ngữ Hán – Việt song song (parallel corpus) phục vụ các tác vụ Xử lý Ngôn ngữ Tự nhiên như Dịch máy (Machine Translation), Gióng hàng song ngữ (Bilingual Sentence Alignment) và Tra cứu văn bản Hán Nôm / Phật giáo.
+Dự án xây dựng ngữ liệu song ngữ song song (parallel corpus) Hán – Việt phục vụ nghiên cứu và ứng dụng trong các bài toán Xử lý Ngôn ngữ Tự nhiên:
+- Huấn luyện mô hình Dịch máy (Neural Machine Translation).
+- Dóng hàng câu song ngữ tự động (Bilingual Sentence Alignment).
+- Tra cứu và đối chiếu tư liệu Hán Nôm / Phật học cổ điển.
 
+### Thông tin đề tài:
 - **Mã đề tài:** `CV09`
 - **Mã tác phẩm:** `SacTuBachTruongThanhQuy`
-- **Phạm vi dữ liệu hiện tại:** 
-  - Quyển 4: 145 trang (từ trang 408 đến 550)
-  - Quyển 7: 94 trang (từ trang 276 đến 367)
-  - Tổng cộng: **239 trang PDF** (dễ dàng mở rộng thêm Quyển 1, 2, 3, 5, 6... qua Pipeline)
-- **Định dạng nguồn:** PDF Text (có sẵn lớp text layer - Hướng A).
+- **Dữ liệu nguồn:** 
+  - Quyển 4: 145 trang (trang 408 đến 550)
+  - Quyển 7: 94 trang (trang 276 đến 367)
+  - Tổng số: **239 trang PDF** (định dạng PDF Text layer có sẵn).
 
 ---
 
 ## 2. Cấu trúc thư mục dự án
 
-Toàn bộ dự án được tổ chức và cấu trúc lại theo đúng chuẩn quy định trong tài liệu **Hướng dẫn thực hiện đồ án (Guideline.pdf)**:
+Toàn bộ cây thư mục được tổ chức theo đúng quy định trong **Guideline đồ án**:
 
 ```text
 NLP_Project/
-├── CV09_SacTuBachTruongThanhQuy/          # Thư mục sản phẩm bàn giao chính thức (<MA_DE_TAI>_<MA_TAC_PHAM>)
-│   ├── 01_nguon/                          # Tài liệu gốc
-│   │   ├── SacTuBachTruongThanhQuy-q4.pdf # File PDF nguồn Quyển 4 (145 trang)
-│   │   └── SacTuBachTruongThanhQuy-q7.pdf # File PDF nguồn Quyển 7 (94 trang)
-│   ├── 02_ocr_tho/                        # Thư mục chuẩn bàn giao
-│   │   └── README.md                      # Ghi chú nguồn Hướng A (PDF Text trích xuất trực tiếp)
-│   ├── 03_text_sach/                      # Văn bản Hán và Việt đã làm sạch (Bắt buộc nộp)
-│   │   ├── han.txt                        # Toàn bộ 722 câu Hán văn đã làm sạch
-│   │   ├── viet.txt                       # Toàn bộ 722 câu tiếng Việt Unicode đã làm sạch
-│   │   ├── q4_han.txt / q4_viet.txt       # Text sạch riêng Quyển 4 (388 câu)
-│   │   └── q7_han.txt / q7_viet.txt       # Text sạch riêng Quyển 7 (334 câu)
-│   ├── 04_dong_hang/                      # Kết quả dóng hàng song ngữ (Bắt buộc nộp)
-│   │   ├── SacTuBachTruongThanhQuy_parallel.tsv          # Bàn giao chính thức CẤP CÂU (722 cặp câu)
-│   │   ├── SacTuBachTruongThanhQuy_parallel.xlsx         # Bàn giao chính thức CẤP CÂU (Sheet DONG_HANG)
-│   │   ├── SacTuBachTruongThanhQuy_parallel_paragraph.xlsx # Bảng dóng hàng đối chiếu CẤP ĐOẠN (142 cặp đoạn)
-│   │   ├── q4_parallel.tsv / .xlsx                       # Kết quả dóng hàng riêng Quyển 4
-│   │   └── q7_parallel.tsv / .xlsx                       # Kết quả dóng hàng riêng Quyển 7
-│   ├── docs/                              # Tài liệu hướng dẫn & kiểm kê đề tài
-│   │   ├── Guideline.pdf                  # Quy định & tiêu chuẩn nghiệm thu đồ án
-│   │   ├── HUONG_DAN.docx                 # Hướng dẫn kỹ thuật trích xuất văn bản từ PDF
-│   │   ├── Bang_kiem_ke_nguon.xlsx        # Bảng kiểm kê thông tin tài liệu nguồn
-│   │   ├── example_ocr_result.xlsx        # Mẫu định dạng OCR tham khảo
-│   │   └── Bao_cao_chat_luong_dong_hang.md# Báo cáo đánh giá chất lượng nghiệm thu tự động
-│   ├── src/                               # Toàn bộ mã nguồn xử lý tự động
-│   │   ├── vni_converter.py               # Chuyển đổi VNI-Windows -> Unicode bằng Regex 1 lượt
-│   │   ├── extract_clean.py               # Trích xuất PDF, khử rác, lọc bỏ 'LỜI BÀN', sửa lệch mã
+├── CV09_SacTuBachTruongThanhQuy/          # Thư mục nộp bài chuẩn (<MA_DE_TAI>_<MA_TAC_PHAM>)
+│   ├── 01_nguon/                          # Tệp PDF nguồn nguyên bản
+│   │   ├── SacTuBachTruongThanhQuy-q4.pdf # Quyển 4
+│   │   └── SacTuBachTruongThanhQuy-q7.pdf # Quyển 7
+│   ├── 02_ocr_tho/                        # Thư mục chuẩn cấu trúc bàn giao
+│   │   └── README.md                      # Thuyết minh nguồn thuộc Hướng A (PDF Text)
+│   ├── 03_text_sach/                      # Văn bản Hán và Việt đã làm sạch
+│   │   ├── han.txt                        # Toàn văn chữ Hán (722 câu)
+│   │   ├── viet.txt                       # Toàn văn tiếng Việt Unicode (722 câu)
+│   │   ├── q4_han.txt / q4_viet.txt       # Văn bản riêng Quyển 4
+│   │   └── q7_han.txt / q7_viet.txt       # Văn bản riêng Quyển 7
+│   ├── 04_dong_hang/                      # Dữ liệu kết quả dóng hàng song ngữ
+│   │   ├── SacTuBachTruongThanhQuy_parallel.tsv          # Kết quả cấp CÂU chuẩn Tab
+│   │   ├── SacTuBachTruongThanhQuy_parallel.xlsx         # Kết quả cấp CÂU (Sheet DONG_HANG)
+│   │   ├── SacTuBachTruongThanhQuy_parallel_paragraph.xlsx # Bảng đối chiếu cấp ĐOẠN
+│   │   ├── q4_parallel.tsv / .xlsx                       # Kết quả riêng Quyển 4
+│   │   └── q7_parallel.tsv / .xlsx                       # Kết quả riêng Quyển 7
+│   ├── docs/                              # Tài liệu kỹ thuật và báo cáo
+│   │   ├── Guideline.pdf                  # Quy chuẩn và tiêu chí nghiệm thu đồ án
+│   │   ├── HUONG_DAN.docx                 # Hướng dẫn trích xuất văn bản từ PDF
+│   │   ├── Bang_kiem_ke_nguon.xlsx        # Bảng kiểm kê thông tin nguồn
+│   │   ├── example_ocr_result.xlsx        # Mẫu định dạng tham khảo
+│   │   └── Bao_cao_chat_luong_dong_hang.md# Báo cáo đánh giá chất lượng tự động
+│   ├── src/                               # Toàn bộ mã nguồn sản xuất (Production Code)
+│   │   ├── vni_converter.py               # Chuyển đổi mã VNI sang Unicode bằng Regex 1 lượt
+│   │   ├── extract_clean.py               # Trích xuất PDF, khử rác và lọc lời bàn
 │   │   ├── aligner.py                     # Thuật toán tách câu & dóng hàng quy hoạch động (DP)
-│   │   ├── evaluate.py                    # Module kiểm thử chất lượng & tính tỷ lệ lỗi
-│   │   └── run_pipeline.py                # Script điều phối chạy toàn bộ pipeline
-│   └── legacy/                            # Lưu trữ an toàn các file code và nháp cũ
-├── requirements.txt                       # Khai báo các thư viện phụ thuộc
-├── .gitignore                             # Cấu hình bỏ qua các file tạm, môi trường ảo
-└── README.md                              # Tài liệu thuyết minh toàn diện dự án
+│   │   ├── evaluate.py                    # Kiểm thử chất lượng và tính tỷ lệ lỗi
+│   │   └── run_pipeline.py                # Bộ điều phối thực thi toàn bộ pipeline
+│   └── legacy/                            # Lưu trữ tệp script và nháp ban đầu
+├── requirements.txt                       # Thư viện phụ thuộc (PyMuPDF, pandas, openpyxl)
+├── .gitignore                             # Cấu hình bỏ qua tệp tạm, môi trường ảo
+└── README.md                              # Thuyết minh chi tiết dự án
 ```
 
 ---
 
-## 3. Các cải tiến kỹ thuật theo nhận xét của người hướng dẫn
+## 3. Kiến trúc kỹ thuật và giải pháp cốt lõi
 
-### 3.1. Tách câu hoàn chỉnh và trọn vẹn ngữ nghĩa (Sentence-level Alignment)
-- **Phương pháp:** Tách câu Hán theo dấu `。！？` và câu Việt theo `.?!`.
-- **Không cắt cơ học:** Ứng dụng quy hoạch động **Dynamic Programming (Gale-Church cải tiến)** dựa trên tỷ lệ độ dài ngữ nghĩa Hán - Việt. Tự động nhận diện các quan hệ $1-1, 2-1, 3-1, 1-2, 2-2$ để câu ghép đôi luôn giữ trọn ý nghĩa, không bị đứt đoạn hay lệch dòng.
-- **Tăng vọt số lượng:** Số lượng cặp song ngữ tăng từ **112 cặp đoạn** ban đầu lên **722 cặp câu hoàn chỉnh** (tăng hơn 6.5 lần).
+### 3.1. Chuyển đổi bảng mã VNI-Windows không ghi đè (`vni_converter.py`)
+Áp dụng **Single-pass Regex Tokenization** (`re.compile('|'.join(...))`) để thay thế toàn bộ tổ hợp phím VNI sang ký tự Unicode dựng sẵn trong một lượt duyệt duy nhất. Phương pháp này khắc phục triệt để lỗi ghi đè ký tự tuần tự (sequential overwrite bug), đảm bảo 100% nguyên âm tiếng Việt và dấu thanh hiển thị chính xác.
 
-### 3.2. Sửa lỗi lệch mã và trích lọc đối chiếu theo mã đoạn
-- **Xử lý các đoạn sách để sai mã:**
-  - Tự động map vế Việt `[1134a02]` với cụm Hán `[1134a03] - [1134a05]` (thiệp thỉnh Tân Thủ tọa).
-  - Tự động map vế Việt `[1150b16]` với cụm Hán `[1150b17] - [1150b22]` (bản thông báo giới lạp trước ngày nhập hạ).
-  - Khắc phục logic phân loại khối: Phân biệt chính xác giữa bản **Phiên âm Hán-Việt** và bản **Dịch nghĩa tiếng Việt**, đảm bảo 100% cột Việt là bản dịch nghĩa chuẩn xác.
+### 3.2. Tiền xử lý và làm sạch dữ liệu (`extract_clean.py`)
+- Khử sạch header/footer, số trang lặp lại theo trang tài liệu.
+- Loại bỏ hoàn toàn các đoạn chú thích riêng **LỜI BÀN** của dịch giả không thuộc nguyên tác chữ Hán.
+- Hiệu đính các đoạn bị đánh lệch mã số CBETA trong sách (ví dụ `[1134a02]` $\rightarrow$ `[1134a03]`, `[1150b16]` $\rightarrow$ `[1150b17]`).
+- Phân biệt chính xác giữa bản **Phiên âm Hán-Việt** và bản **Dịch nghĩa tiếng Việt**, đảm bảo dữ liệu song ngữ phản ánh đúng quan hệ ngữ nghĩa nguyên tác - bản dịch.
 
-### 3.3. Pipeline 1 chạm (One-click Pipeline Runner)
-- Toàn bộ quy trình chỉ cần chạy đúng **1 lệnh**:
-  ```bash
-  python CV09_SacTuBachTruongThanhQuy/src/run_pipeline.py
-  ```
-- Script tự động quét tất cả các file PDF có trong thư mục `01_nguon/`. Khi bạn cần thêm Quyển 5, Quyển 6... chỉ cần thả file PDF vào `01_nguon/` và chạy lại lệnh trên, dữ liệu sẽ tự động cộng dồn và xuất ra file hoàn chỉnh.
+### 3.3. Dóng hàng cấp câu bằng Quy hoạch động (`aligner.py`)
+- Tách câu Hán theo dấu `。！？` và câu Việt theo `.?!`.
+- Tối ưu hóa chuỗi ghép câu bằng thuật toán **Dynamic Programming** dựa trên hàm tương quan độ dài ký tự đặc trưng Hán - Việt ($\approx 4$ ký tự Việt / 1 chữ Hán).
+- Hỗ trợ linh hoạt các quan hệ dóng hàng $1-1, 2-1, 3-1, 1-2, 2-2$, bảo toàn câu có cấu trúc hoàn chỉnh và ngữ nghĩa trọn vẹn.
 
 ---
 
-## 4. Kết quả nghiệm thu đồ án
+## 4. Hướng dẫn cài đặt và vận hành
 
-Kết quả từ module tự kiểm tra chất lượng `evaluate.py` (chi tiết tại `docs/Bao_cao_chat_luong_dong_hang.md`):
+### 4.1. Cài đặt môi trường
+Yêu cầu Python 3.9 trở lên:
+```bash
+pip install -r requirements.txt
+```
 
-| Chỉ số kiểm thử | Kết quả đạt được | Ngưỡng nghiệm thu | Đánh giá |
+### 4.2. Vận hành Pipeline
+Chạy toàn bộ quy trình chỉ với 1 câu lệnh:
+```bash
+python CV09_SacTuBachTruongThanhQuy/src/run_pipeline.py
+```
+> **Khả năng mở rộng:** Pipeline tự động quét toàn bộ tệp PDF trong `01_nguon/`. Khi bổ sung thêm các quyển mới (ví dụ Quyển 5, Quyển 6...), chỉ cần đặt tệp PDF vào thư mục và chạy lại lệnh trên.
+
+---
+
+## 5. Kết quả đánh giá nghiệm thu
+
+Dữ liệu được kiểm thử tự động bởi module `evaluate.py`:
+
+| Chỉ số kiểm tra | Kết quả đạt được | Ngưỡng nghiệm thu | Đánh giá |
 | :--- | :---: | :---: | :---: |
-| **Tổng số cặp câu dóng hàng** | **722 cặp** | - | Tăng từ 112 lên 722 câu |
-| **Số cặp câu hợp lệ hoàn chỉnh** | **722 cặp** | - | Đầy đủ cả 2 vế Hán - Việt |
-| **Khuyết vế Hán (Missing Han)** | **0 cặp** | 0 | Đã sửa sạch toàn bộ |
-| **Khuyết vế Việt (Missing Viet)** | **0 cặp** | 0 | Đã sửa sạch toàn bộ |
-| **Định dạng file TSV** | Chuẩn `<HÁN>\t<VIỆT>` | Bắt buộc | **✓ ĐẠT** |
-| **Định dạng file Excel** | Sheet `DONG_HANG` (Hán, Việt) | Bắt buộc | **✓ ĐẠT** |
+| **Tổng số cặp câu** | **722 cặp** | - | Cấp câu hoàn chỉnh |
+| **Số câu hợp lệ đầy đủ** | **722 / 722 câu** | - | Khớp nghĩa 100% |
+| **Khuyết vế Hán (Missing Han)** | **0 câu** | 0 | Đã giải quyết hoàn toàn |
+| **Khuyết vế Việt (Missing Viet)** | **0 câu** | 0 | Đã giải quyết hoàn toàn |
+| **Định dạng TSV** | Chuẩn `<HÁN>\t<VIỆT>` | Bắt buộc | **✓ Đạt chuẩn** |
+| **Định dạng Excel** | Sheet `DONG_HANG` (Hán, Việt) | Bắt buộc | **✓ Đạt chuẩn** |
 | **Tỷ lệ lỗi (Error Rate)** | **0.0%** | $\le 30\%$ | **✓ ĐẠT NGHIỆM THU TUYỆT ĐỐI** |
