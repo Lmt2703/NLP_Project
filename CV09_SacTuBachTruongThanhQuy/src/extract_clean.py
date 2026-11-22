@@ -99,7 +99,43 @@ BAN_TRUONG_MAP = [
     ('[1149c19]-[1150a01]', r"Ngày … tháng … năm Hành giả Đường ty mỗ giáp.*?Trụ trì\s*\(nt\)"),
 ]
 
-# Ánh xạ 6 dòng biểu mẫu Thảo đơn thức (Quyển 7)
+# 22 lỗi chính tả/gõ dấu từ nguyên bản scan và OCR cần chuẩn hóa
+TYPO_REPLACEMENTS = [
+    (r'\bniêu hiệu\b', 'niên hiệu'),
+    (r'\bDó đó\b', 'Do đó'),
+    (r'\blưõng\b', 'lưỡng'),
+    (r'\bngười củ\b', 'người cũ'),
+    (r'\bgian tri\b', 'gian trái'),
+    (r'\bnữa phần\b', 'nửa phần'),
+    (r'\bbửa\b', 'bữa'),
+    (r'\bchậm rải\b', 'chậm rãi'),
+    (r'\bSai khi\b', 'Sau khi'),
+    (r'\bsai khi\b', 'sau khi'),
+    (r'\bNgười giữa liêu\b', 'Người giữ liêu'),
+    (r'\bngười giữa liêu\b', 'người giữ liêu'),
+    (r'\bLăng mghiêm\b', 'Lăng nghiêm'),
+    (r'\btruớc\b', 'trước'),
+    (r'\bTruớc\b', 'Trước'),
+    (r'\bphứơc\b', 'phước'),
+    (r'\bPhứơc\b', 'Phước'),
+    (r'\bthuợng\b', 'thượng'),
+    (r'\bThuợng\b', 'Thượng'),
+    (r'\bhuớng\b', 'hướng'),
+    (r'\bHuớng\b', 'Hướng'),
+    (r'\bĐô tử\b', 'Đô tự'),
+    (r'\bngừơi\b', 'người'),
+    (r'\bNgừơi\b', 'Người'),
+    (r'\btrựơng\b', 'trượng'),
+    (r'\bTrựơng\b', 'Trượng'),
+    (r'\blập bang\b', 'lập ban'),
+    (r'\btủ khăn\b', 'phủ khăn'),
+    (r'\bhứớng\b', 'hướng'),
+    (r'\bHứớng\b', 'Hướng'),
+    (r'\bsọan\b', 'soạn'),
+    (r'\bSọan\b', 'Soạn'),
+    (r'\bchổ\b', 'chỗ'),
+    (r'\bChổ\b', 'Chỗ'),
+]
 THAO_DON_MAP = [
     ('[1150b17]', 'Giới lạp của Tăng chúng: Giới của Đức Uy Âm Vương, Tôn giả Kiều-trần-như.'),
     ('[1150b18]', 'Đường đầu Hòa thượng: Năm Chí Nguyện mấy giới, Năm Nguyên Trinh mấy giới.'),
@@ -117,9 +153,10 @@ def is_cjk_char(ch: str) -> bool:
 
 
 def clean_han_text(raw_text: str) -> str:
-    """Làm sạch văn bản chữ Hán: giữ chữ CJK và dấu câu Hán chuẩn, loại bỏ tiêu đề Latin."""
+    """Làm sạch văn bản chữ Hán: giữ chữ CJK và dấu câu Hán chuẩn, loại bỏ tiêu đề Latin và chú thích CBETA."""
+    text = re.sub(r"\[(?:\d+|＊|\*)\]", "", raw_text)
     valid_lines = []
-    for line in raw_text.splitlines():
+    for line in text.splitlines():
         line = line.strip()
         if not line:
             continue
@@ -133,7 +170,9 @@ def clean_han_text(raw_text: str) -> str:
             if cleaned.strip():
                 valid_lines.append(cleaned.strip())
 
-    return re.sub(r"\s+", " ", " ".join(valid_lines)).strip()
+    joined = re.sub(r"\s+", " ", " ".join(valid_lines)).strip()
+    joined = re.sub(r"(?<=[\u4e00-\u9fff\u3000-\u303f\uff00-\uffef])\s+(?=[\u4e00-\u9fff\u3000-\u303f\uff00-\uffef])", "", joined)
+    return joined
 
 
 def clean_viet_text(raw_text: str) -> str:
@@ -146,12 +185,14 @@ def clean_viet_text(raw_text: str) -> str:
 
     valid_lines = []
     header_filter = re.compile(
-        r"^(SẮC TU|CHƯƠNG \d+|LƯỠNG TỰ|BẢN TRƯỚNG|ĐẠI TRÍ|ĐẠI LONG|TRỤ TRÌ CHÙA|Chương [A-ZÀ-Ỹa-ỹ\s]+ hết|Tiết lạp chương chung|Quyển \d+|Cấp \d+:|Mô hình)",
+        r"^(?:SẮC TU|CHƯƠNG \d+|LƯỠNG TỰ\s+CHƯƠNG|LƯỠNG TỰ\s+BAN\s+THỦ|BẢN TRƯỚNG\s+THỨC|ĐẠI TRÍ|ĐẠI LONG|TRỤ TRÌ CHÙA|Chương [A-ZÀ-Ỹa-ỹ\s]+ hết|Tiết lạp chương chung|Quyển \d+|Cấp \d+:)",
         re.IGNORECASE,
     )
     for line in text.splitlines():
         line = line.strip()
         if not line or header_filter.match(line):
+            continue
+        if re.match(r"^Mô hình\s*[:\-\d]*$", line, re.IGNORECASE):
             continue
         if re.match(r"^\d+$", line) or re.match(r"^[\(\)\s\.\,\-\_]+$", line):
             continue
@@ -161,6 +202,8 @@ def clean_viet_text(raw_text: str) -> str:
 
     text = " ".join(valid_lines)
     text = clean_vni_artifacts(text)
+    for pat, rep in TYPO_REPLACEMENTS:
+        text = re.sub(pat, rep, text)
     # Chuẩn hóa các biến thể viết tắt v. v...
     text = re.sub(r"\bv\.\s*v[…\.]*", "v.v...", text, flags=re.IGNORECASE)
     text = re.sub(r"\bv[…]+", "v.v...", text, flags=re.IGNORECASE)
@@ -231,6 +274,15 @@ def extract_book(pdf_path: str) -> List[Dict[str, str]]:
         '[1155a21]', '[1155a24]', '[1155a26]'
     }
     CHAPTER_END_TAGS = {'[1136b25]', '[1150a12]', '[1155a26]'}
+
+    # Di chuyển tiêu đề 'Sớ văn (tuyên đọc):' từ cuối [1152a01] sang đầu [1152a09] trong Quyển 7
+    if "q7" in filename.lower():
+        if '[1152a01]' in by_tag and by_tag['[1152a01]']:
+            v_orig = by_tag['[1152a01]'][-1]
+            if "Sớ văn (tuyên đọc):" in v_orig:
+                by_tag['[1152a01]'][-1] = re.sub(r"\s*Sớ văn\s*\(tuyên đọc\)\s*:\s*$", "", v_orig)
+                if '[1152a09]' in by_tag and len(by_tag['[1152a09]']) >= 3:
+                    by_tag['[1152a09]'][2] = "Sớ văn (tuyên đọc): " + by_tag['[1152a09]'][2]
 
     extracted_records: List[Dict[str, str]] = []
 

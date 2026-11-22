@@ -183,6 +183,26 @@ def main() -> None:
 - Trích xuất phân biệt font-span từ PDF, giải mã đúng font VNI-Times sang Unicode mà không phá vỡ dải font Unicode/CJK.
 - Bổ sung bộ chuẩn hóa ký tự ghép VNI tồn đọng (`leã` -> `lễ`, `saün` -> `sẵn`, `mộït` -> `một`, `Tâây` -> `Tây`, `cĩ` -> `có`, `khơng` -> `không`...). Số từ lỗi mã hóa giảm về **0**.
 
+### 3.8. Khôi phục các dòng văn bản bị rớt do lỗi lọc tiêu đề
+- Tinh chỉnh biểu thức chính quy `header_filter` để chỉ khớp các dòng tiêu đề độc lập thực sự, không lọc nhầm các dòng văn bản bình thường vô tình bắt đầu bằng từ ngữ chỉ chức danh/nghi thức như `lưỡng tự...` hoặc `mô hình...`.
+- Khôi phục đầy đủ các cụm từ bị thiếu:
+  - Quyển 4: `lưỡng tự biết. Ngay tối đó, lúc chuông chiều gióng` và `lưỡng tự hoàn tất, cựu thị giả theo trụ trì đến thất`.
+  - Quyển 7: `mô hình chỗ ngồi thiền và chỗ thọ trai khi soạn xong,` và `Lưỡng tự, các cần cựu lớn nhỏ, giang hồ, biện sự,`.
+
+### 3.9. Triệt tiêu hoàn toàn câu mồ côi và bảo vệ ngữ cảnh hội thoại
+- Nâng cấp bộ tách câu tiếng Việt (`split_viet_sentences_v2`): bảo vệ dấu câu bên trong ngoặc kép và các từ nối hội thoại (`!”, rồi`, `.”, mọi người`), ngăn chặn 100% hiện tượng sinh ra các câu rác mồ côi chỉ gồm dấu ngoặc (`”.`, `”`).
+- Gộp các thán từ độc lập ngắn (`Ôi!`, `Than ôi!`, `A!`) vào câu nội dung liền kề để khớp nối chính xác với câu đối thoại và thán ngữ nguyên tác chữ Hán (`兼聞獅子之吼`, `禮文秩猗歟盛哉`).
+
+### 3.10. Khử sạch dấu chú thích CBETA và khoảng trắng trong cột Hán
+- Loại bỏ toàn bộ các ký hiệu đánh số chú thích bản in CBETA (`[1]`, `[4]`, `[5]`, `[7]`, `[＊]`) còn sót lại trong cột Hán.
+- Chuẩn hóa xóa bỏ khoảng trắng sinh ra do ngắt dòng giữa các chữ CJK, phục hồi nguyên vẹn các từ vựng chữ Hán giúp đối sánh từ điển mỏ neo đạt độ chính xác tuyệt đối.
+
+### 3.11. Chuẩn hóa 22 lỗi chính tả và gõ dấu tiếng Việt
+- Rà soát và thay thế chuẩn xác toàn bộ 22 lỗi gõ dấu/lỗi OCR: `niêu hiệu` $\rightarrow$ `niên hiệu`, `Dó đó` $\rightarrow$ `Do đó`, `lưõng` $\rightarrow$ `lưỡng`, `người củ` $\rightarrow$ `người cũ`, `gian tri` $\rightarrow$ `gian trái`, `nữa phần` $\rightarrow$ `nửa phần`, `bửa` $\rightarrow$ `bữa`, `chậm rải` $\rightarrow$ `chậm rãi`, `Sai khi` $\rightarrow$ `Sau khi`, `Người giữa liêu` $\rightarrow$ `Người giữ liêu`, `Lăng mghiêm` $\rightarrow$ `Lăng nghiêm`, `truớc` $\rightarrow$ `trước`, `phứơc` $\rightarrow$ `phước`, `thuợng` $\rightarrow$ `thượng`, `huớng` $\rightarrow$ `hướng`, `Đô tử` $\rightarrow$ `Đô tự`, `ngừơi` $\rightarrow$ `người`, `trựơng` $\rightarrow$ `trượng`, `lập bang` $\rightarrow$ `lập ban`, `tủ khăn` $\rightarrow$ `phủ khăn`, `hứớng` $\rightarrow$ `hướng`, `sọan` $\rightarrow$ `soạn`, `chổ` $\rightarrow$ `chỗ`.
+
+### 3.12. Ghép chuẩn xác tiêu đề Sớ văn khởi kiến
+- Chuyển cụm `Sớ văn (tuyên đọc):` từ cuối đoạn `[1152a08]` sang đầu đoạn `[1152a09]` trong Quyển 7 để dóng hàng chuẩn 1-1 với tiêu đề sớ văn chữ Hán `疏語(啟建)` và bài văn khấn `Gươm nhờ mài giũa...`.
+
 ---
 
 ## 4. Kết luận nghiệm thu

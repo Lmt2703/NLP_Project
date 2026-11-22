@@ -20,7 +20,8 @@ Về phần chi gồm: 91 quan tiền (dựa vào phần chi dùng trong bản t
 500 tiền: phụ thêm cho cung đầu soạn phiếu rao đấu giá y vật. 500 tiền: cung đầu thu y.
 500 tiền: hành giả Xướng thực rút thẻ. 500 tiền: thu cốt.
 1 quan tiền: bưng hộp than. 1 quan tiền: (trực tháp) chi lặt vặt
-Chi 270 quan: theo các khoản chi tiêu trong bản trướng, ngoại trừ 30% nạp cho thường trụ. Kể về chi tiêu các việc kể trên.
+Chi 270 quan: theo các khoản chi tiêu trong bản trướng, ngoại trừ 30% nạp cho thường trụ.
+Kể về chi tiêu các việc kể trên.
 Chi 135 quan: tiền công đức các buổi lễ.
 Khai cụ nội 20 quan: lễ trà tỳ.
 10 quan: phụ thêm lễ trà tỳ. 40 quan: đậy nắp quan, di quan, di cốt, nhập tháp.
@@ -30,225 +31,372 @@ Chi 15 quan: Thủ tọa chủ tang, Đô tự đưa tang, Duy- na đánh khánh
 Chi 9 quan: Tri khách tụng kinh, thị giả bưng lư hương, mỗi người 3 quan; Thánh Tăng thị giả thu tiền xướng y 2 quan; Trực tuế đưa lửa 1 quan.
 Chi 15 quan: Phương trượng, lưỡng tự, Hành giả Đường ty, sao chép bán y vật tạo đơn 3 lần, điểm tâm phương trượng 2 phần.
 Chi 20 quan: Phương trượng Lưỡng tự thiêm đơn, phương trượng 2 phần.
-Chi 444 quan 500 tiền: biếu cho Tăng chúng tụng kinh tại, Quan Âm đại sĩ, Thánh tăng Phương trượng 2 phần, Tăng chúng ước chừng 400 người mỗi người 1 quan.
-Hành giả Đường ty tuỳ nghi biếu tặng cho những người vắng mặt vì lý do đặc biệt và những người mới đến tạm trú, gồm 79 người, mỗi người 500 tiền, bằng nữa phần người khác.
 Ngoại trừ các khoản chi ra, Đường ty còn thu được 500 tiền, dùng để chi tiêu cho các việc chung, và được ghi chép đầy đủ vào sổ sách như đã nêu trên.
 Ngày … tháng … năm Hành giả Đường ty mỗ giáp, xin ghi chép đầy đủ. Thị giả cầm trướng mỗ ký tên; Tri khách mỗ ký tên, Trực tuế (nt) Tri điện (nt) Điển toạ (nt) Tri dục (nt) Phó tự (nt) Tạng chủ (nt) Duy-na (nt) Tang chủ mỗ ký tên, Phó tự (nt) Thư ký (nt) Giám tự (nt) Thủ toạ (nt) Đô tự (nt) Thủ toạ (nt) Trụ trì (nt)
 Người xưa khi lập mẫu bản trướng thường viết thành nhiều bản, để tránh sự sửa đổi.
-Vì thế mà ở Tùng lâm khi có vị Tăng qua đời thường lập bản trướng. Nghĩa là đem những di vật của vị ấy ra giữa đại chúng định giá để ngăn lòng tham lam cất chứa.
-Số tiền khi bán đấu giá di vật, ngoài việc chi dùng cho tang lễ, dành lại 30% cho thường trụ (nếu được 100 quan mới trích 30 quan, còn dưới số đó thì không trích). Số tiền còn lại sẽ biếu cho Tăng chúng.
+Vì thế mà ở Tùng lâm khi có vị Tăng qua đời thường lập bản trướng.
+Nghĩa là đem những di vật của vị ấy ra giữa đại chúng định giá để ngăn lòng tham lam cất chứa.
+Số tiền khi bán đấu giá di vật, ngoài việc chi dùng cho tang lễ, dành lại 30% cho thường trụ (nếu được 100 quan mới trích 30 quan, còn dưới số đó thì không trích).
+Số tiền còn lại sẽ biếu cho Tăng chúng.
 Hễ cứ 100 tiền thì cho nghi lễ Phật sự 1 quan.
-Phương trượng gấp đôi. Lấy 1000 quan làm mức độ, (như điều lệ trình ở trước) xem xét nếu tiền thu được nhiều thì tăng thêm, còn ít thì giảm bớt.
-Đến lúc ấy tùy theo số người nhiều ít mà tùy nghi châm chước (nếu người quá cố là chức sự nghỉ hưu cần cựu có ruộng đất, lúa thóc, phòng xá, giường nệm, bàn ghế thì tất cả đều qui về cho thường trụ. Phải cân nhắc số tiền bán đấu giá y vật được nhiều ít để khi kết thúc cúng dường cho các nghi lễ Phật sự tụng kinh, cúng trà nước, chuyển khám, chuyển cốt, v.v...)
-Thứ tự của chúng Tăng không sắp xếp theo tuổi tác mà sắp xếp theo hạ lạp để khác với thế tục. Tại Tây vức mỗi năm có ba mùa (quí) dùng một mùa để an cư, cấm chỉ đi lại.
-Các việc tụng kinh, ngồi thiền đi đứng đều căn cứ theo sự thọ giới trước sau mà sắp xếp trước sau. Lại qui định 9 tuần (90 ngày) chuyên tâm huân tu đạo nghiệp, ba tuần (30 ngày) sắm sửa những nhu yếu cho bản thân, để cho trong ngoài đều được nuôi dưỡng, thân tâm đều an ổn.
-Giới hạn thời gian như thế để tiến tu, không bỏ phí thì giờ, hộ trì quí tiếc sinh mạng, tu tập từ bi nhẫn nhục. Đó quả thật là giáo chỉ chí lý của đức Phật khiến muôn đời đều tuân hành.
-Vì năm vùng Thiên Trúc (Ấn Độ) đất rộng, mưa nắng bất thường, khí hậu các nơi không giống nhau, cho nên chế định thành các trường hợp: hoặc khởi sự an cư vào tháng tư, tháng năm hay tháng 12, nhưng đều bắt đầu từ ngày 16. Do đó an cư mùa mưa là tùy theo không gian và thời gian, miễn là thích hợp an cư.
+Phương trượng gấp đôi.
+Lấy 1000 quan làm mức độ, (như điều lệ trình ở trước) xem xét nếu tiền thu được nhiều thì tăng thêm, còn ít thì giảm bớt.
+Đến lúc ấy tùy theo số người nhiều ít mà tùy nghi châm chước (nếu người quá cố là chức sự nghỉ hưu cần cựu có ruộng đất, lúa thóc, phòng xá, giường nệm, bàn ghế thì tất cả đều qui về cho thường trụ.
+Phải cân nhắc số tiền bán đấu giá y vật được nhiều ít để khi kết thúc cúng dường cho các nghi lễ Phật sự tụng kinh, cúng trà nước, chuyển khám, chuyển cốt, v.v...)
+Thứ tự của chúng Tăng không sắp xếp theo tuổi tác mà sắp xếp theo hạ lạp để khác với thế tục.
+Tại Tây vức mỗi năm có ba mùa (quí) dùng một mùa để an cư, cấm chỉ đi lại.
+Các việc tụng kinh, ngồi thiền đi đứng đều căn cứ theo sự thọ giới trước sau mà sắp xếp trước sau.
+Lại qui định 9 tuần (90 ngày) chuyên tâm huân tu đạo nghiệp, ba tuần (30 ngày) sắm sửa những nhu yếu cho bản thân, để cho trong ngoài đều được nuôi dưỡng, thân tâm đều an ổn.
+Giới hạn thời gian như thế để tiến tu, không bỏ phí thì giờ, hộ trì quí tiếc sinh mạng, tu tập từ bi nhẫn nhục.
+Đó quả thật là giáo chỉ chí lý của đức Phật khiến muôn đời đều tuân hành.
+Vì năm vùng Thiên Trúc (Ấn Độ) đất rộng, mưa nắng bất thường, khí hậu các nơi không giống nhau, cho nên chế định thành các trường hợp: hoặc khởi sự an cư vào tháng tư, tháng năm hay tháng 12, nhưng đều bắt đầu từ ngày 16.
+Do đó an cư mùa mưa là tùy theo không gian và thời gian, miễn là thích hợp an cư.
 An cư còn được gọi là Tọa hạ, Tọa lạp; ý nghĩa của giới lạp bắt đầu từ đó.
 Có thuyết cho rằng muốn biết hành vi của một người nhập hạ có thanh khiết hay không, thì nên nắn hình người bằng sáp đem chôn xuống đất (rồi lấy lên xem có bị phai màu hay không) để xét nghiệm người kia tu hành viên mãn hay khiếm khuyết.
-Đây quả là chuyện đồng bóng vu vơ hoang đường, há chẳng phải là một truyền thuyết sai lầm sao? Vả chăng sự tu chứng của ta, bậc Thánh còn không thể nhìn thấy, thì những sự vật bên ngoài há có thể đo lường được sự tiến thoái hay sao?
-Ngày nay, Thiền lâm kiết hạ vào ngày rằm tháng tư, giải hạ vào ngày rằm tháng bảy. Thông thường, trước khi nhập hạ một ngày, các tự viện ra thông báo về những phép tắc an cư, để trong thời gian nhập hạ, Tăng chúng chuyên tâm tu tập (ở đây xin nói giản lược); việc này cũng tùy theo quy định của từng địa phương.
-Nếu ta bình luận điều đó không đúng pháp, thì lại không biết rằng có trường hợp đắc pháp ngoài thông lệ! Ở Trung Quốc mỗi năm chia làm bốn mùa, mùa Đông bắt đầu vào dịp tiết nhất dương sinh.
-Đây cũng là thời điểm bắt đầu của bốn mùa, trong lúc này vạn vật đổi mới, lòng người vui vẻ phấn khởi. Lễ nghi quí ở chỗ phù hợp với tục lệ, còn việc giáo hoá thì ở chổ tùy nghi.
-Mỗi năm xoay vòng theo bốn thời điểm chính yếu: Kiết hạ, giải hạ, Đông chí và ngày niên triêu. Chúng ta nhìn lên tiệc pháp với đồng đẳng các bậc long tượng cao cả, chủ khách xướng họa, gồm cả nghe những tiếng rống của sư tử.
+Đây quả là chuyện đồng bóng vu vơ hoang đường, há chẳng phải là một truyền thuyết sai lầm sao?
+Vả chăng sự tu chứng của ta, bậc Thánh còn không thể nhìn thấy, thì những sự vật bên ngoài há có thể đo lường được sự tiến thoái hay sao?
+Ngày nay, Thiền lâm kiết hạ vào ngày rằm tháng tư, giải hạ vào ngày rằm tháng bảy.
+Thông thường, trước khi nhập hạ một ngày, các tự viện ra thông báo về những phép tắc an cư, để trong thời gian nhập hạ, Tăng chúng chuyên tâm tu tập (ở đây xin nói giản lược); việc này cũng tùy theo quy định của từng địa phương.
+Nếu ta bình luận điều đó không đúng pháp, thì lại không biết rằng có trường hợp đắc pháp ngoài thông lệ!
+Ở Trung Quốc mỗi năm chia làm bốn mùa, mùa Đông bắt đầu vào dịp tiết nhất dương sinh.
+Đây cũng là thời điểm bắt đầu của bốn mùa, trong lúc này vạn vật đổi mới, lòng người vui vẻ phấn khởi.
+Lễ nghi quí ở chỗ phù hợp với tục lệ, còn việc giáo hoá thì ở chỗ tùy nghi.
+Mỗi năm xoay vòng theo bốn thời điểm chính yếu: Kiết hạ, giải hạ, Đông chí và ngày niên triêu.
+Chúng ta nhìn lên tiệc pháp với đồng đẳng các bậc long tượng cao cả, chủ khách xướng họa, gồm cả nghe những tiếng rống của sư tử.
 Ôi! Lễ văn trật tự, thật là hưng thịnh và tốt đẹp biết bao!
 Tại Tùng lâm, vào ngày mồng một tháng ba, ra thông báo sơ sài về việc an cư (xem mục tân quải đáp ở sau).
 Đường ty căn cứ vào giới lạp bài mà lập danh sách chư Tăng, sai hành giả trước hết đem trình cho Thủ tọa, kế đến trình cho Trụ trì, tiếp theo nữa trình cho Lưỡng tự, rồi đem treo trước Tăng đường.
 Đồng thời trang bị một cái bàn, để sẵn bút mực trên đó.
-Trong vòng ba ngày, sau mỗi bửa thọ trai, Tăng chúng phải ra xem bản danh sách, nếu thấy sai lầm thì tự mình lấy bút mực cải chính, nhằm đề phòng trong nhất thời soạn bản danh sách e có những nhầm lẫn, hoặc là Tăng chúng đông người khó tránh khỏi thiếu sót lọt sổ.
+Trong vòng ba ngày, sau mỗi bữa thọ trai, Tăng chúng phải ra xem bản danh sách, nếu thấy sai lầm thì tự mình lấy bút mực cải chính, nhằm đề phòng trong nhất thời soạn bản danh sách e có những nhầm lẫn, hoặc là Tăng chúng đông người khó tránh khỏi thiếu sót lọt sổ.
 Vì thế mà trước khi lập đồ biểu an cư, phải soạn ra bản danh sách sơ sài này để mỗi người tự xem tên tuổi và giới lạp cao thấp của mình, có đúng hay không.
-Gần đây, có những kẻ hiếu thắng tranh nhau làm náo loạn, thỉnh thoảng ý mạnh hiếp yếu, tranh giành phải quấy bôi xóa tên họ lẫn nhau, làm huyên náo chúng Tăng. Những kẻ vi phạm như vậy phải bị trục xuất.
-Nếu có người mạo danh khai vượt giới lạp, phải thưa rõ với Duy-na, Thủ tọa để những vị này trình lên Trụ trì xử lý. Hình thức bản thông báo sơ sài: (Giới lạp viết mực đỏ, tên họ viết mực thường)
+Gần đây, có những kẻ hiếu thắng tranh nhau làm náo loạn, thỉnh thoảng ý mạnh hiếp yếu, tranh giành phải quấy bôi xóa tên họ lẫn nhau, làm huyên náo chúng Tăng.
+Những kẻ vi phạm như vậy phải bị trục xuất.
+Nếu có người mạo danh khai vượt giới lạp, phải thưa rõ với Duy-na, Thủ tọa để những vị này trình lên Trụ trì xử lý.
+Hình thức bản thông báo sơ sài: (Giới lạp viết mực đỏ, tên họ viết mực thường)
 Giới lạp của Tăng chúng: Giới của Đức Uy Âm Vương, Tôn giả Kiều-trần-như.
 Đường đầu Hòa thượng: Năm Chí Nguyện mấy giới, Năm Nguyên Trinh mấy giới.
 Thượng tọa mỗ giáp, Thượng tọa mỗ giáp, Năm Đại đức mấy giới.
 Năm Chí Đại mấy giới, Thượng tọa mỗ giáp, Thượng tọa mỗ giáp.
-Kính xin ghi đầy đủ như trên. Nếu có sai sót, xin các vị tự cải chính giúp. Rất mong được sự thể tất.
-Hôm nay, ngày …. .tháng … .. .Đường ty mỗ giáp, xin ghi đầy đủ như vậy
+Kính xin ghi đầy đủ như trên.
+Nếu có sai sót, xin các vị tự cải chính giúp.
+Rất mong được sự thể tất.
+Hôm nay, ngày ….. tháng …... Đường ty mỗ giáp, xin ghi đầy đủ như vậy.
 Người mới được thu nhận vào chùa, sau khi vào liêu nhận chỗ ở, theo điều lệ, phải nạp chừng ấy tiền bồi bổ cho liêu xá.
-Thế rồi, chờ Liêu nguyên định thời gian nào đó treo bảng thông báo về việc đãi trà cho đại chúng biết như sau: “Hôm nay, sau bữa cháo sáng, Thượng tọa mỗ giáp, Thượng tọa mỗ giáp mỗi nhóm hoặc 3 người, 6 người hay 9 người – phải chuẩn bị hương đèn, đầy đủ oai nghi, đứng sắp hàng bên phải liêu đường, chờ đại chúng rời khỏi trai đường. ” Đến giờ, trà đầu đánh bản trước liêu, khi Tăng chúng đi đến liền chấp tay vái chào mời vào vị trí.
-Lúc đại chúng đã đứng ổn định, những người mời uống trà đứng sắp một hàng, chào hỏi vấn an Tăng chúng và mời ngồi, rồi chia ra mỗi nhóm chừng 3 người, nhiều nhất là 9 người, đến trước hoặc hai bên lư hương đốt hương, lúc đi lại phải chú ý, nhìn hai bên nghiêm chỉnh, chậm rải.
-Sai khi thắp hương, lại đứng sắp thành hàng xá chào, vấn an gọi là Ấp hương. Lúc này đánh 2 tiếng bản nhỏ trong liêu, đi châm trà khắp mọi người, bình trà nên từ xuyên đường mà đưa vào, bước tới xá chào, vấn an rồi trở lui sắp thành hàng xá chào vấn an lần nữa, gọi là Ấp trà.
+Thế rồi, chờ Liêu nguyên định thời gian nào đó treo bảng thông báo về việc đãi trà cho đại chúng biết như sau: “Hôm nay, sau bữa cháo sáng, Thượng tọa mỗ giáp, Thượng tọa mỗ giáp mỗi nhóm hoặc 3 người, 6 người hay 9 người – phải chuẩn bị hương đèn, đầy đủ oai nghi, đứng sắp hàng bên phải liêu đường, chờ đại chúng rời khỏi trai đường.”
+Đến giờ, trà đầu đánh bản trước liêu, khi Tăng chúng đi đến liền chấp tay vái chào mời vào vị trí.
+Lúc đại chúng đã đứng ổn định, những người mời uống trà đứng sắp một hàng, chào hỏi vấn an Tăng chúng và mời ngồi, rồi chia ra mỗi nhóm chừng 3 người, nhiều nhất là 9 người, đến trước hoặc hai bên lư hương đốt hương, lúc đi lại phải chú ý, nhìn hai bên nghiêm chỉnh, chậm rãi.
+Sau khi thắp hương, lại đứng sắp thành hàng xá chào, vấn an gọi là Ấp hương.
+Lúc này đánh 2 tiếng bản nhỏ trong liêu, đi châm trà khắp mọi người, bình trà nên từ xuyên đường mà đưa vào, bước tới xá chào, vấn an rồi trở lui sắp thành hàng xá chào vấn an lần nữa, gọi là Ấp trà.
 Thế rồi đánh một tiếng bản, gom các tách trà lại.
-Khi đại chúng đứng dậy ổn định, Liêu nguyên bước tới đứng trước lư hương, thay mặt đại chúng cảm tạ những người chiêu đãi. Khi ấy đại chúng cũng đồng thời đứng chấp tay cảm tạ.
-Cảm tạ xong, liêu nguyên trở lại vị trí. Những người mời uống trà lại đứng sắp hàng xá chào, rồi chia thành nhóm đến trước lư hương vái chào, gọi là cảm tạ đại chúng đã quang lâm, lại trở lui đứng sắp thành hàng vái chào, vấn an.
+Khi đại chúng đứng dậy ổn định, Liêu nguyên bước tới đứng trước lư hương, thay mặt đại chúng cảm tạ những người chiêu đãi.
+Khi ấy đại chúng cũng đồng thời đứng chấp tay cảm tạ.
+Cảm tạ xong, liêu nguyên trở lại vị trí.
+Những người mời uống trà lại đứng sắp hàng xá chào, rồi chia thành nhóm đến trước lư hương vái chào, gọi là cảm tạ đại chúng đã quang lâm, lại trở lui đứng sắp thành hàng vái chào, vấn an.
 Bấy giờ, bản trước liêu đánh lên 3 tiếng, đại chúng chào hỏi nhau rồi giải tán.
 Liêu nguyên tùy nghi bảo trà đầu châm trà, mời những người đãi trà uống, chờ cho tiệc trà do những người mới vào liêu đãi đại chúng hoàn tất, Liêu nguyên tuần tự từng ngày, dựa vào Giới lạp tổ chức tiệc trà phân định giới lạp.
 Nghi lễ này giống như ở trên.
-Sau khi bản thông báo tạm đã ổn định, Đường ty căn cứ Giới lạp soạn các đồ biểu tụng chú Lăng nghiêm, niệm tụng, tuần đường, chỗ ngồi thiền, chỗ ngồi thọ trai (thể thức xem ở phần trước và sau) và lập thẻ ghi Giới lạp của chúng Tăng. Chỉ có vị trí ngồi thọ trai phải thiết lập thành mười sáu bản (ngoài ra, tùy tăng đường lớn hay nhỏ mà bố trí, chứ không bắt buộc). Ngoại trừ đơn liêu Tây đường, Thủ tọa, cần cựu sắp ngồi ở đầu bản, còn những người khác thì dựa vào Giới lạp mà bố trí.
+Sau khi bản thông báo tạm đã ổn định, Đường ty căn cứ Giới lạp soạn các đồ biểu tụng chú Lăng nghiêm, niệm tụng, tuần đường, chỗ ngồi thiền, chỗ ngồi thọ trai (thể thức xem ở phần trước và sau) và lập thẻ ghi Giới lạp của chúng Tăng.
+Chỉ có vị trí ngồi thọ trai phải thiết lập thành mười sáu bản (ngoài ra, tùy tăng đường lớn hay nhỏ mà bố trí, chứ không bắt buộc).
+Ngoại trừ đơn liêu Tây đường, Thủ tọa, cần cựu sắp ngồi ở đầu bản, còn những người khác thì dựa vào Giới lạp mà bố trí.
 Ngày xưa, những chức sự đã nghỉ hưu như Đông đường đặt ngồi ở vị trí phó bát, nhưng sau đó, do tranh giành nhau mà bãi bỏ việc này.
 Đường ty y theo Giới lạp soạn ra bản thảo, trước trình cho Thủ tọa, kế đến trình lên Trụ trì duyệt khán, khi đã được chấp nhận, mới viết thành các đồ biểu.
-Thế rồi, bản chính lại trình lên Trụ trì một lần nữa. Riêng đồ biểu thọ trai phải trình cho tất cả đơn liêu.
-Đến ngày lễ tắm Phật đem bài trí trước chánh điện. Nói chung viết thành một bản nhỏ, rồi thông báo với đại chúng: “Thưa đại chúng, sau khi dùng cháo sáng xong, sẽ bài trí các đồ biểu kể trên, mong đại chúng chiếu cố.
-Hôm nay…. ngày …. Tháng … Đường ty mỗ kính bạch”, rồi đem dán cửa trước và sau của Tăng đường.
+Thế rồi, bản chính lại trình lên Trụ trì một lần nữa.
+Riêng đồ biểu thọ trai phải trình cho tất cả đơn liêu.
+Đến ngày lễ tắm Phật đem bài trí trước chánh điện.
+Nói chung mô hình chỗ ngồi thiền và chỗ thọ trai khi soạn xong, viết thành một bản nhỏ, rồi thông báo với đại chúng: “Thưa đại chúng, sau khi dùng cháo sáng xong, sẽ bài trí các đồ biểu kể trên, mong đại chúng chiếu cố.
+Hôm nay….
+ngày ….
+Tháng … Đường ty mỗ kính bạch”, rồi đem dán cửa trước và sau của Tăng đường.
 Vào khoảng đầu tháng tư, đợi khi chúng hành giả đến Phương trượng cảm tạ về việc cho ở lại xong và Đường ty đã thiết lập xong các đồ biểu.
-Liêu nguyên căn cứ theo Giới lạp thiết lập đồ biểu đặt hòm rương, đồ biểu dùng trà nước, bảng Giới lạp của Tăng chúng, bảng thứ tự nhập liêu, bảng thứ tự cạo tóc, mô hình chỗ ngồi dùng trà nước trong ba tháng hạ (huynh đệ kết duyên tùy ý ghi tên). Sau khi các đồ biểu được thiết lập và đại chúng gặp gỡ chào hỏi nhau xong, thì đem các đồ biểu đó trưng bày tại xuyên đường.
-Đến ngày 12, sau giờ ngọ, Thị giả của Duy-na thưa với Trụ trì, Lưỡng tự các liêu treo bản tụng kinh, thông báo với đại chúng. Liêu nguyên lo việc dọn quét các liêu phòng, chuẩn bị soạn thảo thiệp mời (xem mẫu ở sau), rồi đem dán gian trái trước liêu.
-Nội dung mời tôn chúng tất cả các liêu đến dùng trà nước, đồng thời công bố bản ghi chổ ngồi của Tăng chúng. Trên bàn thờ đức Quán Thế Âm đặt các phẩm vật cúng dường, các bàn hai bên trang trí đài hương, lư hương và đuốc.
+Liêu nguyên căn cứ theo Giới lạp thiết lập đồ biểu đặt hòm rương, đồ biểu dùng trà nước, bảng Giới lạp của Tăng chúng, bảng thứ tự nhập liêu, bảng thứ tự cạo tóc, mô hình chỗ ngồi dùng trà nước trong ba tháng hạ (huynh đệ kết duyên tùy ý ghi tên).
+Sau khi các đồ biểu được thiết lập và đại chúng gặp gỡ chào hỏi nhau xong, thì đem các đồ biểu đó trưng bày tại xuyên đường.
+Đến ngày 12, sau giờ ngọ, Thị giả của Duy-na thưa với Trụ trì, Lưỡng tự các liêu treo bản tụng kinh, thông báo với đại chúng.
+Liêu nguyên lo việc dọn quét các liêu phòng, chuẩn bị soạn thảo thiệp mời (xem mẫu ở sau), rồi đem dán gian trái trước liêu.
+Nội dung mời tôn chúng tất cả các liêu đến dùng trà nước, đồng thời công bố bản ghi chỗ ngồi của Tăng chúng.
+Trên bàn thờ đức Quán Thế Âm đặt các phẩm vật cúng dường, các bàn hai bên trang trí đài hương, lư hương và đuốc.
 Liêu nguyên bảo người nấu thang thủy, rồi đích thân đem đến mời Phương trượng, đồng thời lệnh cho Trà đầu chia nhau mang đến các liêu.
 Khi phân phối xong, liêu nguyên ra lệnh đánh bản nhỏ trong liêu, chuẩn bị một toà thang thủy nhỏ, cũng treo bản đồ ghi chỗ ngồi, đặc biệt là Liêu chủ, phó liêu, Lăng nghiêm đầu, người soạn bình trà ly tách, và mời liêu trưởng cùng quang lâm bầu bạn.
-Lúc đến nơi, Liêu nguyên mời liêu trưởng thắp hương, rồi vái chào mời cắm hương, kế đến mời trở về chổ an toạ. Lúc chuẩn bị nước nóng xong, đánh bản trước liêu, liêu trưởng, đại chúng vào phòng, mời Thị giả của Duy-na cùng tham dự, sắp ngồi bên cạnh Liêu nguyên, đối diện với liêu trưởng, còn đại chúng thì y theo Giới lạp sắp ngồi bốn dãy bàn.
-Bấy giờ, liêu chủ, phó liêu chia nhau đi đến các bàn chào hỏi mọi người, khi họ đi vào, vái chào mời ngồi, khi họ đốt hương, vái chào mời cắm hương. Bấy giờ hành giả đánh hai tiếng bản trong liêu, người rót nước đã rót nước cùng khắp, liền mời uống nước.
-Khi uống nước xong, đánh một tiếng bản, thu dọn ly tách. Liêu trưởng đến trước lư hương cảm tạ mọi người đã tham dự bữa đãi trà nước. Thế rồi, hành giả đánh ba tiếng bản trước liêu, mọi người giải tán.
+Lúc đến nơi, Liêu nguyên mời liêu trưởng thắp hương, rồi vái chào mời cắm hương, kế đến mời trở về chỗ an toạ.
+Lúc chuẩn bị nước nóng xong, đánh bản trước liêu, liêu trưởng, đại chúng vào phòng, mời Thị giả của Duy-na cùng tham dự, sắp ngồi bên cạnh Liêu nguyên, đối diện với liêu trưởng, còn đại chúng thì y theo Giới lạp sắp ngồi bốn dãy bàn.
+Bấy giờ, liêu chủ, phó liêu chia nhau đi đến các bàn chào hỏi mọi người, khi họ đi vào, vái chào mời ngồi, khi họ đốt hương, vái chào mời cắm hương.
+Bấy giờ hành giả đánh hai tiếng bản trong liêu, người rót nước đã rót nước cùng khắp, liền mời uống nước.
+Khi uống nước xong, đánh một tiếng bản, thu dọn ly tách.
+Liêu trưởng đến trước lư hương cảm tạ mọi người đã tham dự bữa đãi trà nước.
+Thế rồi, hành giả đánh ba tiếng bản trước liêu, mọi người giải tán.
 Lúc này, Lưỡng tự vào thiền đường, Thủ toạ, Đô tự đều đốt hương, rồi đứng vào vị trí của mình, còn Liêu nguyên thì đứng chờ ngoài cửa, bên phải, nghênh đón Trụ trì vào thắp hương, rồi đưa đến vị trí ổn định.
-Lúc này từ vị trí cuối cùng của tây tự, Liêu nguyên bước ra thắp hương, lễ bái, còn vị chủ lễ thì cử hành tụng chú Lăng nghiêm, rồi hồi hướng kết thúc, và Liêu nguyên đưa tiễn Trụ trì rời khỏi thiền đường. Buổi lễ ngày 12 tháng 7 cũng giống như vậy.
+Lúc này từ vị trí cuối cùng của tây tự, Liêu nguyên bước ra thắp hương, lễ bái, còn vị chủ lễ thì cử hành tụng chú Lăng nghiêm, rồi hồi hướng kết thúc, và Liêu nguyên đưa tiễn Trụ trì rời khỏi thiền đường.
+Buổi lễ ngày 12 tháng 7 cũng giống như vậy.
 Mẫu thiệp mời:
-Người giữa liêu là Tỷ-kheo mỗ có tổ chức một tiệc trà đạm bạc vào chiều nay tại thiểm liêu, kính mời tôn chúng các liêu bỏ chút thì giờ quí báu về đây tham dự. Kính mong chư vị niệm tình, từ bi quang lâm tham dự. Hôm nay ngày … tháng… người giữ liêu là Tỳ kheo mỗ trân trọng kính mời. Mẫu bì thư: Trân trọng kính mời chư Tôn đức Thiền sư các liêu. Người giữ liêu là Tỷ-kheo mỗ trân trọng kính mời.
-Pháp hội này được cử hành vào ngày 13/4 ÂL. Đường ty căn cứ theo Giới lạp của đại chúng soạn các đồ biểu (xem sau).
-Đến ngày lễ tắm Phật, đem các đồ biểu ấy ra trưng bày trước chánh điện, và mời thư ký soạn sớ văn. Trước hết, Duy-na chọn người có âm thanh tốt cử làm Lăng mghiêm đầu rồi dẫn đến chào hỏi Trụ trì, Khố ty; các vị này phải mời Lăng nghiêm đầu điểm tâm với sự tham dự của Duy-na.
-Gần đến ngày lễ, thư ký viết kệ hồi hướng (bài kệ này do Thiền sư Chân Yết Liễu soạn- xem ở sau), rồi đem dán trên các cây cột hai bên phải trái trong chánh điện. Thấy có nơi khi chép xong, đem khắc vào bia; hoặc khắc vào ván rồi đem treo lên. Đêm trước ngày cử hành lễ, Đường ty thông báo với đại chúng rằng: “Ngày mai, sau khi dùng cháo sáng xong, xin đại chúng mặc y phục trang nghiêm, vào chánh điện để cử hành pháp hội Lăng nghiêm”, rồi đem treo bản thông báo tụng Lăng nghiêm tại các liêu.
+Người giữ liêu là Tỷ-kheo mỗ có tổ chức một tiệc trà đạm bạc vào chiều nay tại thiểm liêu, kính mời tôn chúng các liêu bỏ chút thì giờ quí báu về đây tham dự. Kính mong chư vị niệm tình, từ bi quang lâm tham dự. Hôm nay ngày … tháng… người giữ liêu là Tỳ kheo mỗ trân trọng kính mời. Mẫu bì thư: Trân trọng kính mời chư Tôn đức Thiền sư các liêu. Người giữ liêu là Tỷ-kheo mỗ trân trọng kính mời.
+Pháp hội này được cử hành vào ngày 13/4 ÂL.
+Đường ty căn cứ theo Giới lạp của đại chúng soạn các đồ biểu (xem sau).
+Đến ngày lễ tắm Phật, đem các đồ biểu ấy ra trưng bày trước chánh điện, và mời thư ký soạn sớ văn.
+Trước hết, Duy-na chọn người có âm thanh tốt cử làm Lăng nghiêm đầu rồi dẫn đến chào hỏi Trụ trì, Khố ty; các vị này phải mời Lăng nghiêm đầu điểm tâm với sự tham dự của Duy-na.
+Gần đến ngày lễ, thư ký viết kệ hồi hướng (bài kệ này do Thiền sư Chân Yết Liễu soạn- xem ở sau), rồi đem dán trên các cây cột hai bên phải trái trong chánh điện.
+Thấy có nơi khi chép xong, đem khắc vào bia; hoặc khắc vào ván rồi đem treo lên.
+Đêm trước ngày cử hành lễ, Đường ty thông báo với đại chúng rằng: “Ngày mai, sau khi dùng cháo sáng xong, xin đại chúng mặc y phục trang nghiêm, vào chánh điện để cử hành pháp hội Lăng nghiêm”, rồi đem treo bản thông báo tụng Lăng nghiêm tại các liêu.
 Đến ngày ấy, sau khi dùng cháo xong, chờ trang trí ổn định trên chánh điện, thị giả của Duy-na thưa với Lưỡng tự, kế đến trình lên Trụ trì, rồi bắt đầu đánh bản trước liêu của đại chúng, đi dọc qua hành lang thông báo.
-Khi dứt tiếng bản, lại đến đánh bản ở liêu Phương trượng. Khi ấy Trụ trì rời khỏi phòng, thị giả lại đánh bản lớn treo trước khố đường ba tiếng, rồi đánh chuông lớn, chuông ở Tăng đường và chuông trong chánh điện.
-Trụ trì đến trước điện Phật đốt hương, dâng cúng trà nước, trở về vị trí. Lúc này thị giả đánh chập chõa, Duy-na rời khỏi hàng, đến vái chào Trụ trì, Lưỡng tự, rồi đốt hương bạch Phật, tuyên sớ (theo Thanh qui cũ thì lúc này đại chúng không lễ bái, nhưng thời gian gần đây lại thấy đại chúng lạy ba lạy, còn Trụ trì thì quì truớc lư hương, giống như các ngày thánh tiết (ngày kỷ niệm chư Phật, Bồ-tát) và lễ Phật đản.
-Không biết nghi thức này căn cứ vào đâu? Thông thường khi đại chúng lễ bái và trụ trì quì trước lư hương để xướng sớ là vào các dịp lễ chúc thánh thọ, báo ân Phật, nhằm làm cho buổi lễ trang nghiêm, biểu thị sự kính trọng đặc biệt.
-Còn pháp hội Lăng nghiêm là nhằm cầu an, kỳ phứơc nên nghi lễ này có thể giảm đi, không nhất thiết phải theo xưa mới được. Khi duy-na bạch Phật tuyên sớ xong, Lăng nghiêm đầu xướng tụng Lăng nghiêm từ bài tựa đầu trở đi, đại chúng tụng theo.
-Lúc hết bài tựa lại bắt tiếp phần chú bằng âm tiếng Phạn, đại chúng cũng tụng theo, cho đến hết phần chú thì tụng Bát-nhã tâm kinh, và cuối cùng Duy-na hồi hướng rằng: “Nguyện đem công đức tụng kinh từ trước đến nay hồi hướng cho chân như thật tế trang nghiêm, Phật quả Bồ-đề vô thuợng, bốn ân đều báo đáp, ba cõi thảy huân triêm, hữu tình khắp pháp giới đều thành tựu trí tuệ.
+Khi dứt tiếng bản, lại đến đánh bản ở liêu Phương trượng.
+Khi ấy Trụ trì rời khỏi phòng, thị giả lại đánh bản lớn treo trước khố đường ba tiếng, rồi đánh chuông lớn, chuông ở Tăng đường và chuông trong chánh điện.
+Trụ trì đến trước điện Phật đốt hương, dâng cúng trà nước, trở về vị trí.
+Lúc này thị giả đánh chập chõa, Duy-na rời khỏi hàng, đến vái chào Trụ trì, Lưỡng tự, rồi đốt hương bạch Phật, tuyên sớ (theo Thanh qui cũ thì lúc này đại chúng không lễ bái, nhưng thời gian gần đây lại thấy đại chúng lạy ba lạy, còn Trụ trì thì quì trước lư hương, giống như các ngày thánh tiết (ngày kỷ niệm chư Phật, Bồ-tát) và lễ Phật đản.
+Không biết nghi thức này căn cứ vào đâu?
+Thông thường khi đại chúng lễ bái và trụ trì quì trước lư hương để xướng sớ là vào các dịp lễ chúc thánh thọ, báo ân Phật, nhằm làm cho buổi lễ trang nghiêm, biểu thị sự kính trọng đặc biệt.
+Còn pháp hội Lăng nghiêm là nhằm cầu an, kỳ phước nên nghi lễ này có thể giảm đi, không nhất thiết phải theo xưa mới được.
+Khi duy-na bạch Phật tuyên sớ xong, Lăng nghiêm đầu xướng tụng Lăng nghiêm từ bài tựa đầu trở đi, đại chúng tụng theo.
+Lúc hết bài tựa lại bắt tiếp phần chú bằng âm tiếng Phạn, đại chúng cũng tụng theo, cho đến hết phần chú thì tụng Bát-nhã tâm kinh, và cuối cùng Duy-na hồi hướng rằng: “Nguyện đem công đức tụng kinh từ trước đến nay hồi hướng cho chân như thật tế trang nghiêm, Phật quả Bồ-đề vô thượng, bốn ân đều báo đáp, ba cõi thảy huân triêm, hữu tình khắp pháp giới đều thành tựu trí tuệ.
 Nam mô Thập phương Tam thế Nhất thiết chư Phật…” Hằng ngày, sau khi dùng cháo sáng xong, nghỉ một lát, chờ cho đại chúng thay y, Thị giả Duy-na thưa với Lưỡng tự, trình lên Trụ trì, rồi đi vòng đánh các bản mỗi nơi ba tiếng.
 Nếu Trụ trì rời khỏi phòng đến tham dự, thì đánh bản lớn ba tiếng; còn nếu không ra khỏi phòng thì không đánh, mà chỉ đánh chuông ở Tăng đường hoặc ở chánh điện, nhưng không đánh chuông lớn.
-(Nếu vào các ngày thường từ 13/04 đến 12/07) khi đại chúng vân tập lên chánh điện tụng kinh thì Lăng nghiêm đầu cử tụng chú Lăng nghiêm và cử tụng kệ phổ hồi huớng, đại chúng đồng thanh tụng theo. Nhưng nếu gặp các ngày mồng một và rằm, thì có thêm phần chúc thánh thọ và việc hồi hướng do Duy-na đảm trách.
-Còn ngày 13/07 thì Lăng nghiêm đầu cũng xướng tụng chú Lăng nghiêm nhưng đến khi hồi hướng thì do Duy-na đảm trách. Kệ phổ hồi hướng:
-Thượng lai hiện tiền chúng Tỷ-kheo Phúng tụng Lăng nghiêm chú bí mật Hồi hướng hộ pháp chúng Long thiên Thổ địa Già-lam cùng các Thánh Ba đường, tám nạn lìa khổ luỵ Bốn ân, ba cõi được thấm nhuần Đất nước an ninh, chinh chiến tiêu Gió hoà, mưa thuận, dân an lạc Đại chúng cùng tu đều tiến bộ Vượt lên mười địa chẳng khó gì Sơn môn yên tịnh dứt lầm mê Đàn tín quy y thêm phước tuệ Mười phương ba đời tất cả Phật Tất cả Bồ-tát Ma-ha-tát Ma-ha Bát-nhã-ba-la-mật. Sớ văn (tuyên đọc):
-Gươm nhờ mài giũa tinh vi, mũi nhọn sắc bén; kính do lau chùi tận lực, chiếu sáng không mờ. Thế nên, các tiên Thánh hiện cơ phong bén nhạy, vì chúng sinh phá mê hoặc tế vi.
-Ma-đăng dùng chú thuật bắt A-nan; Thế Tôn sai Văn Thù đi giải cứu. Xiển dương giáo quán một đời: có giáo có quán; chỉ rõ bí mật tu chứng: không chứng, không tu. Chiếu chân kiến mà dứt trần ai, không hoa chẳng vướng; nhập thiền định nhằm chế loạn tâm, nước lặng sóng im.
+(Nếu vào các ngày thường từ 13/04 đến 12/07) khi đại chúng vân tập lên chánh điện tụng kinh thì Lăng nghiêm đầu cử tụng chú Lăng nghiêm và cử tụng kệ phổ hồi hướng, đại chúng đồng thanh tụng theo.
+Nhưng nếu gặp các ngày mồng một và rằm, thì có thêm phần chúc thánh thọ và việc hồi hướng do Duy-na đảm trách.
+Còn ngày 13/07 thì Lăng nghiêm đầu cũng xướng tụng chú Lăng nghiêm nhưng đến khi hồi hướng thì do Duy-na đảm trách.
+Kệ phổ hồi hướng:
+Thượng lai hiện tiền chúng Tỷ-kheo Phúng tụng Lăng nghiêm chú bí mật Hồi hướng hộ pháp chúng Long thiên Thổ địa Già-lam cùng các Thánh Ba đường, tám nạn lìa khổ luỵ Bốn ân, ba cõi được thấm nhuần Đất nước an ninh, chinh chiến tiêu Gió hoà, mưa thuận, dân an lạc Đại chúng cùng tu đều tiến bộ Vượt lên mười địa chẳng khó gì Sơn môn yên tịnh dứt lầm mê Đàn tín quy y thêm phước tuệ Mười phương ba đời tất cả Phật Tất cả Bồ-tát Ma-ha-tát Ma-ha Bát-nhã-ba-la-mật.
+Sớ văn (tuyên đọc): Gươm nhờ mài giũa tinh vi, mũi nhọn sắc bén; kính do lau chùi tận lực, chiếu sáng không mờ.
+Thế nên, các tiên Thánh hiện cơ phong bén nhạy, vì chúng sinh phá mê hoặc tế vi.
+Ma-đăng dùng chú thuật bắt A-nan; Thế Tôn sai Văn Thù đi giải cứu.
+Xiển dương giáo quán một đời: có giáo có quán; chỉ rõ bí mật tu chứng: không chứng, không tu.
+Chiếu chân kiến mà dứt trần ai, không hoa chẳng vướng; nhập thiền định nhằm chế loạn tâm, nước lặng sóng im.
 Đàn hậu tấn làm sao biết được; tụng Di giáo để tự răn mình.
 Phục nguyện, gom Hằng sa số kiếp làm một niệm, vĩnh viễn dài lâu; hợp quốc độ mười phương cùng sống chung, đồng thành Chánh giác.
-(Kết thúc) Mường tượng Lâm Viên còn đó: tinh xá Kỳ Hoàn; tựa hồ hải chúng nghiễm nhiên: Linh Sơn một hội. Thu đại thiên vào vi trần; hợp ba thời trong đương niệm.
+(Kết thúc) Mường tượng Lâm Viên còn đó: tinh xá Kỳ Hoàn; tựa hồ hải chúng nghiễm nhiên: Linh Sơn một hội.
+Thu đại thiên vào vi trần; hợp ba thời trong đương niệm.
 Cầu chúc giải hạ Tự tứ, không phạm, không trì; gom thâu vạn tượng giao thoa, ai phàm, ai thánh.
 Người người diệu giác, cõi cõi Tỳ-lô; thị hiện nghìn vạn ức thân, siêu việt năm mươi bảy vị.
 Dùng tay chỉ trăng, tay đâu phải trăng, tất cả đều phải bỏ; lấy không chứa không, chân không hiển hiện, không ấy cũng nên quên.
-Mong kẻ thơ ngây vâng Di giáo gắng thọ trì; khuyên người mê muội nương an cư trừ chướng ngại. Lại nguyện, xa-ma tịch tĩnh, đầy đủ pháp môn trần lao; đại dụng phát huy, đều nhập Lăng nghiêm chánh định.
-Liêu Duy-na, phòng Thị giả, chúng liêu căn cứ theo Giới lạp soạn bảng thông báo. Sau ngọ ngày mười bốn, bảng thông báo của liêu Duy-na đem bày ở gian phải trước Tăng đường; bảng thông báo của phòng Thị giả đem dán gian trái của Pháp đường; bản thông báo của liêu đại chúng đem dán trong liêu.
-Mỗi nơi đều chuẩn bị hoa hương đèn nến cúng dường. Đại chúng ai nấy đều đến thắp hương trải toạ cụ, đảnh lễ; khi lễ xong, thu hồi lại các bảng thông báo ấy.
-Việc này thực hiện vào bốn dịp lễ. Theo Thanh quy cũ, việc đãi nước được chia làm ba cấp. Cấp một gồm hai dãy, thết đãi Đông đường, Tây đường mời Thủ toạ tham dự.
+Mong kẻ thơ ngây vâng Di giáo gắng thọ trì; khuyên người mê muội nương an cư trừ chướng ngại.
+Lại nguyện, xa-ma tịch tĩnh, đầy đủ pháp môn trần lao; đại dụng phát huy, đều nhập Lăng nghiêm chánh định.
+Liêu Duy-na, phòng Thị giả, chúng liêu căn cứ theo Giới lạp soạn bảng thông báo.
+Sau ngọ ngày mười bốn, bảng thông báo của liêu Duy-na đem bày ở gian phải trước Tăng đường; bảng thông báo của phòng Thị giả đem dán gian trái của Pháp đường; bản thông báo của liêu đại chúng đem dán trong liêu.
+Mỗi nơi đều chuẩn bị hoa hương đèn nến cúng dường.
+Đại chúng ai nấy đều đến thắp hương trải toạ cụ, đảnh lễ; khi lễ xong, thu hồi lại các bảng thông báo ấy.
+Việc này thực hiện vào bốn dịp lễ.
+Theo Thanh quy cũ, việc đãi nước được chia làm ba cấp.
+Cấp một gồm hai dãy, thết đãi Đông đường, Tây đường mời Thủ toạ tham dự.
 Cấp hai chia làm bốn dãy: dãy một Đầu thủ; dãy hai Tri sự; dãy ba cần cựu của Tây tự; dãy bốn cần cựu của Đông tự, mời Tây đường tham dự.
 Cấp ba phần nhiều chia làm sáu dãy: các chức sự của bổn tự, các chức sự của các chùa khác, tuỳ theo chức vụ cao thấp mà sắp đặt chỗ ngồi.
-Nếu chức vụ tương đồng thì sắp ngồi kế nhau, mời Thủ tọa cùng tham dự. Thị ty dự bị soạn thành đồ biểu tam bộ, trình lên Trụ trì xem xong rồi quyết định.
+Nếu chức vụ tương đồng thì sắp ngồi kế nhau, mời Thủ tọa cùng tham dự.
+Thị ty dự bị soạn thành đồ biểu tam bộ, trình lên Trụ trì xem xong rồi quyết định.
 Đến ngày đã định trước, lúc xế chiều, dựa vào tên mà viết thành bản đồ chỗ ngồi.
-Sau đó chuẩn bị bàn lễ có phủ khăn, sắp đặt thành ba toà tại gian trái của tẩm đường. Thỉnh khách Thị giả đi đến các liêu Đông đường, Tây đường, Tiền đường Thủ toạ, Đô tự đảnh lễ, mời như sau: “Hoà thượng Đường đầu mời Ngài chiều nay đến tẩm đường dự bữa đãi thang thuỷ”.
+Sau đó chuẩn bị bàn lễ có phủ khăn, sắp đặt thành ba toà tại gian trái của tẩm đường.
+Thỉnh khách Thị giả đi đến các liêu Đông đường, Tây đường, Tiền đường Thủ toạ, Đô tự đảnh lễ, mời như sau: “Hoà thượng Đường đầu mời Ngài chiều nay đến tẩm đường dự bữa đãi thang thuỷ”.
 Ngoài ra, các vị khác như Đầu thủ, Biện sự, Phương trượng của những Tùng lâm khác thì do khách đầu hành giả đi đến thỉnh mời như sau: “Phương trượng Hoà thượng xin mời Ngài trước giờ ngồi Thiền chiều nay đến tẩm đường dự bữa thết đãi thang thuỷ”.
 Thế rồi, Khách đầu hành giả trang trí và sắp xếp vị trí chỗ ngồi tại tẩm đường, đốt đèn nhang xong, Khách đầu hành giả thưa với Thị giả để Thị giả trình lên Trụ trì, rồi đánh trống.
-Khi khách mời sơ toà vân tập, Thị giả chào hỏi, dẫn đến xá chào vấn an Trụ trì, rồi dựa theo bảng ghi chổ ngồi mời vào vị trí ổn định. Thị giả đốt hương và Thị giả mời khách lại chia nhau đến trước từng người được mời chào hỏi rồi mời ngồi, rồi về chổ cũ.
-Kế đến, hành giả đốt hương tiến tới trước đốt hương, rồi cùng với Thị giả mời khách chia nhau đến từng người vái chào, mời họ cắm hương; đoạn, chờ nghe bản đánh hai tiếng, bưng nước đến khắp mọi người, bèn đi rảo quanh mời khách dùng nước. Khi khách dùng nước xong, Thị giả bước tới đốt hương rồi đánh một tiếng bản, thu lại ly tách, đánh năm tiếng trống báo hiệu kết thúc bữa tiệc nước và giải tán.
-Cách hành lễ cả ba cấp đều giống nhau. Tùng lâm lấy trà thang làm nghi lễ trang trọng, nhưng gần đây do tranh nhau chỗ ngồi cao thấp mà huỷ bỏ không thực hiện nữa.
-Trụ trì nên cố gắng thi hành, và các Tôn túc ẩn cư và bậc tôn túc lão thành cũng nên cố sức khuyên bảo. Thiết nghĩ, việc này cũng nên nêu ra đây để người sau biết thể thức.
-Phàm gặp chiều hôm trước sau giờ ngọ trang trí đầy đủ các vật cúng dường tại nhà thổ địa như lư hương, đèn, đài ghế, lư bình. Hành giả Đường ty thông báo cho đại chúng biết, treo bảng thông báo về việc tụng kinh, đi rảo qua hành lang đánh bản (cũng giống như các ngày mồng tám, mười tám và hai mươi tám).
-Đại chúng vân tập, đứng hai hàng đối diện nhau như đàn nhạn bay. Trụ trì trước hết đến Tổ đường, rồi vào chánh điện thắp hương đảnh lễ ba lạy.
-Khi ấy, đánh ba tiếng bản, rồi đánh chuông lớn. Lúc Trụ trì đến, đại chúng đứng chắp tay, cúi đầu nghênh đón Trụ trì, Thị giả chỉ được vòng tay đi theo sau Trụ trì.
-Trụ trì đốt hương xong trở về vị trí của mình. Hành giả đánh chập chõa, Duy-na bước ra khỏi hàng thắp hương, rồi bắt đầu tụng kinh, cuối cùng hồi hướng (xem ở sau). Tụng niệm hồi hướng vào bốn ngày lễ trong năm:
+Khi khách mời sơ toà vân tập, Thị giả chào hỏi, dẫn đến xá chào vấn an Trụ trì, rồi dựa theo bảng ghi chỗ ngồi mời vào vị trí ổn định.
+Thị giả đốt hương và Thị giả mời khách lại chia nhau đến trước từng người được mời chào hỏi rồi mời ngồi, rồi về chỗ cũ.
+Kế đến, hành giả đốt hương tiến tới trước đốt hương, rồi cùng với Thị giả mời khách chia nhau đến từng người vái chào, mời họ cắm hương; đoạn, chờ nghe bản đánh hai tiếng, bưng nước đến khắp mọi người, bèn đi rảo quanh mời khách dùng nước.
+Khi khách dùng nước xong, Thị giả bước tới đốt hương rồi đánh một tiếng bản, thu lại ly tách, đánh năm tiếng trống báo hiệu kết thúc bữa tiệc nước và giải tán.
+Cách hành lễ cả ba cấp đều giống nhau.
+Tùng lâm lấy trà thang làm nghi lễ trang trọng, nhưng gần đây do tranh nhau chỗ ngồi cao thấp mà huỷ bỏ không thực hiện nữa.
+Trụ trì nên cố gắng thi hành, và các Tôn túc ẩn cư và bậc tôn túc lão thành cũng nên cố sức khuyên bảo.
+Thiết nghĩ, việc này cũng nên nêu ra đây để người sau biết thể thức.
+Phàm gặp chiều hôm trước sau giờ ngọ trang trí đầy đủ các vật cúng dường tại nhà thổ địa như lư hương, đèn, đài ghế, lư bình.
+Hành giả Đường ty thông báo cho đại chúng biết, treo bảng thông báo về việc tụng kinh, đi rảo qua hành lang đánh bản (cũng giống như các ngày mồng tám, mười tám và hai mươi tám).
+Đại chúng vân tập, đứng hai hàng đối diện nhau như đàn nhạn bay.
+Trụ trì trước hết đến Tổ đường, rồi vào chánh điện thắp hương đảnh lễ ba lạy.
+Khi ấy, đánh ba tiếng bản, rồi đánh chuông lớn.
+Lúc Trụ trì đến, đại chúng đứng chắp tay, cúi đầu nghênh đón Trụ trì, Thị giả chỉ được vòng tay đi theo sau Trụ trì.
+Trụ trì đốt hương xong trở về vị trí của mình.
+Hành giả đánh chập chõa, Duy-na bước ra khỏi hàng thắp hương, rồi bắt đầu tụng kinh, cuối cùng hồi hướng (xem ở sau).
+Tụng niệm hồi hướng vào bốn ngày lễ trong năm:
 Thiết nghĩ: Gió xuân lan toả khắp nơi, Viêm đế tuần du mọi chỗ Chính là lúc Đấng pháp vương cấm túc, Cũng là ngày đệ tử Phật hộ sinh Ngưỡng mong đại chúng, cùng đến đài thiêng Tụng trì hồng danh muôn đức Hồi hướng khắp cả tôn thần Cầu xin gia hộ được sống bình an Ngưỡng mong đại chúng niệm tụng v.v...
 Thiết nghĩ: Gió thu thổi khắp chốn, Bạch đế đang tuần du Chính là lúc đức Thế Tôn giải chế Cũng là ngày mà tuổi pháp viên thành Chín tuần không tai nạn, cả chúng thảy an lành Tụng trì vạn đức hồng danh Báo đáp tôn thần khắp chốn Ngưỡng mong đại chúng niệm tụng v.v...
-Thiết nghĩ: Thời điểm lúc cuối năm, Tiết đến hồi mây phủ. Chính là lúc tiết Nhất dương trở lại, Nhằm thời kỳ mà muôn vật nảy sinh.
+Thiết nghĩ: Thời điểm lúc cuối năm, Tiết đến hồi mây phủ.
+Chính là lúc tiết Nhất dương trở lại, Nhằm thời kỳ mà muôn vật nảy sinh.
 Cầu xin đại chúng, Cùng đến đài thiêng.
-Tụng trì vạn đức hồng danh, Hồi hướng tôn thần khắp chốn. Ngưỡng mong đại chúng niệm tụng v.v...
-Thiết nghĩ: Tạo hoá âm thầm vận chuyển, Năm tháng vần xoay giáp vòng. Cả bốn mùa vui vẻ bình an, Tiết Tam dương khởi sinh tốt đẹp.
+Tụng trì vạn đức hồng danh, Hồi hướng tôn thần khắp chốn.
+Ngưỡng mong đại chúng niệm tụng v.v...
+Thiết nghĩ: Tạo hoá âm thầm vận chuyển, Năm tháng vần xoay giáp vòng.
+Cả bốn mùa vui vẻ bình an, Tiết Tam dương khởi sinh tốt đẹp.
 Ngưỡng mong đại chúng, cùng đến đài thiêng.
 Tụng trì hồng danh muôn đức Hồi hướng khắp cả tôn thần Cầu mong đại chúng niệm tụng v.v... Nguyện đem công đức tụng niệm từ trước đến nay hồi hướng cho sơn môn thổ địa, liệt vị hộ pháp Già-lam và các vị tôn thần khắp chốn.
-Ngưỡng mong: Chư thần gia bị, phát huy lợi ích lớn lao; phạm vũ hưng long, vĩnh viễn hanh thông tốt đẹp. Lại xin chư Tôn đức niệm Thập phương tam thế nhất thiết chư Phật v.v... (bốn ngày lễ trong năm đều tụng niệm giống nhau).
+Ngưỡng mong: Chư thần gia bị, phát huy lợi ích lớn lao; phạm vũ hưng long, vĩnh viễn hanh thông tốt đẹp.
+Lại xin chư Tôn đức niệm Thập phương tam thế nhất thiết chư Phật v.v... (bốn ngày lễ trong năm đều tụng niệm giống nhau).
 Khi tăng chúng tụng niệm xong cùng nhau đến tăng đường cử hành lễ.
 Khi thọ trai kết thúc, Đô tự chuẩn bị soạn bảng thông báo về việc đãi thang thuỷ (mẫu bảng thông báo xem ở sau), lệnh cho hành giả Khách đầu chuẩn bị khay lễ có phủ khăn vải, trên đặt lư hương và đèn, bưng đến trước Thủ toạ tiền đường, đốt hương, bày toạ cụ và đắp tứ y rồi đảnh lễ một lạy, thưa rằng: “Kính mời Thượng toạ chiều nay đến vân đường dùng thang thuỷ cùng Thủ toạ và đại chúng.
-Mong Ngài từ bi quang lâm tham dự”, rồi trình nạp bảng thông báo cho Thủ toạ xem. Kế đến, Đô tự lệnh cho trà đầu của liêu mình giao bảng thông báo đó cho cung đầu đem dán gian bên trái trước tăng đường.
-Người Tri khách liêu Khố ty tuỳ nghi đi nhắc nhở khách mời rằng: “Kính mời các Tôn túc sau khi tiệc thang thuỷ kết thúc, xin về trai đường dùng cơm chiều luôn. ” Đô tự bưng lư hương đến Phương trượng, lễ một lạy, mời: “Kính mời Hoà thượng chiều nay đến vân đường dự tiệc thang thuỷ cùng Thủ toạ và đại chúng. Ngưỡng mong Hoà thượng từ bi quang lâm cho được long trọng”, rồi bảo khách đầu đi mời các vị cần cựu ở mông đường và các liêu, đồng thời đem bảng thông báo treo ở các nơi.
+Mong Ngài từ bi quang lâm tham dự”, rồi trình nạp bảng thông báo cho Thủ toạ xem.
+Kế đến, Đô tự lệnh cho trà đầu của liêu mình giao bảng thông báo đó cho cung đầu đem dán gian bên trái trước tăng đường.
+Người Tri khách liêu Khố ty tuỳ nghi đi nhắc nhở khách mời rằng: “Kính mời các Tôn túc sau khi tiệc thang thuỷ kết thúc, xin về trai đường dùng cơm chiều luôn.”
+Đô tự bưng lư hương đến Phương trượng, lễ một lạy, mời: “Kính mời Hoà thượng chiều nay đến vân đường dự tiệc thang thuỷ cùng Thủ toạ và đại chúng.
+Ngưỡng mong Hoà thượng từ bi quang lâm cho được long trọng”, rồi bảo khách đầu đi mời các vị cần cựu ở mông đường và các liêu, đồng thời đem bảng thông báo treo ở các nơi.
 Sau khi đi mời từng người xong, căn cứ theo mô hình đã soạn, sắp đặt chỗ ngồi của Thủ toạ đối diện với Trụ trì, còn chỗ ngồi của đại chúng ở hai dãy bàn hai bên, đồng thời sai hành giả ứng trực để tiếp đón.
 Sau khi chấm dứt tụng kinh, Hành giả đánh một hồi trống báo hiệu việc dùng cơm chiều, đại chúng ai nấy đều tề tựu vào chỗ thọ trai, các đầu thủ nhất loạt vào dãy bàn đầu.
-Đô tự cùng đi vào vái chào Thủ toạ, Thủ toạ đứng dậy vái chào lại. Kế đến, đầu thủ tiến lên đưa Thủ toạ về lại vị trí của ngài, rồi từ bên phải nhà Tổ ra ngoài nghênh đón Trụ trì vào vân đường.
+Đô tự cùng đi vào vái chào Thủ toạ, Thủ toạ đứng dậy vái chào lại.
+Kế đến, đầu thủ tiến lên đưa Thủ toạ về lại vị trí của ngài, rồi từ bên phải nhà Tổ ra ngoài nghênh đón Trụ trì vào vân đường.
 Bấy giờ, cung đầu đánh chầm chậm bảy tiếng chuông trước vân đường, tiễn Trụ trì vào vị trí của ngài, rồi đến trước Thủ toạ vái chào mời Thủ toạ ngồi.
 Thế rồi, bắt đầu từ đó đi tuần hành các gian hai bên phải trái vân đường một vòng, đoạn trở vô giữa vân đường vái chào mời đại chúng an toạ, lại tới trước bàn thờ đốt hương, và đốt hương ở các dãy hai bên, đem hộp hương cất lại chỗ cũ.
 Khi ấy, thị giả lại đến vái chào các vị khách mời, rồi quay sang bên phải vái chào Trụ trì cùng vái chào đại chúng khắp một vòng cả trong và ngoài pháp đường, rồi trở vô giữa pháp đường đứng bên cạnh Trụ trì.
 Giờ đây, thị giả đánh hai tiếng chuông trước vân đường, trước hết người hầu trà đi rót thang thuỷ cho các khách mời cùng Trụ trì, rồi rót khắp đại chúng.
 Đô tự đứng lên vái chào các thực khách rồi đến trước bàn tổ đảnh lễ ba lạy, đi tuần rảo trong ngoài vân đường một vòng; khi đi tuần xong, Đô tự bèn dẫn tất cả mọi người đến trước Trụ trì trải toạ cụ đảnh lễ, trước hết thưa rằng: “Hôm nay chùa có tổ chức một bữa tiệc nước đạm bạc, Hoà thượng đã rủ lòng từ bi quang lâm tham dự cho tăng phần trang trọng, khiến cho mọi người vô cùng cảm kích” lại dập toạ cụ lạy một lạy, thưa tiếp: “Bữa nay gặp ngày lành tháng tốt, kính chúc Đường đầu Hoà thượng pháp thể khang an, miên trường phúc thọ”.
-Cuối cùng mọi người đảnh lễ Hoà thượng ba lạy rồi thoái lui qua ngả sau bàn tổ, lại quay sang trước vân đường đứng sắp hàng. Lúc này, Thủ toạ bước ra đứng đối diện với Đô tự lạy một lạy cảm tạ về việc đã mời mình dự bữa tiệc thang thuỷ rồi từ gian bên phải trở vào ngồi vị trí của mình.
-Bấy giờ Đô tự lại đến trước bàn thờ thắp hương (báo hiệu sắp đến giờ thọ trai buổi chiều) để kết thúc bữa tiệc. Tiếp theo, mọi người đi đến trai đường, Thị giả Duy-na tuyên bố: “Kính xin đại chúng dọn bát ra”.
-Hành giả đến hầu Trụ trì và các thực khách tại bàn ăn. Lúc này đại chúng đều mở bát ra (nhưng đầu thủ thì không mở, nên Khố ty phải chuẩn bị chén bát khác để dọn thức ăn).
-Khi buổi thọ trai chấm dứt, Thị giả đánh ba tiếng trống, mọi người rời khỏi bàn ăn. Bấy giờ Hoà thượng Trụ trì soạn bảng thông báo yêu cầu mọi người không đến Phương trượng làm lễ như sau: “Vào ngày lễ hôm khác, xin mọi người hãy vân tập tại pháp đường đông đủ để hành lễ mà khỏi đến Phương trượng, kính xin đại chúng lưu ý. Người ở núi này (Trụ trì) là mỗ xin thông báo”, rồi sai hành giả đem dán bên phải tăng đường.
-Chiều hôm ấy không đánh chuông báo hiệu nghỉ việc tham thiền (vì mọi người đều bận tham dự buổi tiệc thang thuỷ do Khố ty thết đãi). Các khách mời ở xa theo thông báo của Trụ trì (không đến phương trượng lễ tạ), mà đi bái kiến tập thể những nơi cần bái kiến. Cả bốn ngày lễ lớn trong năm đều tổ chức giống nhau, chỉ khác là ngày lễ mùa đông, sau khi dùng thang thuỷ xong, ăn trái cây, rồi mới dùng bữa chiều.
+Cuối cùng mọi người đảnh lễ Hoà thượng ba lạy rồi thoái lui qua ngả sau bàn tổ, lại quay sang trước vân đường đứng sắp hàng.
+Lúc này, Thủ toạ bước ra đứng đối diện với Đô tự lạy một lạy cảm tạ về việc đã mời mình dự bữa tiệc thang thuỷ rồi từ gian bên phải trở vào ngồi vị trí của mình.
+Bấy giờ Đô tự lại đến trước bàn thờ thắp hương (báo hiệu sắp đến giờ thọ trai buổi chiều) để kết thúc bữa tiệc.
+Tiếp theo, mọi người đi đến trai đường, Thị giả Duy-na tuyên bố: “Kính xin đại chúng dọn bát ra”. Hành giả đến hầu Trụ trì và các thực khách tại bàn ăn.
+Lúc này đại chúng đều mở bát ra (nhưng đầu thủ thì không mở, nên Khố ty phải chuẩn bị chén bát khác để dọn thức ăn). Khi buổi thọ trai chấm dứt, Thị giả đánh ba tiếng trống, mọi người rời khỏi bàn ăn.
+Bấy giờ Hoà thượng Trụ trì soạn bảng thông báo yêu cầu mọi người không đến Phương trượng làm lễ như sau: “Vào ngày lễ hôm khác, xin mọi người hãy vân tập tại pháp đường đông đủ để hành lễ mà khỏi đến Phương trượng, kính xin đại chúng lưu ý. Người ở núi này (Trụ trì) là mỗ xin thông báo”, rồi sai hành giả đem dán bên phải tăng đường.
+Chiều hôm ấy không đánh chuông báo hiệu nghỉ việc tham thiền (vì mọi người đều bận tham dự buổi tiệc thang thuỷ do Khố ty thết đãi). Các khách mời ở xa theo thông báo của Trụ trì (không đến phương trượng lễ tạ), mà đi bái kiến tập thể những nơi cần bái kiến.
+Cả bốn ngày lễ lớn trong năm đều tổ chức giống nhau, chỉ khác là ngày lễ mùa đông, sau khi dùng thang thuỷ xong, ăn trái cây, rồi mới dùng bữa chiều.
 Bảng thông báo mời thết đãi thang thuỷ:
-Chiều hôm nay Khố ty có tổ chức bữa tiệc thang thuỷ thô sơ tại tẩm đường, kính mời Thủ toạ cùng đại chúng đến tham dự cho đúng với nghi thức buổi lễ. Ngưỡng mong đại chúng từ bi, cùng quang lâm tham dự.
-Hôm nay là ngày. .. tháng … Khố ty Tỷ-kheo mỗ kính bạch.
-Vào lúc canh năm ngày đã định trước, hương khúc, pháp quyến, tiểu sư đều phải đến liêu Phương trượng thắp hương đảnh lễ. Nhưng nếu thấy trước tăng đường có treo bảng thông báo miễn việc đảnh lễ thì khỏi đến.
-Khi ấy, thị giả thưa với Phương trượng lệnh cho hành giả thông báo với đại chúng, và treo bảng thông báo về việc thượng đường. Khi dùng cháo sáng xong, Trụ trì thuyết pháp cho đại chúng kết thúc, liền trình bày tường tận nghi lễ từ đầu đến cuối như sau: “Các hạ tọa trước hết đảnh lễ nhân sự Tây đường một lạy, kế đến đảnh lễ nhân sự Tri sự ba lạy, tiếp theo, đảnh lễ Thủ tọa đại chúng ba lạy.
-Thế rồi, trước hết Tri sự trở về Khố ty, Thủ tọa hướng dẫn đại chúng đến Khố ty đảnh lễ các chức sự Khố ty ba lạy, rồi Thủ tọa trở về gian trên tăng đường an vị. Hậu đường hướng dẫn đại chúng trở về gian dưới của tăng đường đảnh lễ nhân sự của Thủ tọa ba lạy, rồi đứng theo vị trí của mô hình tụng niệm.
-Thủ tọa hướng dẫn tăng chúng đi tuần hành rồi đứng vào vị trí của mình tại tăng đường. Tiếp đến, Thủ tọa rời vị trí đến bàn Tổ thắp hương đảnh lễ ba lạy, đi tuần hành một vòng, rồi trở về vị trí của mình.
-Bấy giờ, hành giả tuyên bố: “Thủ tọa lễ tạ đại chúng ba lạy”. Tiếp theo, Tri sự vào tăng đường thắp hương, đảnh lễ ba lạy, đi tuần hành một vòng, rồi đến đứng vào đầu bản tại bàn Tổ. Khi ấy, hành giả lại tuyên bố: “Tri sự đảnh lễ đại chúng, đại chúng đáp lại ba lạy, Tri sự đứng nguyên tại chỗ”.
-Khi ấy, Trụ trì đi vào tăng đường thắp hương, đảnh lễ ba lạy, tuần hành một vòng, rồi đứng vào vị trí của mình. Hành giả lại hô lớn: “Đường đầu Hòa thượng cùng với đại chúng đồng loạt đảnh lễ ba lạy”, lại nói tiếp: “Đại chúng phổ đồng đảnh lễ ba lạy, rồi theo thứ tự đi tuần hành qua các liêu”.
-Bấy giờ các hành giả hạ tọa liền đem lư hương, đài ghế lư bình đến đặt trên bàn, rồi đứng xếp hàng thành chữ nhất. Khi họ sắp hàng xong, Tây đường tiến lên sắp xếp công việc cho mọi người.
+Chiều hôm nay Khố ty có tổ chức bữa tiệc thang thuỷ thô sơ tại tẩm đường, kính mời Thủ toạ cùng đại chúng đến tham dự cho đúng với nghi thức buổi lễ.
+Ngưỡng mong đại chúng từ bi, cùng quang lâm tham dự.
+Hôm nay là ngày ...
+tháng … Khố ty Tỷ-kheo mỗ kính bạch.
+Vào lúc canh năm ngày đã định trước, Lưỡng tự, các cần cựu lớn nhỏ, giang hồ, biện sự, hương khúc, pháp quyến, tiểu sư đều phải đến liêu Phương trượng thắp hương đảnh lễ.
+Nhưng nếu thấy trước tăng đường có treo bảng thông báo miễn việc đảnh lễ thì khỏi đến.
+Khi ấy, thị giả thưa với Phương trượng lệnh cho hành giả thông báo với đại chúng, và treo bảng thông báo về việc thượng đường.
+Khi dùng cháo sáng xong, Trụ trì thuyết pháp cho đại chúng kết thúc, liền trình bày tường tận nghi lễ từ đầu đến cuối như sau: “Các hạ tọa trước hết đảnh lễ nhân sự Tây đường một lạy, kế đến đảnh lễ nhân sự Tri sự ba lạy, tiếp theo, đảnh lễ Thủ tọa đại chúng ba lạy.
+Thế rồi, trước hết Tri sự trở về Khố ty, Thủ tọa hướng dẫn đại chúng đến Khố ty đảnh lễ các chức sự Khố ty ba lạy, rồi Thủ tọa trở về gian trên tăng đường an vị.
+Hậu đường hướng dẫn đại chúng trở về gian dưới của tăng đường đảnh lễ nhân sự của Thủ tọa ba lạy, rồi đứng theo vị trí của mô hình tụng niệm.
+Thủ tọa hướng dẫn tăng chúng đi tuần hành rồi đứng vào vị trí của mình tại tăng đường.
+Tiếp đến, Thủ tọa rời vị trí đến bàn Tổ thắp hương đảnh lễ ba lạy, đi tuần hành một vòng, rồi trở về vị trí của mình.
+Bấy giờ, hành giả tuyên bố: “Thủ tọa lễ tạ đại chúng ba lạy”.
+Tiếp theo, Tri sự vào tăng đường thắp hương, đảnh lễ ba lạy, đi tuần hành một vòng, rồi đến đứng vào đầu bản tại bàn Tổ.
+Khi ấy, hành giả lại tuyên bố: “Tri sự đảnh lễ đại chúng, đại chúng đáp lại ba lạy, Tri sự đứng nguyên tại chỗ”.
+Khi ấy, Trụ trì đi vào tăng đường thắp hương, đảnh lễ ba lạy, tuần hành một vòng, rồi đứng vào vị trí của mình.
+Hành giả lại hô lớn: “Đường đầu Hòa thượng cùng với đại chúng đồng loạt đảnh lễ ba lạy”, lại nói tiếp: “Đại chúng phổ đồng đảnh lễ ba lạy, rồi theo thứ tự đi tuần hành qua các liêu”.
+Bấy giờ các hành giả hạ tọa liền đem lư hương, đài ghế lư bình đến đặt trên bàn, rồi đứng xếp hàng thành chữ nhất.
+Khi họ sắp hàng xong, Tây đường tiến lên sắp xếp công việc cho mọi người.
 Tiếp theo, Tri sự tiến đến thắp hương, trước hết trải tọa cụ quì bạch rằng: “Lúc bắt đầu an cư nhận được cái thứ khăn, bình; ngưỡng cầu pháp lực hộ trì, không gặp những việc khó khăn”, lại bạch tiếp: “Hôm nay vào dịp mạnh hạ, gặp thời điểm tốt lành, ngưỡng mong Hòa thượng Đường đầu pháp thể khang an, phúc đức tăng trưởng”.
-Bạch xong, lùi lại lạy ba lạy, và Trụ trì đáp lại một lạy. Kế đến, Thủ tọa hướng dẫn tăng chúng vào thắp hương, Cần cựu các liêu đi theo sau lần lượt thắp hương, còn việc đảnh lễ và tác bạch thì giống như Tri sự đã làm ở trước.
+Bạch xong, lùi lại lạy ba lạy, và Trụ trì đáp lại một lạy.
+Kế đến, Thủ tọa hướng dẫn tăng chúng vào thắp hương, Cần cựu các liêu đi theo sau lần lượt thắp hương, còn việc đảnh lễ và tác bạch thì giống như Tri sự đã làm ở trước.
 Sau khi đại chúng đã rời khỏi tăng đường, Trụ trì vào pháp tòa ngồi, Thị giả, tiểu sư đến trước Trụ trì thắp hương, đảnh lễ; kế đến, tham đầu hướng dẫn các hành giả đến thắp hương đảnh lễ; tiếp theo người điều khiển các nhân viên tập sự hướng dẫn những người già cả, người coi sóc các phòng, phu khiêng kiệu và các người giúp việc đến tham bái.
-Bấy giờ Thủ tọa suất lãnh tăng chúng đến Khố ty đảnh lễ ba lạy. Hậu đường Thủ tọa hướng dẫn chúng trở về lại gian dưới trước tăng đường đứng vào vị trí, và Thủ tọa Tiền đường đứng ở gian trên.
-Lúc ấy, hành giả của Đường ty tuyên bố: “Đại chúng cùng với Thủ tọa nhân sự đứng đối diện đảnh lễ nhau ba lạy, rồi y theo đồ biểu tụng niệm mà đứng”. Thế rồi, Thủ tọa suất lãnh tăng chúng đi tuần hành, rồi trở vô pháp đường đứng vào vị trí của mình.
-Thị giả và những người mới đến tạm trú tại chùa đi tuần nửa vòng, rồi các thị giả ra đứng phía sau bàn Tổ, và những người tạm trú theo cách thức thị giả mà đứng. Khi ấy, Thủ tọa rời vị trí đến trước bàn Tổ thắp hương, đảnh lễ ba lạy, đi tuần hành một vòng rồi trở về vị trí, nói lớn: “Thủ tọa xin lễ tạ đại chúng”, và đảnh lễ đại chúng ba lạy.
-Khi Thủ tọa lễ xong, Tri sự bước vào đốt hương, đảnh lễ, đi tuần hành, rồi đến đứng vào vị trí đầu bản tại bàn Tổ, nói: “Tri sự xin lễ tạ đại chúng”, rồi đảnh lễ đại chúng ba lạy. Lạy xong, vẫn đứng nguyên tại chỗ.
+Bấy giờ Thủ tọa suất lãnh tăng chúng đến Khố ty đảnh lễ ba lạy.
+Hậu đường Thủ tọa hướng dẫn chúng trở về lại gian dưới trước tăng đường đứng vào vị trí, và Thủ tọa Tiền đường đứng ở gian trên.
+Lúc ấy, hành giả của Đường ty tuyên bố: “Đại chúng cùng với Thủ tọa nhân sự đứng đối diện đảnh lễ nhau ba lạy, rồi y theo đồ biểu tụng niệm mà đứng”.
+Thế rồi, Thủ tọa suất lãnh tăng chúng đi tuần hành, rồi trở vô pháp đường đứng vào vị trí của mình.
+Thị giả và những người mới đến tạm trú tại chùa đi tuần nửa vòng, rồi các thị giả ra đứng phía sau bàn Tổ, và những người tạm trú theo cách thức thị giả mà đứng.
+Khi ấy, Thủ tọa rời vị trí đến trước bàn Tổ thắp hương, đảnh lễ ba lạy, đi tuần hành một vòng rồi trở về vị trí, nói lớn: “Thủ tọa xin lễ tạ đại chúng”, và đảnh lễ đại chúng ba lạy.
+Khi Thủ tọa lễ xong, Tri sự bước vào đốt hương, đảnh lễ, đi tuần hành, rồi đến đứng vào vị trí đầu bản tại bàn Tổ, nói: “Tri sự xin lễ tạ đại chúng”, rồi đảnh lễ đại chúng ba lạy.
+Lạy xong, vẫn đứng nguyên tại chỗ.
 Tiếp theo, Trụ trì vào tăng đường đốt hương, đảnh lễ, đi tuần hành, rồi đứng vào vị trí của mình (lúc này các tiểu sư đệ tử của Trụ trì tất cả đều phải lánh ra ngoài bằng lối cửa sau, chờ cho lễ xong, trở lại vị trí của mình uống trà).
-Lúc này, hành giả tuyên bố:“Hòa thượng đường đầu cùng đại chúng đảnh lễ nhau ba lạy. ” Lễ xong, lại nói: “Tất cả đại chúng cùng đảnh lễ nhau ba lạy” (Thanh quy cũ chép rằng: nếu Tri sự rời khỏi tăng đường, Trụ trì mới vào, thì khi Tri sự đảnh lễ Trụ trì không thể trả lễ. Mà nguyên tắc lễ nghi thì không thể không đáp lễ.
-Thời gian gần đây, Hòa thượng Hy Tẩu và Hòa thượng Nhất Sơn đều hành lễ như đã nêu trên, và các bậc thức giả đều cho đó là đúng). Lúc này, Tri sự rời khỏi tăng đường, thị giả, các người tạm trú cũng theo chân Tri sự ra khỏi tăng đường. Thế rồi, đại chúng vân tập trở lại tại tăng đường, vào ngồi vị trí của mình.
-Thị giả bèn vào giữa tăng đường, vái chào mời mọi người ngồi, rồi đến các lư hương trong và ngoài tăng đường thắp hương, thắp xong, đem hộp hương cất lại chỗ cũ. Thế rồi bước vào giữa tăng đường vái chào mọi người, đồng thời ra các gian hai bên chào hỏi tất cả.
-Chào hỏi xong, trở vô đứng giữa tăng đường. Bấy giờ, Thị giả đánh hai tiếng chuông, những người hầu trà bưng trà đến khắp mọi chỗ, rồi đem bình trà ra ngoài, lại trở vô vái chào mọi người như trước, rồi đứng vào giữa tăng đường.
-Lúc này hành giả đánh một tiếng chuông báo hiệu việc thu dọn các ly tách, rồi đánh tiếp ba tiếng báo hiệu tiệc trà kết thúc, đại chúng ai nấy rời khỏi tăng đường. Lúc này Trụ trì lần lượt đi tuần tra các liêu.
-Các liêu phải nghiêm chỉnh thiết lập bàn hương, ghế ngồi trước cửa phòng để nghinh đón Trụ trì. Trụ trì bắt đầu từ liêu thứ nhất ở dãy nhà phía đông tuần hành qua các liêu.
-Mỗi khi Trụ trì đến trước bàn hương của liêu phòng nào thì liêu chủ cùng tăng chúng liêu ấy thắp hương chúc tụng: “Hôm nay nhân ngày lễ, đáng lẽ chúng con phải đảnh lễ Hòa thượng, trái lại, Hòa thượng đã ban cho ân huệ, thân hành đến thăm”, rồi cắm hương nói tiếp: “Vừa rồi đã phiền Hòa thượng ghé thăm, chúng con xin hết lòng cảm tạ”, đoạn tiễn đưa Trụ trì đi vài bước. Thế rồi, liêu chủ lại trở về đứng bên phải bàn hương, chắp tay vái chào khi đại chúng đi qua.
-Đợi cho đại chúng qua hết, liêu chủ liền đi theo sau cùng, lần lượt tuần hành. Những người ở các liêu khác nối đuôi theo sau tiến vào pháp đường.
+Lúc này, hành giả tuyên bố:“Hòa thượng đường đầu cùng đại chúng đảnh lễ nhau ba lạy.”
+Lễ xong, lại nói: “Tất cả đại chúng cùng đảnh lễ nhau ba lạy” (Thanh quy cũ chép rằng: nếu Tri sự rời khỏi tăng đường, Trụ trì mới vào, thì khi Tri sự đảnh lễ Trụ trì không thể trả lễ.
+Mà nguyên tắc lễ nghi thì không thể không đáp lễ.
+Thời gian gần đây, Hòa thượng Hy Tẩu và Hòa thượng Nhất Sơn đều hành lễ như đã nêu trên, và các bậc thức giả đều cho đó là đúng).
+Lúc này, Tri sự rời khỏi tăng đường, thị giả, các người tạm trú cũng theo chân Tri sự ra khỏi tăng đường.
+Thế rồi, đại chúng vân tập trở lại tại tăng đường, vào ngồi vị trí của mình.
+Thị giả bèn vào giữa tăng đường, vái chào mời mọi người ngồi, rồi đến các lư hương trong và ngoài tăng đường thắp hương, thắp xong, đem hộp hương cất lại chỗ cũ.
+Thế rồi bước vào giữa tăng đường vái chào mọi người, đồng thời ra các gian hai bên chào hỏi tất cả.
+Chào hỏi xong, trở vô đứng giữa tăng đường.
+Bấy giờ, Thị giả đánh hai tiếng chuông, những người hầu trà bưng trà đến khắp mọi chỗ, rồi đem bình trà ra ngoài, lại trở vô vái chào mọi người như trước, rồi đứng vào giữa tăng đường.
+Lúc này hành giả đánh một tiếng chuông báo hiệu việc thu dọn các ly tách, rồi đánh tiếp ba tiếng báo hiệu tiệc trà kết thúc, đại chúng ai nấy rời khỏi tăng đường.
+Lúc này Trụ trì lần lượt đi tuần tra các liêu.
+Các liêu phải nghiêm chỉnh thiết lập bàn hương, ghế ngồi trước cửa phòng để nghinh đón Trụ trì.
+Trụ trì bắt đầu từ liêu thứ nhất ở dãy nhà phía đông tuần hành qua các liêu.
+Mỗi khi Trụ trì đến trước bàn hương của liêu phòng nào thì liêu chủ cùng tăng chúng liêu ấy thắp hương chúc tụng: “Hôm nay nhân ngày lễ, đáng lẽ chúng con phải đảnh lễ Hòa thượng, trái lại, Hòa thượng đã ban cho ân huệ, thân hành đến thăm”, rồi cắm hương nói tiếp: “Vừa rồi đã phiền Hòa thượng ghé thăm, chúng con xin hết lòng cảm tạ”, đoạn tiễn đưa Trụ trì đi vài bước.
+Thế rồi, liêu chủ lại trở về đứng bên phải bàn hương, chắp tay vái chào khi đại chúng đi qua.
+Đợi cho đại chúng qua hết, liêu chủ liền đi theo sau cùng, lần lượt tuần hành.
+Những người ở các liêu khác nối đuôi theo sau tiến vào pháp đường.
 Lúc ấy, Trụ trì đến đứng vào trước bàn hương, đại chúng cứ từng nhóm ba người đến vái chào Trụ trì, rồi tuần tự kinh hành về lại liêu mình, theo thứ tự đứng chắp tay trước bàn hương.
-Khi mọi người đã tuần hành giáp vòng thì giải tán. Bốn ngày lễ trong năm đều thực hiện giống nhau.
+Khi mọi người đã tuần hành giáp vòng thì giải tán.
+Bốn ngày lễ trong năm đều thực hiện giống nhau.
 Khi tiểu tham Trụ trì nói với đại chúng như sau: “Sáng mai, sau khi kết thúc bữa thọ trai, cảm phiền Đô tự, Duy-na và Thị giả mang bài hiệu về việc bỉnh phất đến các liêu Thủ tọa bái thỉnh rằng: “Kỉnh thỉnh Thủ tọa chiều mai lên tòa thuyết pháp cho đại chúng”.
-Đến ngày hôm ấy, sau khi thọ trai xong, Thị giả thiêu hương lệnh cho hành giả khách đầu mang tích trượng, bài phất, có cả người bưng theo khay lễ có trải khăn đặt lư hương và đèn, hẹn với Đô tử, Duy-na cùng đến các liêu Đầu thủ, đốt hương đảnh lễ một lạy, bẩm bạch rằng: “Hòa thượng Trụ trì có từ chỉ dạy chúng con đem bài phất đặc biệt tới đây cung thỉnh Tôn đức chiều nay lên tòa thuyết pháp cho đại chúng”. Sau khi đã đi mời từng người xong, Thủ tọa hẹn với các Đầu thủ đã được mời dẫn theo hành giả cầm bài phất và tích trượng đến liêu Phương trượng bẩm bạch từ chối về việc mình đã được mời.
-Khi ấy, Trụ trì phải hết sức khuyên bảo những vị ấy cố gắng nhận lời, rồi tiễn đưa họ rời khỏi phòng. Thế nhưng, Thủ tọa liền quay lại bẩm bạch với Trụ trì rằng: “Mệnh lệnh của Tôn đức nghiêm minh khiến con không thể từ chối.
-Vậy, xin mượn pháp tòa để hoằng pháp, ngưỡng mong Tôn đức từ bi chiếu cố. Nhưng việc bỉnh phất xưa nay đa phần đều thiết lập một pháp tòa riêng, nay xin theo lệ ấy để người sau được biết”. Nói dứt lời, Thủ tọa quay sang chỗ Thị giả thiêu hương, mượn trống pháp đánh lên.
+Đến ngày hôm ấy, sau khi thọ trai xong, Thị giả thiêu hương lệnh cho hành giả khách đầu mang tích trượng, bài phất, có cả người bưng theo khay lễ có trải khăn đặt lư hương và đèn, hẹn với Đô tự, Duy-na cùng đến các liêu Đầu thủ, đốt hương đảnh lễ một lạy, bẩm bạch rằng: “Hòa thượng Trụ trì có từ chỉ dạy chúng con đem bài phất đặc biệt tới đây cung thỉnh Tôn đức chiều nay lên tòa thuyết pháp cho đại chúng”.
+Sau khi đã đi mời từng người xong, Thủ tọa hẹn với các Đầu thủ đã được mời dẫn theo hành giả cầm bài phất và tích trượng đến liêu Phương trượng bẩm bạch từ chối về việc mình đã được mời.
+Khi ấy, Trụ trì phải hết sức khuyên bảo những vị ấy cố gắng nhận lời, rồi tiễn đưa họ rời khỏi phòng.
+Thế nhưng, Thủ tọa liền quay lại bẩm bạch với Trụ trì rằng: “Mệnh lệnh của Tôn đức nghiêm minh khiến con không thể từ chối.
+Vậy, xin mượn pháp tòa để hoằng pháp, ngưỡng mong Tôn đức từ bi chiếu cố.
+Nhưng việc bỉnh phất xưa nay đa phần đều thiết lập một pháp tòa riêng, nay xin theo lệ ấy để người sau được biết”.
+Nói dứt lời, Thủ tọa quay sang chỗ Thị giả thiêu hương, mượn trống pháp đánh lên.
 Người có bổn phận bỉnh phất liền lệnh trà đầu hành giả mời Thị giả bàn Tổ làm thiền khách tham vấn, rồi thân hành đến bàn Tổ thắp hương dâng trà.
-Dâng trà xong, quay sang nói với Thị giả: “Chiều nay có buổi bỉnh phất, xin phiền Thị giả đốt hương làm thiền khách để thưa hỏi”, rồi lệnh cho hành giả treo thông báo bỉnh phất trước tăng đường. Sau đó, Hòa thượng Trụ trì mời ngừơi bỉnh phất dùng cơm chiều, và miễn việc đưa đón qua lại.
-Thế rồi hành giả của Đường ty bài trí pháp tòa tại tăng đường, bên trái dựng bình phong, và thiết lập vị trí của Trụ trì. Đến lúc chuông chiều đánh, hành giả thưa với người bỉnh phất, rồi bạch với Trụ trì, đánh một hồi trống tập họp đại chúng (giống như lễ tiểu tham).
-Trụ trì rời khỏi liêu đến pháp đường đứng vào vị trí của mình. Đô tự, Duy-na và Thị giả cùng đến trước người bỉnh phất vái chào vấn an.
-Thế rồi, người bỉnh phất đến chào hỏi vấn an Trụ trì, kế đến chào hỏi vấn an các Tri sự từ đầu đến cuối, tiếp theo chào hỏi vấn an các vị đồng hàng cũng từ đầu đến cuối, rồi dơ tay lên chào toàn thể đại chúng, đoạn lên pháp tòa ngồi. Khi ấy Thị giả bỉnh phất và Thị giả phương trượng bước đến trước pháp tòa vái chào, tiếp theo Lưỡng tự Tây đường tuần tự vái chào, Trụ trì vái chào.
+Dâng trà xong, quay sang nói với Thị giả: “Chiều nay có buổi bỉnh phất, xin phiền Thị giả đốt hương làm thiền khách để thưa hỏi”, rồi lệnh cho hành giả treo thông báo bỉnh phất trước tăng đường.
+Sau đó, Hòa thượng Trụ trì mời người bỉnh phất dùng cơm chiều, và miễn việc đưa đón qua lại.
+Thế rồi hành giả của Đường ty bài trí pháp tòa tại tăng đường, bên trái dựng bình phong, và thiết lập vị trí của Trụ trì.
+Đến lúc chuông chiều đánh, hành giả thưa với người bỉnh phất, rồi bạch với Trụ trì, đánh một hồi trống tập họp đại chúng (giống như lễ tiểu tham).
+Trụ trì rời khỏi liêu đến pháp đường đứng vào vị trí của mình.
+Đô tự, Duy-na và Thị giả cùng đến trước người bỉnh phất vái chào vấn an.
+Thế rồi, người bỉnh phất đến chào hỏi vấn an Trụ trì, kế đến chào hỏi vấn an các Tri sự từ đầu đến cuối, tiếp theo chào hỏi vấn an các vị đồng hàng cũng từ đầu đến cuối, rồi dơ tay lên chào toàn thể đại chúng, đoạn lên pháp tòa ngồi.
+Khi ấy Thị giả bỉnh phất và Thị giả phương trượng bước đến trước pháp tòa vái chào, tiếp theo Lưỡng tự Tây đường tuần tự vái chào, Trụ trì vái chào.
 Nhưng khi Trụ trì đến vái chào thì người bỉnh phất phải đứng dậy thể hiện sự cung kính rồi nói với Thị giả: “Thị giả hãy mời Hòa thượng đường đầu an tọa”, và Thị giả liền đến trước Trụ trì vái chào vấn an, rồi quay sang pháp tòa thắp hương, lại dơ tọa cụ lên dập xuống trí ý vấn an, rồi vòng tay đứng bên cạnh pháp tòa.
-Khi ấy người bỉnh phất nói sơ qua ý nghĩa cuộc pháp đàm, rồi nói vắn tắt đôi lời cảm tạ Phương trượng, Lưỡng tự cần cựu các liêu và đại chúng. Nói xong nêu lên công án tiểu tham của Phương trượng, hoặc niêm (nêu ra câu hỏi), hoặc tụng (lập lại một công án cũ), cứ thế diễn tiến cho đến khi kết thúc thì rời pháp tòa đến vái chào Trụ trì, rồi trở về chỗ của mình.
-Kế đến người bỉnh phất khác lại lên pháp tòa tiếp tục công việc theo nghi lễ giống như người trước. Khi cuộc pháp đàm chấm dứt, vị khách đầu của liêu Phương trựơng tuyên bố: “Kính mời chư tôn đức dùng trái cây và nước giải khát”.
+Khi ấy người bỉnh phất nói sơ qua ý nghĩa cuộc pháp đàm, rồi nói vắn tắt đôi lời cảm tạ Phương trượng, Lưỡng tự cần cựu các liêu và đại chúng.
+Nói xong nêu lên công án tiểu tham của Phương trượng, hoặc niêm (nêu ra câu hỏi), hoặc tụng (lập lại một công án cũ), cứ thế diễn tiến cho đến khi kết thúc thì rời pháp tòa đến vái chào Trụ trì, rồi trở về chỗ của mình.
+Kế đến người bỉnh phất khác lại lên pháp tòa tiếp tục công việc theo nghi lễ giống như người trước.
+Khi cuộc pháp đàm chấm dứt, vị khách đầu của liêu Phương trượng tuyên bố: “Kính mời chư tôn đức dùng trái cây và nước giải khát”.
 Buổi lễ bỉnh phất cũng như buổi lễ tiểu tham, (Sau khi xong việc) những người được mời đảm trách công việc bỉnh phất phải mang theo hương đến liêu Phương trượng cảm tạ Trụ trì (đã tín nhiệm mời mình chủ trì cuộc pháp đàm), rồi về chỗ ngồi dùng trái cây và nước giải khát.
 Ngày hôm sau, Phương trượng mời trà các vị bỉnh phất.
-Nếu như Đô tự mời thọ trai thì phải mời đãi trà luôn, và buổi trai phạn ấy, tổ chức vào lúc nửa buổi sáng. Và những người được mời tham dự chọn một ngày nào đó đến Pháp đường theo thứ lớp cảm tạ về sự khoản đãi ấy.
-Nếu như dự định đêm sau tổ chức một buổi bỉnh phất nữa thì mời lập bang Tây đường đảm trách việc ấy. Vào dịp tiểu tham, Trụ trì nên tâm sự cởi mở khích lệ đại chúng, rồi tùy nghi nêu công án hoặc niêm hoặc tụng để hỗ trợ nhau tiến tu đạo nghiệp.
-Thế nhưng, thời gian gần đây, nghi thức này trở thành hình thức rườm rà nhiêu khê, khiến người nghe thêm chán nản, làm trò cười cho giới tri thức. Vì lẽ, việc bỉnh phất là dịp pháp thí, chỉ nên theo thời thế, nghi thức, nêu đề mục tổng quát, hoặc nói vắn tắt đôi điều là đủ rồi.
-Đến ngày đã ấn định, sau khi dùng cháo xong, Thị giả thỉnh khách viết bảng thông báo về việc đãi trà (xem ở sau), chuẩn bị khay lễ có tủ khăn trên đặt lư hương, đèn cầy, đến liêu Thủ tọa thắp hương, đảnh lễ thỉnh mời: “Sáng nay, sau khi thụ trai xong, Hoà thượng đường đầu đến vân đường đãi trà, trân trọng kính mời Thủ toạ quang lâm tham dự bữa tiệc trà đặc biệt này”, rồi đệ trình bảng thông báo cho Thủ toạ xem, sau đó đem dán gian bên phải trước Tăng đường.
+Nếu như Đô tự mời thọ trai thì phải mời đãi trà luôn, và buổi trai phạn ấy, tổ chức vào lúc nửa buổi sáng.
+Và những người được mời tham dự chọn một ngày nào đó đến Pháp đường theo thứ lớp cảm tạ về sự khoản đãi ấy.
+Nếu như dự định đêm sau tổ chức một buổi bỉnh phất nữa thì mời lập ban Tây đường đảm trách việc ấy.
+Vào dịp tiểu tham, Trụ trì nên tâm sự cởi mở khích lệ đại chúng, rồi tùy nghi nêu công án hoặc niêm hoặc tụng để hỗ trợ nhau tiến tu đạo nghiệp.
+Thế nhưng, thời gian gần đây, nghi thức này trở thành hình thức rườm rà nhiêu khê, khiến người nghe thêm chán nản, làm trò cười cho giới tri thức.
+Vì lẽ, việc bỉnh phất là dịp pháp thí, chỉ nên theo thời thế, nghi thức, nêu đề mục tổng quát, hoặc nói vắn tắt đôi điều là đủ rồi.
+Đến ngày đã ấn định, sau khi dùng cháo xong, Thị giả thỉnh khách viết bảng thông báo về việc đãi trà (xem ở sau), chuẩn bị khay lễ có phủ khăn trên đặt lư hương, đèn cầy, đến liêu Thủ tọa thắp hương, đảnh lễ thỉnh mời: “Sáng nay, sau khi thụ trai xong, Hoà thượng đường đầu đến vân đường đãi trà, trân trọng kính mời Thủ toạ quang lâm tham dự bữa tiệc trà đặc biệt này”, rồi đệ trình bảng thông báo cho Thủ toạ xem, sau đó đem dán gian bên phải trước Tăng đường.
 Kế đến, khách đầu hành giả tuần tự đi mời đầu thủ các liêu và các Tri sự cùng đến tham dự, rồi đem treo bảng danh sách mời uống trà tại Tăng đường.
-Thế rồi, hành giả đánh một hồi bản dài, Thị giả thỉnh khách đi vào thắp một nén hương trước nhà Tổ, đảnh lễ ba lạy, đi tuần hành một vòng tại Tăng đường, rồi bước vào giữa phòng vái chào mọi người và thối lui. Đó gọi là tuần đường mời uống trà.
+Thế rồi, hành giả đánh một hồi bản dài, Thị giả thỉnh khách đi vào thắp một nén hương trước nhà Tổ, đảnh lễ ba lạy, đi tuần hành một vòng tại Tăng đường, rồi bước vào giữa phòng vái chào mọi người và thối lui.
+Đó gọi là tuần đường mời uống trà.
 Kế đến, căn cứ theo Giới lạp sắp đặt chỗ ngồi cho các khách mời: Thủ tọa ngồi đối diện với Trụ trì; vị Tri sự thượng thủ ngồi kế bên cạnh Trụ trì; Duy-na ngồi tiếp theo, rồi các Tri sự khác và các khách mời ngồi tiếp theo sau nữa.
-Bấy giờ, Hành giả đánh một hồi trống, Tăng chúng vân tập, Thị giả thiêu hương tiến hành các nghi thức (giống như nghi lễ Khố ty đãi thang thủy cho đại chúng). Khi lễ kết thúc, Thủ tọa đến cảm ơn Trụ trì đã mời mình uống trà, lạy ba lạy thưa rằng: “Hôm nay con rất vinh hạnh được Hòa thượng đãi trà, khiến cho lòng con vô cùng cảm kích”, lại thưa tiếp: “Hôm nay gặp ngày lành tháng tốt, kính chúc Đường đầu Hoà thượng pháp thể khang an, phúc tuệ tăng trưởng”, rồi đảnh lễ ba lạy kết thúc.
-Cứ mỗi lần Thủ tọa chuẩn bị đảnh lễ thì Trụ trì ra dấu hiệu đừng đảnh lễ, nhưng Thủ tọa vẫn đảnh lễ, thì Trụ trì đáp lại một bái. Thế rồi, Thủ tọa xoay mình lại đi ra cửa sau bàn Tổ phía bên phải. Trụ trì tiễn đưa Thủ tọa vài bước rồi trở lại vị trí của mình.
-Thị giả bước tới thắp hương cảm tạ khách mời. Bấy giờ hành giả đánh một tiếng chuông, các người hầu trà thu lại ly tách, rồi đánh một tiếng trống giải tán tiệc trà (diễn tiến giống như các trường hợp trước).
-Sau đó, Thủ tọa đến pháp đường đảnh lễ cảm tạ Trụ trì, nhưng nếu Trụ trì miễn lễ thì chỉ vái chào vấn an mà thôi. Hình thức thiệp mời:
+Bấy giờ, Hành giả đánh một hồi trống, Tăng chúng vân tập, Thị giả thiêu hương tiến hành các nghi thức (giống như nghi lễ Khố ty đãi thang thủy cho đại chúng).
+Khi lễ kết thúc, Thủ tọa đến cảm ơn Trụ trì đã mời mình uống trà, lạy ba lạy thưa rằng: “Hôm nay con rất vinh hạnh được Hòa thượng đãi trà, khiến cho lòng con vô cùng cảm kích”, lại thưa tiếp: “Hôm nay gặp ngày lành tháng tốt, kính chúc Đường đầu Hoà thượng pháp thể khang an, phúc tuệ tăng trưởng”, rồi đảnh lễ ba lạy kết thúc.
+Cứ mỗi lần Thủ tọa chuẩn bị đảnh lễ thì Trụ trì ra dấu hiệu đừng đảnh lễ, nhưng Thủ tọa vẫn đảnh lễ, thì Trụ trì đáp lại một bái.
+Thế rồi, Thủ tọa xoay mình lại đi ra cửa sau bàn Tổ phía bên phải.
+Trụ trì tiễn đưa Thủ tọa vài bước rồi trở lại vị trí của mình.
+Thị giả bước tới thắp hương cảm tạ khách mời.
+Bấy giờ hành giả đánh một tiếng chuông, các người hầu trà thu lại ly tách, rồi đánh một tiếng trống giải tán tiệc trà (diễn tiến giống như các trường hợp trước).
+Sau đó, Thủ tọa đến pháp đường đảnh lễ cảm tạ Trụ trì, nhưng nếu Trụ trì miễn lễ thì chỉ vái chào vấn an mà thôi.
+Hình thức thiệp mời:
 Sáng nay, sau giờ thọ trai, Hoà thượng đường đầu đến vân đường thiết đãi tiệc trà cho toàn thể thủ toạ và đại chúng. Trân trọng kính mời Thủ toạ bỏ chút thì giờ quang lâm tham dự cho đúng với lễ nghi. Đồng thời kính mời các vị Tri sự cùng quang lâm tham dự cho thêm phần long trọng. Hôm nay ngày … tháng … Thị ty là mỗ giáp kính mời.
 Vào ngày thứ hai sau ngày lễ chính, khi kết thúc bữa cháo sáng, Khố ty soạn bảng thông báo về việc mời dùng trà (giống như bảng thông báo mời uống thang thủy), rồi đi mời ẩm khách, thông báo với đại chúng và treo thiệp mời dùng trà.
-Hành giả đánh một hồi bản dài, đại chúng vân tập vào Tăng đường, mời uống trà, v.v... các việc này giống như công việc của Thị giả đã nói ở trước. Sau bữa thọ trai chấm dứt, hành giả đem trưng bày thiệp mời, thiết lập vị trí, đánh một hồi trống tập họp đại chúng.
-Khố ty vái chào mời Tăng chúng ngồi, vái chào mời thắp hương, vái chào mời dùng trà, đi tuần hành vấn an, rồi đến Trụ trì đảnh lễ, bày tỏ lời cảm tạ một cách chí thành. Các việc này giống như lễ đãi thang thủy đã nói ở trước.
+Hành giả đánh một hồi bản dài, đại chúng vân tập vào Tăng đường, mời uống trà, v.v... các việc này giống như công việc của Thị giả đã nói ở trước.
+Sau bữa thọ trai chấm dứt, hành giả đem trưng bày thiệp mời, thiết lập vị trí, đánh một hồi trống tập họp đại chúng.
+Khố ty vái chào mời Tăng chúng ngồi, vái chào mời thắp hương, vái chào mời dùng trà, đi tuần hành vấn an, rồi đến Trụ trì đảnh lễ, bày tỏ lời cảm tạ một cách chí thành.
+Các việc này giống như lễ đãi thang thủy đã nói ở trước.
 Ngày thứ ba sau ngày lễ chính, Thủ tọa tiền đường soạn thiệp mời uống trà (xem ở sau), đi đến liêu Thủ tọa hậu đường, liêu phương trượng thỉnh mời dùng trà (về thứ lớp các nghi thức được tiến hành giống như việc đãi trà của Khố ty, chỉ khác là phải thiết lập thêm vị trí của Tri sự).
 Mẫu thiệp mời uống trà:
 Thủ tọa tiền đường là Tỳ-kheo mỗ giáp theo thông lệ có tổ chức một bữa tiệc trà đơn giản, trân trọng kính mời Thủ tọa hậu đường và đại chúng sau giờ thọ trai sáng nay hoan hỷ đến vân đường dùng trà; đồng thời mời các Tri sự cùng đến tham dự cho thêm phần long trọng. Nay ngày …tháng …có ghi vị trí rõ ràng tại thiệp mời. Tỳ-kheo mỗ kính mời. Mẫu bì thư: Kính mời Thủ tọa hậu đường và đại chúng (có ghi rõ chỗ ngồi). Trân trọng (dán kín bì thư).
-Trụ trì lên pháp đường thuyết pháp xong, thông báo rằng: “Sau khi hạ tòa sẽ tuần đường và uống trà”. Thế rồi, đại chúng vân tập vào Tăng đường đứng theo mô hình tụng kinh hằng ngày, rồi tuần tự đi tuần hành một vòng tại Tăng đường. Những người mới đến và Thị giả đi theo sau đại chúng tuần hành đến bàn Tổ.
-Tới đây, người mới đến và Thị giả hứớng về bàn Tổ đứng sắp hai hàng đối diện nhau. Khi đại chúng tuần hành giáp vòng rồi đứng vào chỗ ổn định, thì chuông trước tăng đường được đánh lên bảy tiếng, Trụ trì đi vào, đốt hương, đi tuần hành một vòng, rồi trở về vị trí của mình.
-Khi ấy, các Tri sự bước đến sắp hàng trước bàn Tổ vái chào chư Tổ, rồi quay sang chào hỏi vấn an Trụ trì, đoạn bắt đầu từ dãy hàng Thủ tọa đi tuần nhiễu một vòng. Những người mới đến và Thị giả theo sau các Tri sự ra ngoài.
-Bấy giờ, Thị giả thiêu hương bước ra giữa Tăng đường vái chào mời mọi người an tọa; đợi khi đại chúng ngồi ổn định, thì bước đến trước đốt hương, rồi đốt hương các gian hai bên Tăng đường. Trước hết, đốt hương gian bên trái, kế đến đốt hương gian bên phải, rồi đem cất hộp hương lại chỗ cũ, lại đến trước lư hương vái chào mời từng người cắm hương.
-Khi mời cắm hương xong, Thị giả thiêu hương trở về vị trí của mình. Lúc này, hành giả đánh hai tiếng chuông, những người hầu trà đem bình trà đi rót khắp mọi người, vái chào mời uống trà, rồi rút lui.
+Trụ trì lên pháp đường thuyết pháp xong, thông báo rằng: “Sau khi hạ tòa sẽ tuần đường và uống trà”.
+Thế rồi, đại chúng vân tập vào Tăng đường đứng theo mô hình tụng kinh hằng ngày, rồi tuần tự đi tuần hành một vòng tại Tăng đường.
+Những người mới đến và Thị giả đi theo sau đại chúng tuần hành đến bàn Tổ.
+Tới đây, người mới đến và Thị giả hướng về bàn Tổ đứng sắp hai hàng đối diện nhau.
+Khi đại chúng tuần hành giáp vòng rồi đứng vào chỗ ổn định, thì chuông trước tăng đường được đánh lên bảy tiếng, Trụ trì đi vào, đốt hương, đi tuần hành một vòng, rồi trở về vị trí của mình.
+Khi ấy, các Tri sự bước đến sắp hàng trước bàn Tổ vái chào chư Tổ, rồi quay sang chào hỏi vấn an Trụ trì, đoạn bắt đầu từ dãy hàng Thủ tọa đi tuần nhiễu một vòng.
+Những người mới đến và Thị giả theo sau các Tri sự ra ngoài.
+Bấy giờ, Thị giả thiêu hương bước ra giữa Tăng đường vái chào mời mọi người an tọa; đợi khi đại chúng ngồi ổn định, thì bước đến trước đốt hương, rồi đốt hương các gian hai bên Tăng đường.
+Trước hết, đốt hương gian bên trái, kế đến đốt hương gian bên phải, rồi đem cất hộp hương lại chỗ cũ, lại đến trước lư hương vái chào mời từng người cắm hương.
+Khi mời cắm hương xong, Thị giả thiêu hương trở về vị trí của mình.
+Lúc này, hành giả đánh hai tiếng chuông, những người hầu trà đem bình trà đi rót khắp mọi người, vái chào mời uống trà, rồi rút lui.
 Tiếp theo, hành giả đánh một tiếng chuông thị giả thu dọn ly tách, rồi đánh tiếp ba tiếng, Trụ trì rời khỏi Tăng đường, kế đến Thủ tọa cùng đại chúng tuần tự bước ra.
 Nếu như có duyên sự cấp bách nên Trụ trì không thể đến tham dự được, thì sau khi dùng cháo sáng xong, Tăng chúng cứ vân tập về Tăng đường uống trà như thường lệ, còn việc Thị giả hành lễ thì cũng giống các lễ trước.
 Vào dịp tiết lạp, sau khi kết thúc việc đãi trà tại Tăng đường, Thị giả cùng với khách đầu đi đến hành đường uống trà.
-Khách đầu chuẩn bị thông báo với tham đầu, treo bảng thông báo về việc đãi trà cho đại chúng biết; đồng thời chuẩn bị nấu nước nóng, sọan ly tách và mời Điển tọa cùng tham dự. Phòng Phương trựợng chuẩn bị cung cấp trà.
-Thị giả thân hành đến Khố ty, Điển tọa tiếp đón mời vào phòng, Tham đầu đường chủ suất lãnh các hành giả ra ngoài cửa đón tiếp. Khi Thị giả vào phòng, đứng ở vị trí chính, vì là thay mặt Trụ trì, còn Điển tọa thì đứng bên phải Thị giả.
-Thế rồi, Thị giả đến trước bàn đốt một nén hương, chắp tay vái chào mời mọi người ngồi, đoạn trở về vị trí của mình. Sau khi dùng trà xong, Điển tọa tiễn đưa thị giả rời khỏi phòng, còn Tham đầu đường chủ thì đưa ra khỏi cửa, liền đến phòng Phương trượng cảm ơn Trụ trì về việc đãi trà vừa rồi.
-Khố ty chờ Phương trượng đãi trà xong, Tri sự mới đến hành đường đãi trà. Tri sự ngồi ở vị trí chủ tọa, Điển tọa ngồi bên cạnh, (còn cách hành lễ thì giống như Thị giả Phương trượng đã làm ở các phần trước).
-Khi tiễn khách mời ra tới cửa, Thị giả thông báo rằng: “Tham đầu đại chúng đến Khố ty cảm tạ về việc đãi trà”. Thế rồi khách đầu của Khố ty cũng thông báo: “Tri sự có lời dạy rằng, Miễn việc cảm tạ về sự đãi trà”. Đầu thủ chờ việc đãi trà tại Tăng đường xong (xem chương Lưỡng tự), lệnh cho hành giả Đường ty báo với tham đầu, treo bảng thông báo để cho đại chúng biết, rồi mời Điển tọa cùng đến tham dự (các nghi thức như cảm tạ, miễn sự cảm tạ, tiễn khách mời ra cửa đều giống như việc Khố ty đãi trà).
+Khách đầu chuẩn bị thông báo với tham đầu, treo bảng thông báo về việc đãi trà cho đại chúng biết; đồng thời chuẩn bị nấu nước nóng, soạn ly tách và mời Điển tọa cùng tham dự.
+Phòng Phương trựợng chuẩn bị cung cấp trà.
+Thị giả thân hành đến Khố ty, Điển tọa tiếp đón mời vào phòng, Tham đầu đường chủ suất lãnh các hành giả ra ngoài cửa đón tiếp.
+Khi Thị giả vào phòng, đứng ở vị trí chính, vì là thay mặt Trụ trì, còn Điển tọa thì đứng bên phải Thị giả.
+Thế rồi, Thị giả đến trước bàn đốt một nén hương, chắp tay vái chào mời mọi người ngồi, đoạn trở về vị trí của mình.
+Sau khi dùng trà xong, Điển tọa tiễn đưa thị giả rời khỏi phòng, còn Tham đầu đường chủ thì đưa ra khỏi cửa, liền đến phòng Phương trượng cảm ơn Trụ trì về việc đãi trà vừa rồi.
+Khố ty chờ Phương trượng đãi trà xong, Tri sự mới đến hành đường đãi trà.
+Tri sự ngồi ở vị trí chủ tọa, Điển tọa ngồi bên cạnh, (còn cách hành lễ thì giống như Thị giả Phương trượng đã làm ở các phần trước).
+Khi tiễn khách mời ra tới cửa, Thị giả thông báo rằng: “Tham đầu đại chúng đến Khố ty cảm tạ về việc đãi trà”. Thế rồi khách đầu của Khố ty cũng thông báo: “Tri sự có lời dạy rằng, Miễn việc cảm tạ về sự đãi trà”.
+Đầu thủ chờ việc đãi trà tại Tăng đường xong (xem chương Lưỡng tự), lệnh cho hành giả Đường ty báo với tham đầu, treo bảng thông báo để cho đại chúng biết, rồi mời Điển tọa cùng đến tham dự (các nghi thức như cảm tạ, miễn sự cảm tạ, tiễn khách mời ra cửa đều giống như việc Khố ty đãi trà).
 Tháng giêng: Ngày mồng một (có nơi áp dụng cả bốn tháng đầu mùa trong năm), đại chúng hành đạo, tụng kinh, cầu nguyện.
-Chương trình phải soạn đầy đủ, niêm yết tại cửa. Và các quan viên, đàn việt, các chùa lân cận đến Phương trượng mừng tuổi năm mới. Ngày mười bảy giỗ kỵ Tổ Bách Trượng.
-Tháng hai: Ngày mồng một đem cất lò sưởi tại tăng đường. Nếu chùa ở trên cao lạnh lẽo thì không nhất thiết phải cất. Ngày mười lăm kỷ niệm Phật nhập Niết-bàn.
-Tháng ba: Ngày mồng một, Đường ty sọan thảo đơn. Vào ngày tiết thanh minh, Khố ty sai hành giả quét dọn sạch sẽ, chuẩn bị đầy đủ các phẩm vật cúng dường tại nhà Tổ, các tháp Tổ, các bàn thờ linh của Đàn việt, rồi tập họp đại chúng lên chánh điện tụng kinh; cũng trong tháng này ra thông báo cấm việc hái trà và bẻ măng trong rừng.
-Tháng tư: Ngày mồng một chấm dứt việc cho du Tăng tạm trú lại trong chùa. Ngày mồng bốn, mồng năm thắp hương, thuyết pháp. Ngày mồng tám làm lễ Phật đản, có lễ tắm Phật.
+Chương trình phải soạn đầy đủ, niêm yết tại cửa.
+Và các quan viên, đàn việt, các chùa lân cận đến Phương trượng mừng tuổi năm mới.
+Ngày mười bảy giỗ kỵ Tổ Bách Trượng.
+Tháng hai: Ngày mồng một đem cất lò sưởi tại tăng đường.
+Nếu chùa ở trên cao lạnh lẽo thì không nhất thiết phải cất.
+Ngày mười lăm kỷ niệm Phật nhập Niết-bàn.
+Tháng ba: Ngày mồng một, Đường ty soạn thảo đơn.
+Vào ngày tiết thanh minh, Khố ty sai hành giả quét dọn sạch sẽ, chuẩn bị đầy đủ các phẩm vật cúng dường tại nhà Tổ, các tháp Tổ, các bàn thờ linh của Đàn việt, rồi tập họp đại chúng lên chánh điện tụng kinh; cũng trong tháng này ra thông báo cấm việc hái trà và bẻ măng trong rừng.
+Tháng tư: Ngày mồng một chấm dứt việc cho du Tăng tạm trú lại trong chùa.
+Ngày mồng bốn, mồng năm thắp hương, thuyết pháp. Ngày mồng tám làm lễ Phật đản, có lễ tắm Phật.
 Khố ty chuẩn bị sắm sửa cơm đen để cúng dường trong dịp lễ tắm Phật này, còn Phương trượng thì mời đại chúng dùng điểm tâm trước khi nhập Hạ.
-Ngày mười ba cử hành lễ hội Lăng nghiêm. Ngày rằm làm lễ kết chế an cư. Lúc này, nên tháo chiếc rèm che nóng mà căng chiếc rèm che lạnh trong Tăng đường.
-Tháng năm: Sáng sớm tết Đoan ngọ, vị Tri sự thắp hương, châm trà xương bồ trong Tăng đường. Trụ trì thượng đường lần lượt khai hội mừng mùa lúa non. Đường ty soạn danh sách chư Tăng tụng kinh của các liêu.
-Trực tuế kiểm tra, sửa chữa các chỗ bị dột nát, khai thông cống rãnh. Phương trượng thân hành đến các liêu, các am tháp, mỗi nơi mời dùng trà thân mật một lần; đồng thời lệnh cho hành giả treo màn trong Tăng đường.
+Ngày mười ba cử hành lễ hội Lăng nghiêm.
+Ngày rằm làm lễ kết chế an cư.
+Lúc này, nên tháo chiếc rèm che nóng mà căng chiếc rèm che lạnh trong Tăng đường.
+Tháng năm: Sáng sớm tết Đoan ngọ, vị Tri sự thắp hương, châm trà xương bồ trong Tăng đường.
+Trụ trì thượng đường lần lượt khai hội mừng mùa lúa non.
+Đường ty soạn danh sách chư Tăng tụng kinh của các liêu.
+Trực tuế kiểm tra, sửa chữa các chỗ bị dột nát, khai thông cống rãnh.
+Phương trượng thân hành đến các liêu, các am tháp, mỗi nơi mời dùng trà thân mật một lần; đồng thời lệnh cho hành giả treo màn trong Tăng đường.
 Tháng sáu: Ngày mồng một thời tiết đã khá nóng, nên Thủ tọa không đánh bản tọa thiền; còn Đường ty điều động chúng hong phơi mền chiếu; Thán đầu hoặc Khố ty lo việc đập nhỏ các khối than.
 Tháng bảy: Trong tuần đầu, Đường ty chuẩn bị chương trình lễ hội Vu-lan bồn, lập danh sách tụng kinh của các liêu, kêu gọi Tăng chúng quyên góp tài vật, sửa soạn thức ăn để cúng dường.
-Ngày mười ba kết thúc lễ hội Lăng nghiêm. Ngày rằm làm lễ giải chế, và buổi chiều thiết lễ Vu-lan bồn, tụng kinh cúng thí thực.
-Tháng tám: Ngày mồng một bắt đầu cho phép du Tăng đến tạm trú, Tri khách chuẩn bị phơi mền chiếu trong các liêu. Tháng này may vá áo cũ, chưa vội cho phép Tăng chúng di chuyển đến nơi khác; tháo màn treo ở Tăng đường.
+Ngày mười ba kết thúc lễ hội Lăng nghiêm.
+Ngày rằm làm lễ giải chế, và buổi chiều thiết lễ Vu-lan bồn, tụng kinh cúng thí thực.
+Tháng tám: Ngày mồng một bắt đầu cho phép du Tăng đến tạm trú, Tri khách chuẩn bị phơi mền chiếu trong các liêu.
+Tháng này may vá áo cũ, chưa vội cho phép Tăng chúng di chuyển đến nơi khác; tháo màn treo ở Tăng đường.
 Tháng chín: Ngày mồng một, Thủ tọa đánh bản ngồi thiền trở lại; Đường ty lo việc dán giấy lại các cửa sổ của Tăng đường, hạ rèm che mát, căng rèm che ấm.
-Sáng sớm ngày tiết Trùng dương (mồng chín tháng chín). Tri sự thắp hương, dâng trà thù du; Trụ trì thượng đường, cho phép du tăng đến tham kiến.
+Sáng sớm ngày tiết Trùng dương (mồng chín tháng chín).
+Tri sự thắp hương, dâng trà thù du; Trụ trì thượng đường, cho phép du tăng đến tham kiến.
 Tháng mười: Ngày mồng một bắt đầu đem lò sưởi ra dùng, Phương trượng thăm hỏi hết thảy mọi người. Ngày mồng năm giỗ kỵ Tổ Đạt-ma.
-Tháng mười một: Ngày hai mươi hai giỗ Thầy của Vua (Đế sư). Ngày tiết Đông chí, Khố ty chuẩn bị các thứ bánh trái; vì trong tháng này các chức sự hoặc thôi việc, hoặc được đề cử, và nhân dịp này Phương trượng sẽ mời đại chúng dùng điểm tâm trước mùa Đông.
+Tháng mười một: Ngày hai mươi hai giỗ Thầy của Vua (Đế sư).
+Ngày tiết Đông chí, Khố ty chuẩn bị các thứ bánh trái; vì trong tháng này các chức sự hoặc thôi việc, hoặc được đề cử, và nhân dịp này Phương trượng sẽ mời đại chúng dùng điểm tâm trước mùa Đông.
 Tháng mười hai: Ngày mồng tám lễ Phật thành đạo, Khố ty chuẩn bị tạo hồng tao và đệ trình sổ sách tổng kết cuối năm cho Phương trượng.
