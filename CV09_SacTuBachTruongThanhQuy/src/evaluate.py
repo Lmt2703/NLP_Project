@@ -4,13 +4,15 @@ Tuân thủ Mục 6, 7 & 8 trong Guideline đồ án cùng các tiêu chuẩn ki
 - Kiểm tra tính hợp lệ của cấu trúc TSV và Excel (định dạng, sheet, cột).
 - Phát hiện các lỗi MISSING (khuyết vế Hán hoặc vế Việt).
 - Phát hiện lỗi rò rỉ ký tự chữ Hán (CJK) sang cột tiếng Việt.
-- Phát hiện lỗi lẫn từ rác mã hóa VNI (leã, saün, mộït, Tâây, cĩ, khơng...).
+- Phát hiện lỗi lẫn 'LỜI BÀN' / 'LỜI BAØN' của dịch giả vào cột dịch.
+- Phát hiện lỗi lẫn sơ đồ vị trí (Cấp 1, Cấp 2...) vào cột dịch.
+- Phát hiện lỗi lẫn từ rác mã hóa VNI (leã, saün, mộït, Dieãn, Tâây, cĩ, khơng...).
 - Tính toán tỷ lệ lỗi và đối chiếu với ngưỡng nghiệm thu (tối đa 30%).
 """
 
 import os
 import re
-from typing import Any, Dict, List
+from typing import Any, Dict
 import pandas as pd
 
 
@@ -37,6 +39,8 @@ def evaluate_parallel_files(tsv_path: str, xlsx_path: str) -> Dict[str, Any]:
         "missing_han_count": 0,
         "missing_viet_count": 0,
         "cjk_in_viet_count": 0,
+        "loi_ban_count": 0,
+        "diagram_count": 0,
         "vni_artifact_count": 0,
         "error_count": 0,
         "error_rate": 0.0,
@@ -74,9 +78,13 @@ def evaluate_parallel_files(tsv_path: str, xlsx_path: str) -> Dict[str, Any]:
     missing_han = 0
     missing_viet = 0
     cjk_in_viet = 0
+    loi_ban_count = 0
+    diagram_count = 0
     vni_artifacts = 0
 
     vni_regex = re.compile("|".join(SUSPICIOUS_VNI_WORDS), re.IGNORECASE)
+    loi_ban_regex = re.compile(r"(?:lời|lôøi)\s*(?:bàn|baøn)", re.IGNORECASE)
+    diagram_regex = re.compile(r"Cấp \d+:|Mô hình bữa đãi", re.IGNORECASE)
 
     for _, row in df.iterrows():
         h = str(row["Hán"]).strip() if pd.notna(row["Hán"]) else ""
@@ -88,6 +96,10 @@ def evaluate_parallel_files(tsv_path: str, xlsx_path: str) -> Dict[str, Any]:
             missing_viet += 1
         if v and any(is_cjk_char(c) for c in v):
             cjk_in_viet += 1
+        if v and loi_ban_regex.search(v):
+            loi_ban_count += 1
+        if v and diagram_regex.search(v):
+            diagram_count += 1
         if v and vni_regex.search(v):
             vni_artifacts += 1
 
@@ -97,16 +109,20 @@ def evaluate_parallel_files(tsv_path: str, xlsx_path: str) -> Dict[str, Any]:
     report["missing_han_count"] = missing_han
     report["missing_viet_count"] = missing_viet
     report["cjk_in_viet_count"] = cjk_in_viet
+    report["loi_ban_count"] = loi_ban_count
+    report["diagram_count"] = diagram_count
     report["vni_artifact_count"] = vni_artifacts
     report["error_count"] = error_count
     report["error_rate"] = round((error_count / total) * 100, 2) if total > 0 else 100.0
 
-    # Tiêu chí nghiệm thu: Error rate <= 30%, TSV/Excel đúng chuẩn, 0 CJK rò rỉ, 0 lỗi VNI
+    # Tiêu chí nghiệm thu: Error rate <= 30%, TSV/Excel đúng chuẩn, 0 CJK rò rỉ, 0 LỜI BÀN, 0 sơ đồ, 0 lỗi VNI
     if (
         report["error_rate"] <= 30.0
         and report["tsv_format_ok"]
         and report["xlsx_format_ok"]
         and report["cjk_in_viet_count"] == 0
+        and report["loi_ban_count"] == 0
+        and report["diagram_count"] == 0
         and report["vni_artifact_count"] == 0
     ):
         report["acceptance_status"] = "ĐẠT NGHIỆM THU (Pass - Tuyệt đối)"
@@ -131,6 +147,8 @@ def print_evaluation_report(report: Dict[str, Any]) -> None:
     print(f" Khuyết vế Hán:            {report['missing_han_count']}")
     print(f" Khuyết vế Việt:           {report['missing_viet_count']}")
     print(f" Lẫn chữ Hán trong vế Việt: {report['cjk_in_viet_count']}")
+    print(f" Dính LỜI BÀN bình luận:   {report['loi_ban_count']}")
+    print(f" Dính sơ đồ vị trí:        {report['diagram_count']}")
     print(f" Lỗi font VNI tồn đọng:    {report['vni_artifact_count']}")
     print(f" Tỷ lệ lỗi:                {report['error_rate']}%")
     print(f" Chuẩn định dạng TSV:      {'✓ Hợp lệ' if report['tsv_format_ok'] else '✗ Lỗi'}")

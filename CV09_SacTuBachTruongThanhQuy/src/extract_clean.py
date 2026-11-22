@@ -1,15 +1,19 @@
 """Module trích xuất và làm sạch văn bản Hán - Việt từ tài liệu PDF.
 
-Quy trình xử lý hoàn thiện:
+Quy trình xử lý hoàn thiện (Phiên bản v3):
 1. Trích xuất lớp văn bản phân biệt font (VNI-Times vs Unicode) từ PDF qua extract_text_from_pdf.
-2. Loại bỏ header, footer, số trang, các đoạn 'Lời bàn' riêng và danh sách ấn tống / lưu chiểu cuối sách.
-3. Phân biệt rõ rệt 3 khối văn bản: Chữ Hán, Phiên âm Hán-Việt, và Dịch nghĩa tiếng Việt. Tuyệt đối KHÔNG đưa phiên âm vào cột Việt.
+2. Cắt bỏ triệt để 7 cụm 'LỜI BÀN' / 'LỜI BAØN' / 'LÔØI BAØN' của dịch giả khỏi văn bản nguồn Quyển 4 trước khi dóng hàng.
+3. Cắt bỏ toàn bộ trang lưu chiểu, ban ấn tống và danh sách công đức cúng dường ở cuối Quyển 4.
 4. Xử lý triệt để các cấu trúc dồn bản dịch trong Quyển 7:
-   - Bản trướng thức: Tách và ánh xạ chính xác 36 khoản thu chi 1-1.
-   - Thảo đơn thức: Tách và ánh xạ chính xác 6 dòng biểu mẫu 1-1.
-   - Nguyệt phần tu tri: Tách và ánh xạ chính xác 12 tháng lịch tiết 1-1.
-5. Gom cụm các biểu mẫu hành chính (văn trạng, phong bì, thiệp mời) tránh để sót chữ Hán sang cột dịch.
-6. Làm sạch toàn diện ký tự CJK rò rỉ và chuẩn hóa lỗi mã hóa font VNI tồn đọng.
+   - Bản trướng thức: Ánh xạ chuẩn xác 35 khoản thu chi 1-1, đồng bộ số tiền Hán - Việt (15 quan nhập liệm + 1 quan đánh não bạt...).
+   - Loại bỏ trùng lặp và phiên âm ở cuối Bản trướng ([1149c28], [1150a01]).
+   - Thảo đơn thức: Ánh xạ chính xác 6 dòng biểu mẫu 1-1.
+   - Nguyệt phần tu tri: Ánh xạ chính xác 12 tháng lịch tiết 1-1.
+5. Loại bỏ sơ đồ vị trí ngồi (Cấp 1, Cấp 2, Cấp 3...) trước [1152b28] trong Quyển 7.
+6. Gom đúng nhóm biểu mẫu hành chính:
+   - Quyển 4: [1135c26] cho Mẫu văn trạng + Bì thư, [1136b15] cho Mẫu bảng thức.
+   - Quyển 7: Tách chữ '茶狀' ở [1154b15] để vế '但添設知事位次。' không bị lệch nghĩa.
+7. Chuẩn hóa tất cả chuỗi viết tắt 'v. v…', 'v. v...', 'v...' thành 'v.v...'.
 """
 
 import os
@@ -35,7 +39,7 @@ TAG_CORRECTIONS = {
 
 CBETA_PATTERN = re.compile(r"(\[\d{4}[a-z]\d{2}\])(.*?)(?=\[\d{4}[a-z]\d{2}\]|\Z)", re.DOTALL)
 
-# Ánh xạ 36 khoản mục chi tiết của Bản trướng thức (Quyển 7)
+# Ánh xạ 35 khoản mục chi tiết của Bản trướng thức (Quyển 7) chuẩn xác theo từng số tiền
 BAN_TRUONG_MAP = [
     ('[1149b11]', r"Nay xin trình bày đầy đủ các hạng mục.*?\(đem bán đấu giá\)\."),
     ('[1149b12]', r"Về phần thu gồm: 1000 quan tiền.*?chép rõ từng hạng mục\)\."),
@@ -51,28 +55,48 @@ BAN_TRUONG_MAP = [
     ('[1149b23]', r"2 quan tiền: Đường ty hành giả thông báo đại chúng\..*?500 tiền: giám tác sai bảo lao công\."),
     ('[1149b24]', r"500 tiền: phương trượng cho gọi người bưng hộp hương\..*?10 quan tiền: hành đường tụng kinh\."),
     ('[1149b25]', r"1 quan tiền: phụ thêm cho hành giả Đường ty đánh bản\..*?2 quan tiền: người hầu trà cung cấp cho 4 liêu\."),
-    ('[1149b26]', r"15 quan tiền: nhập liệm\."),
-    ('[1149b27]', r"1 quan tiền: đánh não bạt\..*?3 quan tiền: đánh nhạc lễ\."),
-    ('[1149b28]', r"3 quan tiền: sáu người khiêng hương án, cầm cờ đèn\..*?500 tiền: biếu cho những kẻ cầm nhành cây tuyết liễu"),
-    ('[1149b29]', r"1 quan tiền: châm lửa thiêu xác\..*?3 quan tiền: những người hầu hạ Phương trượng đưa tang\."),
-    ('[1149c01]', r"1 quan tiền: lao công của 4 liêu khiêng bàn ghế\."),
-    ('[1149c02]', r"500 tiền: phụ thêm cho hành giả Đường ty trình y\..*?500 tiền: Hành giả Đường ty rao đấu giá\s*y vật\."),
-    ('[1149c03]', r"500 tiền: phụ thêm cho cung đầu soạn phiếu rao đấu.*?500 tiền: cung đầu thu y\."),
-    ('[1149c04]', r"500 tiền: hành giả Xướng thực rút thẻ\..*?500 tiền: thu cốt\."),
-    ('[1149c05]', r"1 quan tiền: bưng hộp than\..*?1 quan tiền: \(trực tháp\) chi lặt vặt"),
-    ('[1149c06]', r"Chi 270 quan: theo các khoản chi tiêu trong bản trướng.*?Kể về chi tiêu các việc kể trên\."),
-    ('[1149c07]', r"Chi 135 quan: tiền công đức các buổi lễ\."),
-    ('[1149c08]', r"Khai cụ nội 20 quan: lễ trà tỳ\..*?10 quan: phụ thêm lễ trà tỳ\."),
-    ('[1149c09]', r"40 quan: đậy nắp quan, di quan, di cốt, nhập tháp\..*?20 quan: thêm cho 4 buổi lễ kể trên\."),
-    ('[1149c10]', r"30 quan: Duy na làm lễ sơn đầu, thị giả của Tri khách cầm trướng\."),
-    ('[1149c11]', r"15 quan: Phụ thêm 3 Phật sự kể trên\."),
-    ('[1149c12]', r"Chi 15 quan: Thủ tọa chủ tang, Đô tự đưa tang, Duy-.*?\b5 quan\."),
-    ('[1149c14]', r"Chi 9 quan: Tri khách tụng kinh.*?Trực tuế đưa lửa 1 quan\."),
-    ('[1149c15]', r"Chi 15 quan: Phương trượng, lưỡng tự.*?điểm tâm phương trượng 2 phần\."),
-    ('[1149c16]', r"Chi 20 quan: Phương trượng Lưỡng tự thiêm đơn, phương trượng 2 phần\."),
-    ('[1149c18]-[1149c27]', r"Chi 444 quan 500 tiền: biếu cho Tăng chúng tụng kinh.*?bằng nữa phần người khác\."),
-    ('[1149c28]', r"Ngoại trừ các khoản chi ra, Đường ty còn thu được 500 tiền.*?như đã nêu trên\."),
-    ('[1150a01]', r"Ngày … tháng … năm Hành giả Đường ty mỗ giáp.*?Trụ trì\s*\(nt\)"),
+    # [1149b26]: 15 quan di chuyển kim quan + 1 quan đánh não bạt
+    ('[1149b26]', r"15 quan tiền: nhập liệm\.\s*1 quan tiền: đánh não bạt\."),
+    # [1149b27]: 3 quan đánh nhạc lễ + 3 quan 6 người khiêng hương án
+    ('[1149b27]', r"3 quan tiền: đánh nhạc lễ\.\s*3 quan tiền: sáu người khiêng hương án, cầm cờ đèn\."),
+    # [1149b28]: 500 tiền tuyết liễu + 1 quan châm lửa thiêu xác
+    ('[1149b28]', r"500 tiền: biếu cho những kẻ cầm nhành cây tuyết liễu.*?\s*1 quan tiền: châm lửa thiêu xác\."),
+    # [1149b29]: 3 quan người phương trượng đưa tang + 1 quan lao công 4 liêu khiêng bàn ghế
+    ('[1149b29]', r"3 quan tiền: những người hầu hạ Phương trượng đưa tang\.\s*1 quan tiền: lao công của 4 liêu khiêng bàn ghế\."),
+    # [1149c01]: 500 tiền trình y + 500 tiền rao đấu giá y vật
+    ('[1149c01]', r"500 tiền: phụ thêm cho hành giả Đường ty trình y\..*?500 tiền: Hành giả Đường ty rao đấu giá\s*y vật\."),
+    # [1149c02]: 500 tiền soạn phiếu + 500 tiền thu y
+    ('[1149c02]', r"500 tiền: phụ thêm cho cung đầu soạn phiếu rao đấu.*?500 tiền: cung đầu thu y\."),
+    # [1149c03]: 500 tiền rút thẻ + 500 tiền thu cốt
+    ('[1149c03]', r"500 tiền: hành giả Xướng thực rút thẻ\..*?500 tiền: thu cốt\."),
+    # [1149c04]: 1 quan bưng hộp than + 1 quan trực tháp chi lặt vặt
+    ('[1149c04]', r"1 quan tiền: bưng hộp than\..*?1 quan tiền: \(trực tháp\) chi lặt vặt"),
+    # [1149c05]: Chi 270 quan
+    ('[1149c05]', r"Chi 270 quan: theo các khoản chi tiêu trong bản trướng.*?Kể về chi tiêu các việc kể trên\."),
+    # [1149c06]: Chi 135 quan
+    ('[1149c06]', r"Chi 135 quan: tiền công đức các buổi lễ\."),
+    # [1149c07]: Khai cụ nội 20 quan
+    ('[1149c07]', r"Khai cụ nội 20 quan: lễ trà tỳ\."),
+    # [1149c08]: 10 quan phụ thêm + 40 quan đậy nắp quan...
+    ('[1149c08]', r"10 quan: phụ thêm lễ trà tỳ\.\s*40 quan: đậy nắp quan, di quan, di cốt, nhập tháp\."),
+    # [1149c09]: 20 quan thêm cho 4 buổi lễ + 30 quan Duy na làm lễ sơn đầu...
+    ('[1149c09]', r"20 quan: thêm cho 4 buổi lễ kể trên\.\s*30 quan: Duy na làm lễ sơn đầu, thị giả của Tri khách cầm trướng\."),
+    # [1149c10]: 15 quan phụ thêm
+    ('[1149c10]', r"15 quan: Phụ thêm 3 Phật sự kể trên\."),
+    # [1149c11]: Chi 15 quan: Thủ tọa chủ tang...
+    ('[1149c11]', r"Chi 15 quan: Thủ tọa chủ tang, Đô tự đưa tang, Duy-.*?\b5 quan\."),
+    # [1149c12]: Chi 9 quan: Tri khách tụng kinh...
+    ('[1149c12]', r"Chi 9 quan: Tri khách tụng kinh.*?Trực tuế đưa lửa 1 quan\."),
+    # [1149c14]: Chi 15 quan: Phương trượng, lưỡng tự...
+    ('[1149c14]', r"Chi 15 quan: Phương trượng, lưỡng tự.*?điểm tâm phương trượng 2 phần\."),
+    # [1149c15]: Chi 20 quan: Phương trượng Lưỡng tự thiêm đơn...
+    ('[1149c15]', r"Chi 20 quan: Phương trượng Lưỡng tự thiêm đơn, phương trượng 2 phần\."),
+    # [1149c16]: Chi 444 quan 500 tiền
+    ('[1149c16]', r"Chi 444 quan 500 tiền: biếu cho Tăng chúng tụng kinh tại.*?bằng nữa phần người khác\."),
+    # [1149c18]: Ngoại trừ các khoản chi ra...
+    ('[1149c18]', r"Ngoại trừ các khoản chi ra, Đường ty còn thu được 500 tiền.*?như đã nêu trên\."),
+    # [1149c19]-[1150a01]: Ngày... tháng... năm... + Danh sách chức sự ký tên
+    ('[1149c19]-[1150a01]', r"Ngày … tháng … năm Hành giả Đường ty mỗ giáp.*?Trụ trì\s*\(nt\)"),
 ]
 
 # Ánh xạ 6 dòng biểu mẫu Thảo đơn thức (Quyển 7)
@@ -84,18 +108,6 @@ THAO_DON_MAP = [
     ('[1150b21]', 'Kính xin ghi đầy đủ như trên. Nếu có sai sót, xin các vị tự cải chính giúp. Rất mong được sự thể tất.'),
     ('[1150b22]', 'Hôm nay, ngày ….. tháng …... Đường ty mỗ giáp, xin ghi đầy đủ như vậy.')
 ]
-
-# Nhóm các thẻ phụ (phong bì, lạc khoản, tiêu đề biểu mẫu) vào thẻ cha
-TEMPLATE_GROUPS = {
-    "[1134a03]": ["[1134a04]", "[1134a05]"],
-    "[1135c18]": ["[1135c27]", "[1135c28]", "[1135c29]", "[1135c30]"],
-    "[1136b11]": ["[1136b15]", "[1136b16]", "[1136b17]", "[1136b18]", "[1136b19]"],
-    "[1151b13]": ["[1151b14]", "[1151b15]", "[1151b16]", "[1151b17]", "[1151b18]"],
-    "[1152a01]": ["[1152a02]", "[1152a03]", "[1152a04]", "[1152a05]", "[1152a06]", "[1152a07]", "[1152a08]"],
-    "[1153a23]": ["[1153a24]", "[1153a25]"],
-    "[1154b04]": ["[1154b05]", "[1154b06]", "[1154b07]"],
-    "[1154b17]": ["[1154b18]", "[1154b19]", "[1154b20]", "[1154b21]", "[1154b22]"],
-}
 
 
 def is_cjk_char(ch: str) -> bool:
@@ -125,15 +137,16 @@ def clean_han_text(raw_text: str) -> str:
 
 
 def clean_viet_text(raw_text: str) -> str:
-    """Làm sạch văn bản tiếng Việt: loại bỏ lời bàn, rác chữ Hán và tiêu đề thừa."""
-    text = re.sub(r"LỜI BÀN.*?(?=\[\d{4}[a-z]\d{2}\]|\Z|\*\s*\*|\*\s*\*\s*\*)", "", raw_text, flags=re.DOTALL | re.IGNORECASE)
+    """Làm sạch văn bản tiếng Việt: loại bỏ lời bàn, sơ đồ vị trí, rác chữ Hán và tiêu đề thừa."""
+    text = re.sub(r"(?:LỜI|LÔØI)\s*(?:BÀN|BAØN).*?(?=\[\d{4}[a-z]\d{2}\]|\Z|\*\s*\*|\*\s*\*\s*\*)", "", raw_text, flags=re.DOTALL | re.IGNORECASE)
+    text = re.sub(r"Mô hình bữa đãi nước.*?(?=\*|\Z|四節|TỨ TIẾT|\[\d{4}[a-z]\d{2}\])", "", text, flags=re.DOTALL | re.IGNORECASE)
     text = re.sub(r"\*+", "", text)
     # Loại bỏ triệt để mọi ký tự CJK bị rò rỉ vào khối tiếng Việt
     text = "".join(" " if is_cjk_char(c) else c for c in text)
 
     valid_lines = []
     header_filter = re.compile(
-        r"^(SẮC TU|CHƯƠNG \d+|LƯỠNG TỰ|BẢN TRƯỚNG|ĐẠI TRÍ|ĐẠI LONG|TRỤ TRÌ CHÙA|Chương [A-ZÀ-Ỹa-ỹ\s]+ hết|Tiết lạp chương chung|Quyển \d+)",
+        r"^(SẮC TU|CHƯƠNG \d+|LƯỠNG TỰ|BẢN TRƯỚNG|ĐẠI TRÍ|ĐẠI LONG|TRỤ TRÌ CHÙA|Chương [A-ZÀ-Ỹa-ỹ\s]+ hết|Tiết lạp chương chung|Quyển \d+|Cấp \d+:|Mô hình)",
         re.IGNORECASE,
     )
     for line in text.splitlines():
@@ -142,10 +155,15 @@ def clean_viet_text(raw_text: str) -> str:
             continue
         if re.match(r"^\d+$", line) or re.match(r"^[\(\)\s\.\,\-\_]+$", line):
             continue
+        if re.match(r"^[\d\s\,\-\.]+khách", line, re.IGNORECASE) or re.match(r"^[\d\s\,\-\.]+chủ", line, re.IGNORECASE):
+            continue
         valid_lines.append(line)
 
     text = " ".join(valid_lines)
     text = clean_vni_artifacts(text)
+    # Chuẩn hóa các biến thể viết tắt v. v...
+    text = re.sub(r"\bv\.\s*v[…\.]*", "v.v...", text, flags=re.IGNORECASE)
+    text = re.sub(r"\bv[…]+", "v.v...", text, flags=re.IGNORECASE)
     text = re.sub(r"\.{2,}", "...", text)
     return re.sub(r"\s+", " ", text).strip()
 
@@ -158,11 +176,17 @@ def extract_book(pdf_path: str) -> List[Dict[str, str]]:
     filename = os.path.basename(pdf_path)
     full_text = extract_text_from_pdf(pdf_path)
 
-    # 1. Cắt bỏ trang lưu chiểu, danh sách ấn tống và rác cuối sách ở Quyển 4
+    # 1. Cắt bỏ trang lưu chiểu, danh sách ấn tống và 7 cụm LỜI BÀN ở Quyển 4
     if "q4" in filename.lower():
         cut_match = re.search(r"quyển\s*(?:đệ\s*)?4\s*hết", full_text, re.IGNORECASE)
         if cut_match:
             full_text = full_text[:cut_match.end()]
+        full_text = re.sub(
+            r"(?:LỜI|LÔØI)\s*(?:BÀN|BAØN).*?(?=\[\d{4}[a-z]\d{2}\]|\Z|\*\s*\*|\*\s*\*\s*\*)",
+            "",
+            full_text,
+            flags=re.DOTALL | re.IGNORECASE
+        )
 
     for pattern in NOISE_PATTERNS:
         full_text = re.sub(pattern, "", full_text, flags=re.MULTILINE | re.IGNORECASE)
@@ -177,8 +201,29 @@ def extract_book(pdf_path: str) -> List[Dict[str, str]]:
             tag_order.append(corrected_tag)
         by_tag.setdefault(corrected_tag, []).append(content.strip())
 
+    if "q4" in filename.lower():
+        TEMPLATE_GROUPS = {
+            "[1134a03]": ["[1134a04]", "[1134a05]"],
+            # [1135c26] là thẻ bắt đầu của Mẫu văn trạng và Phong bì
+            "[1135c26]": ["[1135c27]", "[1135c28]", "[1135c29]", "[1135c30]"],
+            # [1136b15] là thẻ bắt đầu của Mẫu bảng thức mời trà
+            "[1136b15]": ["[1136b16]", "[1136b17]", "[1136b18]", "[1136b19]"],
+        }
+    else:
+        TEMPLATE_GROUPS = {
+            "[1151b13]": ["[1151b14]", "[1151b15]", "[1151b16]", "[1151b17]", "[1151b18]"],
+            "[1152a01]": ["[1152a02]", "[1152a03]", "[1152a04]", "[1152a05]", "[1152a06]", "[1152a07]", "[1152a08]"],
+            "[1153a23]": ["[1153a24]", "[1153a25]"],
+            "[1154b04]": ["[1154b05]", "[1154b06]", "[1154b07]"],
+            "[1154b17]": ["[1154b18]", "[1154b19]", "[1154b20]", "[1154b21]", "[1154b22]"],
+        }
+
     SUB_TAGS = set(sub for subs in TEMPLATE_GROUPS.values() for sub in subs)
-    BAN_TRUONG_SUB_TAGS = set(t for t, _ in BAN_TRUONG_MAP[1:])
+    BAN_TRUONG_SUB_TAGS = (
+        {f"[1149b{i:02d}]" for i in range(12, 30)}
+        | {f"[1149c{i:02d}]" for i in range(1, 30)}
+        | {'[1150a01]'}
+    )
     THAO_DON_SUB_TAGS = {'[1150b16]', '[1150b18]', '[1150b19]', '[1150b20]', '[1150b21]', '[1150b22]'}
     NGUYET_PHAN_SUB_TAGS = {
         '[1154c26]', '[1154c28]', '[1155a02]', '[1155a05]',
@@ -196,17 +241,17 @@ def extract_book(pdf_path: str) -> List[Dict[str, str]]:
         if tag in CHAPTER_END_TAGS:
             continue
 
-        # 1. Bản trướng thức trong Quyển 7: Tách thành 36 khoản thu chi 1-1
+        # 1. Bản trướng thức trong Quyển 7: Tách thành 35 khoản thu chi tương ứng chuẩn xác
         if tag == '[1149b11]' and "q7" in filename.lower():
             viet_chunk_bt = blocks[2] if len(blocks) >= 3 else ""
             clean_vc_bt = clean_viet_text(viet_chunk_bt)
             for bt_tag, pat in BAN_TRUONG_MAP:
                 m = re.search(pat, clean_vc_bt, re.DOTALL | re.IGNORECASE)
                 v_item = clean_viet_text(m.group(0)) if m else ""
-                if bt_tag == '[1149c18]-[1149c27]':
+                if bt_tag == '[1149c19]-[1150a01]':
                     sub_tags_bt = [
-                        '[1149c18]', '[1149c19]', '[1149c20]', '[1149c21]', '[1149c22]',
-                        '[1149c23]', '[1149c24]', '[1149c25]', '[1149c26]', '[1149c27]'
+                        '[1149c19]', '[1149c20]', '[1149c21]', '[1149c22]', '[1149c23]',
+                        '[1149c24]', '[1149c25]', '[1149c26]', '[1149c27]', '[1149c28]', '[1150a01]'
                     ]
                     h_item = " ".join(clean_han_text(by_tag[st][0]) for st in sub_tags_bt if st in by_tag and by_tag[st])
                 else:
@@ -274,6 +319,10 @@ def extract_book(pdf_path: str) -> List[Dict[str, str]]:
             viet_clean = clean_viet_text(blocks[2])
         elif len(blocks) == 2:
             viet_clean = clean_viet_text(blocks[1])
+
+        # Xử lý đặc thù ở [1154b15]: tách chữ 茶狀 sang đầu tiêu đề mẫu thiệp
+        if tag == '[1154b15]' and han_clean.endswith('茶狀'):
+            han_clean = han_clean[:-2].strip()
 
         if han_clean and viet_clean:
             extracted_records.append({
