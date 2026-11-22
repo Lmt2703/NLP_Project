@@ -4,7 +4,7 @@
 - **Tác phẩm:** Sắc tu Bách Trượng thanh quy (勅修百丈清規)
 - **Quyển:** Quyển 4 (Chương 4: Lưỡng tự ban thủ) và Quyển 7 (Chương 7: Tiết lạp)
 - **Phương pháp:** Neo mã đoạn CBETA kết hợp Tách câu quy hoạch động đa mục tiêu (Lexical-Anchored Sentence DP Alignment)
-- **Thời gian lập:** 22/11/2026 19:03:43
+- **Thời gian lập:** 22/11/2026 21:33:12
 
 ---
 
@@ -12,9 +12,9 @@
 
 | Quyển sách | Số cặp cấp Đoạn | Tổng số câu dóng | Số câu hợp lệ | Ký tự Hán lẫn vào Việt | Lỗi font VNI | Tỷ lệ lỗi |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: |
-| q4 (SacTuBachTruongThanhQuy-q4.pdf) | 54 | 484 | 484 | 0 | 0 | 0.0% |
-| q7 (SacTuBachTruongThanhQuy-q7.pdf) | 81 | 402 | 402 | 0 | 0 | 0.0% |
-| **TỔNG CỘNG** | **135** | **886** | **886** | **0** | **0** | **0.0%** |
+| q4 (SacTuBachTruongThanhQuy-q4.pdf) | 54 | 482 | 482 | 0 | 0 | 0.0% |
+| q7 (SacTuBachTruongThanhQuy-q7.pdf) | 82 | 404 | 404 | 0 | 0 | 0.0% |
+| **TỔNG CỘNG** | **136** | **886** | **886** | **0** | **0** | **0.0%** |
 
 ---
 

@@ -229,6 +229,96 @@ BUDDHIST_DICT: List[Tuple[str, str]] = [
     ("冬節", "đông tiết"),
     ("進住持", "hầu trụ trì"),
     ("鳴鼓三下", "đánh ba tiếng trống"),
+    # Mỏ neo bổ sung cho Quyển 4 (Chương 4: Lưỡng tự ban thủ)
+    ("蒸潤", "ẩm ướt"),
+    ("蒸潤", "mốc meo"),
+    ("殘斷", "sút sổ"),
+    ("殘斷", "rách rã"),
+    ("專司其藏", "quản lý kinh điển"),
+    ("教律", "giáo luật"),
+    ("不遵佛之言行", "tuân thủ ngôn hạnh"),
+    ("自性之妙", "tự tánh"),
+    ("祖之意", "ý đồ của chư tổ"),
+    ("應變無窮", "ứng biến vô cùng"),
+    ("不即不離", "không tức không rời bỏ"),
+    ("東西藏", "đông tây"),
+    ("親炙參扣", "tham học hỏi đạo"),
+    ("禮節常宜恭謹", "lễ tiết"),
+    ("慶喜之侍瞿曇", "khánh hỉ"),
+    ("病僧", "tăng nhân bị bệnh"),
+    ("倉庫疎漏", "kho đụn sơ hở"),
+    ("守己廉謹", "trong sạch cẩn trọng"),
+    ("預貼牌上", "treo lên"),
+    ("旦暮", "sớm chiều"),
+    ("交點本寮什物", "di giao tạp vật"),
+    ("提調香燈", "nhang đèn"),
+    ("望寮", "liêu hờ"),
+    ("搆怨住持", "oán trách trụ trì"),
+    ("離寺相遠", "khá xa chùa"),
+    ("其弊二也", "vụ việc thứ hai"),
+    ("雖不明支", "không được công khai chi ra"),
+    ("巧立除破", "khéo lập ra các danh mục giả"),
+    ("莊中之費", "phí dụng to lớn của ban ruộng vườn"),
+    ("半於寺", "phân nửa khoản chi tiêu của toàn chùa"),
+    ("其弊三也", "đây là vụ việc thứ ba"),
+    ("大家業產", "đại gia đình"),
+    ("耕種有佃", "cày cấy gieo trồng"),
+    ("收租之時", "thu tô"),
+    ("消禍未萌", "chưa chớm phát sinh"),
+    ("逃亡家", "đào vong"),
+    ("更不報眾", "không cần trải qua giai đoạn treo bảng báo"),
+    ("委曲致懇", "thành khẩn"),
+    ("送歸寮", "trở về tăng liêu"),
+    ("茶湯管待", "thiết bày trà thang quản đãi"),
+    ("進退不混", "tựu chức và thoái nhiệm"),
+    ("榜式", "bảng thức"),
+    ("特賜開允", "nhận lời thỉnh cầu"),
+    ("幸獲依棲", "hân hạnh được chấp nhận"),
+    ("既蒙見舉", "mong được tiến cử"),
+    ("佛法寄重", "phật pháp hoằng dương"),
+    ("既蒙使令", "thừa đương"),
+    ("慈悲包荒", "rộng lượng bao dung"),
+    ("仍往庫司", "đến khố ty"),
+    ("備草飯", "cơm rau giản đơn"),
+    ("預席", "dự tiệc mời"),
+    ("光伴分手", "ngồi hai bên đối mặt nhau"),
+    ("新頭首一出", "tân đầu thủ hàng nhất"),
+    ("舊知事四出", "cựu tri sự hàng thứ tư"),
+    ("東序居右", "đông tự ở bên phải"),
+    ("燒香侍者", "thị giả đốt hương"),
+    ("至晚湯果", "đến chiều tối"),
+    ("送舊人粥飯三日", "đưa người cũ đãi cơm cháo ba ngày"),
+    # Mỏ neo bổ sung cho Quyển 7 (Chương 7: Tiết lạp)
+    ("各當自看", "mỗi người tự xem tên tuổi"),
+    ("好爭作閙", "hiếu thắng"),
+    ("犯者合擯", "trục xuất"),
+    ("冐名越戒", "mạo danh khai vượt giới lạp"),
+    ("分十六板", "mười sáu bản"),
+    ("除單寮", "ngoại trừ đơn liêu"),
+    ("副鉢", "phó bát"),
+    ("看定方寫諸圖", "mới viết thành các đồ biểu"),
+    ("正本再呈", "bản chính lại trình"),
+    ("遍呈單寮", "trình cho tất cả đơn liêu"),
+    ("鋪大殿前", "trước chánh điện"),
+    ("貼僧堂前後門", "dán cửa trước và sau"),
+    ("四節講行", "bốn dịp lễ"),
+    ("三座湯", "ba cấp"),
+    ("第一座", "cấp một"),
+    ("第二座", "cấp hai"),
+    ("第三座", "cấp ba"),
+    ("侍司預備草圖", "thị ty dự bị"),
+    ("書照牌", "bản đồ chỗ ngồi"),
+    ("備卓袱", "chuẩn bị bàn lễ"),
+    ("陳列寢堂下間", "gian trái của tẩm đường"),
+    ("堂頭和尚請今晚", "hoà thượng đường đầu mời ngài chiều nay"),
+    ("餘頭首辦事名勝", "ngoài ra, các vị khác như đầu thủ"),
+    ("寢堂釘掛排位", "trang trí và sắp xếp"),
+    ("香几之右", "bên phải bàn hương"),
+    ("就隨其末", "đi theo sau cùng"),
+    ("至法堂上", "tiến vào pháp đường"),
+    ("合掌立定", "đứng chắp tay trước bàn hương"),
+    ("巡遍而散", "tuần hành giáp vòng thì giải tán"),
+    ("四節並同", "bốn ngày lễ trong năm"),
 ]
 
 # Các bước chuyển trạng thái (di_han, dj_viet) được chấp nhận trong thuật toán DP
@@ -285,6 +375,12 @@ def split_viet_sentences(text: str) -> List[str]:
     for k, v in protected.items():
         t = t.replace(k, v)
 
+    # Bảo vệ các dấu chấm lửng trong ngày tháng điền khuyết (Hôm nay…, ngày…..)
+    t = re.sub(r'Hôm nay\s*[\.…]{2,}', 'Hôm nay#DOTS# ', t, flags=re.IGNORECASE)
+    t = re.sub(r'ngày\s*[\.…]{2,}', 'ngày#DOTS# ', t, flags=re.IGNORECASE)
+    t = re.sub(r'tháng\s*[\.…]{2,}', 'tháng#DOTS# ', t, flags=re.IGNORECASE)
+    t = re.sub(r'năm\s*[\.…]{2,}', 'năm#DOTS# ', t, flags=re.IGNORECASE)
+
     # Bảo vệ các từ nối sau lời thoại: '!”, rồi' hay '.”, mọi người'
     t = re.sub(
         r'([.?!][”"\'’\)]*)\s*,\s*(rồi|lại|mọi người|hành giả|cùng|đoạn|sau đó|khi ấy|bấy giờ)',
@@ -313,6 +409,7 @@ def split_viet_sentences(text: str) -> List[str]:
     for s in sentences:
         s = s.replace("#COMMA#", ",")
         s = s.replace("vv#DOT#", "v.v...")
+        s = s.replace("#DOTS#", "…..")
         for k, v in protected.items():
             s = s.replace(v, k)
         s = s.strip()
