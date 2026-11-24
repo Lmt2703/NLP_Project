@@ -21,9 +21,120 @@ Xử lý dứt điểm:
    - 887-900 (Tắc 496-499)
    - 931-956 (Tắc 507-517)
    - 972-cuối (Tắc 525: Khúc ca 12 giờ, Tắc 521-524, Triệu Vương tán, Khóc Triệu Châu)
+4. Khôi phục câu mở đầu bị cắt mất tại Tắc 473 (Sư hỏi trị nhật ăn rau sống hay rau chín).
+5. Xóa triệt để 4 vị trí lặp dòng / lặp vế (716-718, 772, 958, 983).
+6. Căn chỉnh chuẩn xác 100% 11 điểm lệch ranh giới đối thoại ngắn (67-68, 357-360, 694-698, 703-704, 711-713, 715-716, 778-780, 932-933, 947-948, 952-953, 954-956).
 """
 
 from typing import List, Tuple
+
+
+def apply_precise_fixes(pairs: List[Tuple[str, str]]) -> List[Tuple[str, str]]:
+    """Căn chỉnh chi tiết 16 điểm theo phản hồi rà soát toàn diện."""
+    p = [list(pair) for pair in pairs]
+
+    # Thực hiện từ cuối lên đầu để các chỉ số phía trước không bị xê dịch
+
+    # 1. Điểm 5: Dòng 983 (Tắc 517) - Xóa vế lặp 'Thủ tọa không đáp được.' ở đầu cột VI
+    p[982] = [p[982][0], "Có vị tú tài gặp Sư bèn khen ngợi:  - Hòa thượng là cổ Phật."]
+
+    # 2. Điểm 16 & Điểm 4: Dòng 954-959 (Tắc 506-507) - Căn chỉnh ranh giới cầu đá & viện Tân La, xóa câu lặp 'cách biển'
+    block_506_507 = [
+        ("師與首座看石橋，乃問首座：是什麼人造？ 云：李膺造。", "Sư cùng thủ tọa xem cầu đá. Sư hỏi Thủ tọa:   - Người nào tạo chiếc cầu? Thủ tọa đáp:  - Lý Ưng tạo."),
+        ("師云：造時向什麼處下手？", "- Lúc tạo nhằm vào đâu để tay?"),
+        ("座無對，師云：尋常說石橋問，著下手處也不知。", "Thủ tọa không đáp được. Sư bảo:  - Bình thường nói cầu đá, hỏi đến chỗ để tay cũng chẳng biết."),
+        ("有新羅院主請師齋，師到門首問：此是什麼院？", "Có viện chủ Tân La thỉnh Sư thọ trai, Sư đến trước cổng hỏi: “Ðây là chùa  nào?”"),
+        ("云：新羅院。", "Viện chủ thưa: “Viện Tân La”."),
+        ("師云：我與你隔海。", "Sư bảo: “Ta cùng ông cách biển”.")
+    ]
+    p[953:959] = [list(x) for x in block_506_507]
+
+    # 3. Điểm 15: Dòng 952-953 (Tắc 505) - Trả 'Tăng phất tay áo ra đi.' về đúng dòng 953
+    p[951] = ["師云：孫臏門下因 什麼鑽龜？", "Sư bảo:  - Dưới cửa Tôn Tẩn nhân gì dùi rùa?"]
+    p[952] = ["僧拂袖出去，師云：將為當榮，折他雙足。", "Tăng phất tay áo ra đi. Sư bảo:  - Tuy sắp được vinh hiển mà hai chân bị chặt ."]
+
+    # 4. Điểm 14: Dòng 947-948 (Tắc 504) - Trả 'Tăng xòe tay.' về đúng dòng 948
+    p[946] = ["師云：還見文殊也無？", "- Có thấy Văn-thù hay không?"]
+    p[947] = ["僧展手，師云：展手頗 多，文殊難覩。", "Tăng xòe tay. Sư bảo:  - Ông có thể xòe tay nhiều lần, nhưng ai thấy được Văn-thù?"]
+
+    # 5. Điểm 13: Dòng 932-933 (Tắc 499-500) - Tách 'Sư đến Bá Trượng.' sang đầu dòng 933
+    p[931] = ["師放下掃 呵呵大笑而去，大慈便歸方丈。", "Sư buông chổi xuống, cười to ha hả mà đi. Ðại Từ trở về phương trượng."]
+    p[932] = ["師到百丈，百丈問：從 什麼處來？", "Sư đến Bá Trượng. Bá Trượng hỏi:  - Từ đâu đến đây?"]
+
+    # 6. Điểm 1: Dòng 826 (Tắc 473) - Khôi phục câu mở đầu bị cắt mất
+    block_473 = [
+        ("師問菜頭：今日喫生菜？ 熟菜？", "Sư hỏi trị nhật:  - Hôm nay ăn rau sống hay rau chín?"),
+        ("菜頭提起一莖菜。", "Trị nhật đưa lên một cọng rau.")
+    ]
+    p[825:826] = [list(x) for x in block_473]
+
+    # 7. Điểm 3 & Điểm 12: Dòng 771-781 (Tắc 465) - Xóa lặp '云：不會。' ở dòng 772, khớp chuẩn 3 dòng 778-780
+    block_465 = [
+        ("云：不會。", "Tăng thưa: “Chẳng lãnh hội”."),
+        ("師却云：此去舒州有投子山和尚，你去禮拜，問取因緣。 相契不用更來，不相契却來。", "Sư lại bảo: “Từ đây hãy đi đến Châu Thư có hòa thượng ở núi Ðầu Tử, ông  hãy đến đó lễ bái và hỏi. Nhân duyên khế hợp thì chẳng cần trở lại, chẳng khế  hợp thì trở lại đây”."),
+        ("其僧便去。", "Vị tăng ấy liền đi."),
+        ("纔到投子和尚處，投子乃問：近離 什麼處？", "Vừa đến chỗ hòa thượng Ðầu Tử, Ðầu Tử hỏi: “Vừa rời chỗ  nào đến?”"),
+        ("云：離趙州特來禮拜和尚。", "Tăng thưa: “Rời Triệu Châu đến đây lễ bái hòa thượng”."),
+        ("投子云：趙州老人 有何言句？", "Ðầu Tử bảo: “Ông già Triệu Châu có lời gì chỉ dạy?”"),
+        ("僧乃具舉前話。", "Tăng bèn thuật lại lời trước."),
+        ("投子乃下禪床行三五步 却坐云：會麼？", "Ðầu Tử bước xuống giường thiền, đi năm ba bước, rồi ngồi lại bảo: “Lãnh hội  chăng?”"),
+        ("僧云：不會。", "Tăng thưa: “Chẳng lãnh hội”."),
+        ("投子云：你歸舉似趙州。", "Ðầu Tử bảo: “Ông về đi thuật lại cho Triệu Châu”."),
+        ("其僧却歸舉似師，", "Vị tăng ấy trở về thuật lại cho Sư."),
+        ("師云：還會麼？ 云：未會。", "Sư bảo:   - Lãnh hội chăng? Tăng thưa:   - Chưa lãnh hội."),
+        ("師云：也不較多也。", "Sư bảo:   - Cũng chẳng sai khác.")
+    ]
+    p[770:781] = [list(x) for x in block_465]
+
+    # 8. Điểm 10, Điểm 11 & Điểm 2: Dòng 711-721 (Tắc 452-453) - Xóa lặp '披衲衣來否', căn chuẩn ranh giới 1-1
+    block_452_453 = [
+        ("云： 既不在心數裏，和尚為什麼覓？", "- Ðã chẳng ở trong tâm sở, hòa thượng vì cái gì tìm?"),
+        ("師云：為你道不得。", "- Vì ông nói không được."),
+        ("云： 法過眼、耳、鼻、舌、身、意而不解，作麼生道不得？", "- Pháp vượt trên mắt tai mũi lưỡi thân ý, nhưng chẳng thể nhận biết. Vậy làm  sao có thể nói được?"),
+        ("師云：喫 我涕唾。", "- Ăn đàm dãi của ta."),
+        ("師問僧：你曾看法華經麼？ 云：曾看。", "Sư hỏi vị tăng: “Ông từng xem kinh Pháp Hoa chăng?” Tăng thưa: “Dạ từng xem”."),
+        ("師云：經中 道：衲衣在空閑，假名阿練若，誑惑世間人。", "Sư bảo:  - Trong kinh nói ‘Khoác nạp y và ở nơi vắng vẻ, được gọi là A-luyện-nhã,  người thế gian bị dối gạt vì điều đó’."),
+        ("你作麼生 會？", "Ông làm sao lãnh hội?"),
+        ("僧擬禮拜，", "Tăng lễ bái."),
+        ("師云：你披衲衣來否？", "Sư bảo: - Ông có khoác nạp y chăng?"),
+        ("云：披來。", "- Có khoác."),
+        ("師云：莫惑我。", "- Chớ lừa ta."),
+        ("云：如何得不惑去？", "- Làm sao để chẳng lừa thầy?"),
+        ("師云：自作活計，莫取老僧語。", "- Ta tự tạo kế sống, chớ nhận đùa lời của lão tăng.")
+    ]
+    p[710:721] = [list(x) for x in block_452_453]
+
+    # 9. Điểm 8 & Điểm 9: Dòng 694-704 (Tắc 450-452) - Tách bạch '主無語' <-> 'Tọa chủ im lặng', '主無對' <-> 'Tọa chủ không đáp được'
+    block_450_452 = [
+        ("師云：直饒你問得答得，總屬經論佛法未在。", "- Dù cho ông hỏi được và đáp được, thảy đều thuộc kinh luận, chẳng phải Phật  pháp."),
+        ("主無語。", "Tọa chủ im lặng không đáp."),
+        ("師問一行者：從什麼處來？", "Sư hỏi một cư sĩ tập tu:  - Từ đâu đến đây?"),
+        ("云：北院來。", "Cư sĩ đáp:   - Từ một viện ở phía bắc đến."),
+        ("師云：那 院何似者院？", "- Sao viện đó giống viện này?"),
+        ("行者無對。", "Cư sĩ không đáp được."),
+        ("有僧在邊立，師令代行者語， 僧代云：從那院來。", "Có vị tăng đứng bên cạnh, Sư sai tăng đáp thay cư sĩ. Tăng nói:  - Từ viện kia đến."),
+        ("師笑之。", "Sư cười."),
+        ("師又令文遠代之，文遠云： 行者還是不取師語話。", "Sư lại sai Văn Viễn đáp thay. Văn Viễn nói:  - Con chưa có lời nào với Thầy."),
+        ("師問座主：所習何業？", "Sư hỏi tọa chủ:  - Ðã quen sự nghiệp (tu pháp môn) gì?"),
+        ("云：講維 摩經。", "Tọa chủ thưa:  - Giảng Kinh Duy-ma."),
+        ("師云：維摩經步步是道場，座主在什麼處？", "Sư bảo:  - Kinh Duy-ma nói ‘Đạo tràng ở mỗi bước chân‘. Tọa chủ ở chỗ nào?"),
+        ("主無 對。", "Tọa chủ không đáp được."),
+        ("師令全益代座主語，全益云：只者一問，可識道場 麼？", "Sư sai Toàn Ích (một đệ tử của Sư) đáp thay tọa chủ. Toàn Ích nói:  - Chỉ một câu hỏi này mà có thể nhận biết đạo tràng chăng?")
+    ]
+    p[693:704] = [list(x) for x in block_450_452]
+
+    # 10. Điểm 7: Dòng 357-360 (Tắc 344) - Căn chỉnh ranh giới 4 dòng hạt châu của học nhân
+    p[356] = ["師云：高聲問。", "Sư bảo: “Hỏi to lên!”"]
+    p[357] = ["僧禮拜，師 云：不解問。 何不道：高下即不問，如何是學人珠？ 何不與麼問？", "Tăng lễ bái. Sư bảo:   - Ông chẳng biết hỏi. Sao chẳng nói ‘Có tiếng hay lặng thinh thì chẳng hỏi, thế  nào là hạt châu của học nhân?’ Sao ông chẳng hỏi như thế?"]
+    p[358] = ["僧便再問，", "Vị tăng liền hỏi lại câu trên."]
+    p[359] = ["師云：洎合放過者漢。", "Sư bảo:   - Ta cũng muốn cho qua gã này."]
+
+    # 11. Điểm 6: Dòng 67-68 (Tắc 242) - Đưa '師應諾。' xuống đúng câu đáp
+    p[66] = ["問：如何是一句？", "Tăng hỏi: “Thế nào là một câu?”"]
+    p[67] = ["師應諾。 僧再 問，師云：我不患聾。", "Sư ứng thinh: “Dạ!” Tăng hỏi lại câu trên, Sư bảo: “Ta chẳng bệnh điếc”."]
+
+    return [(h, v) for h, v in p]
+
 
 def refine_trieu_chau_pairs(orig_pairs: List[Tuple[str, str]]) -> List[Tuple[str, str]]:
     """Thay thế các khối bị lệch dòng bằng các cặp đã được căn chỉnh chuẩn xác 100%."""
@@ -373,4 +484,7 @@ def refine_trieu_chau_pairs(orig_pairs: List[Tuple[str, str]]) -> List[Tuple[str
     for s, e, blk in sorted(replacements, key=lambda x: x[0], reverse=True):
         new_pairs[s:e] = blk
 
-    return new_pairs
+    # Áp dụng căn chỉnh chi tiết dứt điểm 16 lỗi theo yêu cầu mới
+    final_pairs = apply_precise_fixes(new_pairs)
+
+    return final_pairs
