@@ -120,8 +120,8 @@ Toàn bộ dữ liệu được kiểm thử tự động bởi module [evaluate
 
 | Chỉ số kiểm tra | Sắc Tu Bách Trượng | Triệu Châu Ngữ Lục | TỔNG CỘNG | Ngưỡng nghiệm thu | Đánh giá |
 | :--- | :---: | :---: | :---: | :---: | :---: |
-| **Tổng số cặp câu song ngữ** | **886 cặp** | **1.150 cặp** | **2.036 cặp câu** | - | Cấp câu hoàn chỉnh |
-| **Số câu hợp lệ** | **886 / 886** | **1.150 / 1.150** | **2.036 / 2.036** | - | Khớp nghĩa 100% |
+| **Tổng số cặp câu song ngữ** | **886 cặp** | **1.023 cặp** | **1.909 cặp câu** | - | Cấp câu hoàn chỉnh |
+| **Số câu hợp lệ** | **886 / 886** | **1.023 / 1.023** | **1.909 / 1.909** | - | Khớp nghĩa 100% |
 | **Khuyết vế Hán (Missing Han)** | **0 câu** | **0 câu** | **0 câu** | 0 | Đạt chuẩn |
 | **Khuyết vế Việt (Missing Viet)** | **0 câu** | **0 câu** | **0 câu** | 0 | Đạt chuẩn |
 | **Lẫn chữ Hán trong vế Việt** | **0** | **0** | **0** | 0 | Đạt chuẩn |

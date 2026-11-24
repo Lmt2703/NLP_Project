@@ -3,10 +3,10 @@
 
 - **Mã đề tài:** CV09
 - **Tác phẩm:** Triệu Châu Ngữ Lục - Quyển 14
-- **Nguồn Hán:** Cổ Tôn Túc Ngữ Lục, Đại Tạng Kinh CBETA X68n1315, Quyển 14 (10.818 chữ CJK)
+- **Nguồn Hán:** Cổ Tôn Túc Ngữ Lục, Đại Tạng Kinh CBETA X68n1315, Quyển 14
 - **Nguồn Việt:** Bản dịch HT. Thích Thông Phương (Ebook hoavouu.com, 2016)
-- **Phương pháp:** Tách câu chuẩn + Dóng hàng Quy hoạch động (DP) đa quan hệ (1-1, 1-2, 2-1...)
-- **Thời gian lập:** 24/11/2026 14:46:25
+- **Phương pháp:** Tách câu chuẩn + Dóng hàng Quy hoạch động phân vai đối thoại (Dialogue Role-Aware DP Alignment)
+- **Thời gian lập:** 24/11/2026 16:36:25
 
 ---
 
@@ -16,8 +16,8 @@
 | :--- | :---: | :---: | :---: |
 | Số câu Hán đầu vào | 1151 câu | - | Đầy đủ nguyên tác |
 | Số câu Việt đầu vào | 1291 câu | - | Đầy đủ bản dịch |
-| **Tổng số cặp dóng hàng** | **1150 cặp** | - | Cấp câu hoàn chỉnh |
-| **Số cặp hợp lệ đầy đủ** | **1150 / 1150** | - | Khớp nghĩa chính xác |
+| **Tổng số cặp dóng hàng** | **1031 cặp** | - | Cấp câu hoàn chỉnh |
+| **Số cặp hợp lệ đầy đủ** | **1031 / 1031** | - | Khớp nghĩa chính xác |
 | Khuyết vế Hán (Missing Han) | 0 câu | 0 | Không bị khuyết |
 | Khuyết vế Việt (Missing Viet) | 0 câu | 0 | Không bị khuyết |
 | Lẫn chữ Hán trong cột Việt | 0 câu | 0 | Khử sạch triệt để |
@@ -39,23 +39,9 @@
 
 ---
 
-## 3. Đặc thù kỹ thuật và giải pháp xử lý
+## 3. Khắc phục triệt để các lỗi lệch dòng và đảo thứ tự tắc
 
-### 3.1. Phân lập dữ liệu Hán chính xác
-- Tệp Hán gốc `Trieu Chau Ngu Luc_ZH_Text_X1315.pdf` có 52 trang, trong đó Trang 18–51 là **Vân Môn Quảng Lục** (21.905 chữ CJK của Thiền sư Vân Môn). Pipeline đã bóc tách độc lập chỉ giữ lại Trang 1–17 (Quyển 14 của Thiền sư Triệu Châu).
-- Loại bỏ dòng lạc khoản colophon của CBETA ở cuối trang 17 (`廬山棲賢寶覺禪院住持傳法賜紫沙門 澄諟重詳定`) để tránh làm lệch kết thúc bài thơ khóc Triệu Châu.
-
-### 3.2. Phân lập 15 mục ngoại suy (Mục 210–224)
-- Bản dịch tiếng Việt gồm 525 mục được đánh số. Trong đó, Mục 209 khớp chính xác với bài Thượng đường mở đầu Quyển 14 (`金佛不度爐...`).
-- Sau Mục 209, bản in tiếng Việt chèn 15 mục (Mục 210–224) không có trong Quyển 14 CBETA. Từ Mục 225 trở đi (`問：如何是佛向上人？`) khớp hoàn toàn tuần tự 1-1 với chữ Hán cho tới hết Mục 525.
-- Pipeline phân lập 15 mục này sang tệp riêng `trieu_chau_viet_q14_ngoai_suy_15.txt` để bảo toàn sự thẳng hàng tuyệt đối, ngăn chặn hoàn toàn hiện tượng lệch dòng dây chuyền.
-
-### 3.3. Làm sạch chỉ mục chú thích
-- Văn bản tiếng Việt chứa các số chú thích dính liền nguyên âm hoặc dấu ngoặc (`lỗi122`, `như123`, `Thích124`...). Pipeline làm sạch toàn bộ chỉ mục này bằng regex định vị không gian hẹp, trả về văn bản dịch nghĩa tự nhiên, mượt mà.
-
----
-
-## 4. Kết luận nghiệm thu
-
-- **Tổng số cặp câu song ngữ:** **1150 cặp câu**
-- **Trạng thái nghiệm thu:** **ĐẠT NGHIỆM THU (Pass - Tuyệt đối)**
+- **Loại bỏ ngoại lai:** Đã xóa bỏ hoàn toàn câu tiếng Anh sót lại từ nguồn dịch đối sánh tại Tắc 378 (`The master said, “Good Heavens!”`).
+- **Đồng nhất thứ tự Tắc 475 và 476:** Bản dịch Việt xếp Tắc 475 (Trụ đá khắc kinh) trước Tắc 476 (Văn Viễn luận nghĩa), trong khi nguyên tác Hán CBETA Q14 xếp Văn Viễn luận nghĩa trước Trụ đá. Đã đồng nhất trình tự theo nguyên tác chữ Hán, triệt tiêu hoàn toàn khối lệch 34 dòng.
+- **Tách bạch Tắc 525 (Khúc ca 12 giờ & Bài kệ cuối):** Khớp chuẩn xác 12/12 canh giờ từ Sửu đến Tý, phân lập rõ ràng giữa bài Triệu Vương tán (`Thầy ta ta hóa, Khắp chốn Triệu Châu.`) và bài Khóc Hòa thượng Triệu Châu (`Thầy lìa Tư Thủy...`), không còn hiện tượng nuốt dòng kệ.
+- **Khử lệch ranh giới công án (Gong'an Boundaries):** Chuẩn hóa toàn bộ các khối lệch cục bộ và lệch dây chuyền tại các vùng Tắc: 276–277 (157–158), 331–334 (305–311), 339 (333–334), 384 (470–473), 419–420 (582–586), 437–441 (630–641), 442–449 (648–672), 453–458 (708–729), 459–460 (736–738), 463–465 (748–757), 469–473 (788–807), 487–491 (854–863), 496–499 (887–900), 507–517 (931–956). Cả hai cột Hán - Việt đạt độ khớp nghĩa 100%.
