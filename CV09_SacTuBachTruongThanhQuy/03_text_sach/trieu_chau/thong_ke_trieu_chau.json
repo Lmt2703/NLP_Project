@@ -1,0 +1,83 @@
+{
+  "files": {
+    "vi": {
+      "filename": "Trieu Chau Ngu Luc_VI_Text_ThongPhuong (1).pdf",
+      "size_mb": 0.73,
+      "pages": 134
+    },
+    "zh": {
+      "filename": "Trieu Chau Ngu Luc_ZH_Text_X1315.pdf",
+      "size_mb": 1.32,
+      "pages": 52
+    }
+  },
+  "vietnamese": {
+    "total_words": 28104,
+    "total_chars": 128326,
+    "hanh_trang": {
+      "pages": "1 - 6",
+      "words": 1718,
+      "chars": 7599,
+      "sentences": 105
+    },
+    "ngu_luc": {
+      "pages": "6 - 121",
+      "total_items": 525,
+      "total_words": 22284,
+      "total_chars": 102392,
+      "avg_words_per_item": 42.4,
+      "max_item": {
+        "id": 525,
+        "words": 760
+      },
+      "min_item": {
+        "id": 385,
+        "words": 11
+      },
+      "q13_items_count": 208,
+      "q13_words": 9306,
+      "q14_items_count": 317,
+      "q14_words": 12978
+    },
+    "footnotes": {
+      "pages": "121 - 133",
+      "total_notes": 334,
+      "words": 4102,
+      "chars": 18335
+    }
+  },
+  "chinese": {
+    "total_pages": 52,
+    "total_cjk_chars": 33424,
+    "tua_co_ton_tuc": {
+      "pages": "0 - 1",
+      "cjk_chars": 701,
+      "author": "Sa môn Vật Sơ Đại Quán (1267)"
+    },
+    "q14_trieu_chau": {
+      "pages": "1 - 17",
+      "title": "古尊宿語錄卷第十四 - 趙州真際禪師語錄之餘",
+      "cjk_chars": 10818,
+      "punctuation_marks": 2658,
+      "lines": 564,
+      "sentences": 1152,
+      "questions_count": 234,
+      "replies_count": 440,
+      "shang_tang_count": 1
+    },
+    "van_mon_q15_q16": {
+      "pages": "18 - 51",
+      "title": "雲門匡真禪師廣錄 卷15-16",
+      "cjk_chars": 21905,
+      "note": "Thuộc ngữ lục của Thiền sư Vân Môn Văn Yển, không thuộc Triệu Châu."
+    }
+  },
+  "alignment_coverage": {
+    "q14_overlap_items": "Mục 209 đến 525 (317 mục)",
+    "q14_vi_words": 12978,
+    "q14_zh_cjk": 10818,
+    "char_ratio_vi_to_zh": 5.51,
+    "missing_zh_in_file": "Mục 1 đến 208 (208 mục) thuộc Quyển 13",
+    "extraneous_zh_in_file": "Trang 18 đến 51 (21905 chữ Hán) thuộc Ngữ lục Vân Môn"
+  }
+}
