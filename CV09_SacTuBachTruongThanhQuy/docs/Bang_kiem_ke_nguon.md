@@ -136,16 +136,11 @@ CV09_SacTuBachTruongThanhQuy/
 │   ├── bach_truong/                                   # Văn bản Sắc tu Bách Trượng thanh quy (Quyển 4 & 7)
 │   │   ├── q4_han.txt / q4_viet.txt                   # Riêng Quyển 4 (482 câu)
 │   │   ├── q7_han.txt / q7_viet.txt                   # Riêng Quyển 7 (404 câu)
-│   │   └── bach_truong_aligned_han.txt / _viet.txt    # Gộp Quyển 4 & 7 (886 câu)
-│   ├── trieu_chau/                                    # Văn bản trích xuất Triệu Châu Ngữ Lục (1.039 câu)
-│   └── giai_thoat_dao_luan/                           # Văn bản trích xuất Giải Thoát Đạo Luận (4.961 câu)
-│       ├── giai_thoat_dao_luan_han_clean.txt          # Toàn văn Hán sạch 12 quyển
-│       ├── giai_thoat_dao_luan_viet_clean.txt         # Toàn văn Việt sạch 12 quyển
-│       ├── giai_thoat_dao_luan_sections.json          # 19 phân đoạn cấu trúc JSON
-│       ├── giai_thoat_dao_luan_aligned_han.txt        # Văn bản Hán đã dóng hàng (4.961 câu)
-│       ├── giai_thoat_dao_luan_aligned_viet.txt       # Văn bản Việt đã dóng hàng (4.961 câu)
-│       ├── thong_ke_giai_thoat_dao_luan.json          # Thống kê trích xuất
-│       └── thong_ke_dong_hang_gtdl.json               # Thống kê dóng hàng
+│   │   └── bach_truong_han.txt / bach_truong_viet.txt # Gộp Quyển 4 & 7 (886 câu)
+│   ├── trieu_chau/                                    # Văn bản Triệu Châu Ngữ Lục Q14
+│   │   └── trieu_chau_han.txt / trieu_chau_viet.txt   # 1.039 câu Hán & Việt sạch
+│   └── giai_thoat_dao_luan/                           # Văn bản Giải Thoát Đạo Luận 12 Quyển
+│       └── giai_thoat_dao_luan_han.txt / _viet.txt    # 4.961 câu Hán & Việt sạch
 ├── 04_dong_hang/                                      # Kết quả dóng hàng song ngữ chuẩn TSV & Excel
 │   ├── CV09_TongHop_parallel.tsv / .xlsx              # Tệp tổng hợp cả 4 quyển (6.886 cặp)
 │   ├── q4_parallel.tsv / .xlsx                        # Quyển 1: Bách Trượng Q4 (482 cặp)
@@ -154,10 +149,8 @@ CV09_SacTuBachTruongThanhQuy/
 │   ├── TrieuChauNguLuc_parallel.tsv / .xlsx           # Quyển 3: Triệu Châu Q14 (1.039 cặp)
 │   └── GiaiThoatDaoLuan_parallel.tsv / .xlsx          # Quyển 4: Giải Thoát Đạo Luận 12Q (4.961 cặp)
 └── docs/
-    ├── Guideline.pdf                                  # Quy chuẩn đồ án
-    ├── HUONG_DAN.docx                                 # Hướng dẫn trích xuất văn bản
-    ├── Bang_kiem_ke_nguon.xlsx                        # Bảng kiểm kê Excel (4 quyển / 3 tác phẩm)
-    ├── Bang_kiem_ke_nguon.md                          # Báo cáo kiểm kê nguồn (tệp này)
+    ├── Bang_kiem_ke_nguon.xlsx                        # Bảng kiểm kê nguồn Excel (3 tác phẩm / 4 quyển)
+    ├── Bang_kiem_ke_nguon.md                          # Báo cáo kiểm kê nguồn chi tiết (tệp này)
     └── Bao_cao_chat_luong_dong_hang.md                # Báo cáo tổng hợp kiểm tra chất lượng cả 4 quyển
 ```
 

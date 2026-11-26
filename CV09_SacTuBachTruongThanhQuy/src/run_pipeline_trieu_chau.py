@@ -35,6 +35,7 @@ from aligner import (
     split_viet_sentences,
 )
 from evaluate import evaluate_parallel_files, print_evaluation_report
+from extract_trieu_chau import extract_chinese_pdf, extract_vietnamese_pdf
 from trieu_chau_refiner import refine_trieu_chau_pairs
 
 
@@ -193,41 +194,31 @@ def align_dialogue_sentences(
 def main() -> None:
     start_time = time.time()
     base_folder = os.path.abspath(os.path.join(SRC_DIR, ".."))
+    nguon_dir = os.path.join(base_folder, "01_nguon")
     trieu_chau_dir = os.path.join(base_folder, "03_text_sach", "trieu_chau")
     dong_hang_dir = os.path.join(base_folder, "04_dong_hang")
-    docs_dir = os.path.join(base_folder, "docs")
 
     banner = "=" * 65
     print(f"\n{banner}")
     print("   PIPELINE DÓNG HÀNG CHUẨN XÁC: TRIỆU CHÂU NGỮ LỤC (CV09)")
     print(banner)
 
-    zh_path = os.path.join(trieu_chau_dir, "trieu_chau_han_q14.txt")
-    vi_json_path = os.path.join(trieu_chau_dir, "trieu_chau_viet_items.json")
+    vi_pdf = os.path.join(nguon_dir, "Trieu Chau Ngu Luc_VI_Text_ThongPhuong (1).pdf")
+    zh_pdf = os.path.join(nguon_dir, "Trieu Chau Ngu Luc_ZH_Text_X1315.pdf")
+    vi_data = extract_vietnamese_pdf(vi_pdf)
+    zh_data = extract_chinese_pdf(zh_pdf)
 
-    with open(zh_path, "r", encoding="utf-8") as f:
-        zh_text = f.read()
-
-    with open(vi_json_path, "r", encoding="utf-8") as f:
-        items = json.load(f)
-
-    zh_text = re.sub(r"[\x00-\x08\x0b\x0c\x0e-\x1f]", "", zh_text)
+    zh_text = re.sub(r"[\x00-\x08\x0b\x0c\x0e-\x1f]", "", zh_data["q14_text"])
 
     colophon_marker = "廬山棲賢寶覺禪院住持傳法賜紫沙門"
     if colophon_marker in zh_text:
         zh_text = zh_text[:zh_text.find(colophon_marker)].strip()
 
+    items = [{"id": k, "text": v} for k, v in sorted(vi_data["items"].items())]
     matched_items = [it for it in items if it["id"] == 209 or 225 <= it["id"] <= 525]
-    unmatched_items = [it for it in items if 210 <= it["id"] <= 224]
 
     print(f"[*] Dữ liệu Hán Q14: {len(zh_text):,} ký tự")
     print(f"[*] Dữ liệu Việt Q14 khớp chuẩn: {len(matched_items)} mục (Mục 209 & 225–525)")
-    print(f"[*] Phân lập 15 mục khuyết bản Hán trong PDF nguồn (Mục 210–224)")
-
-    extra_path = os.path.join(trieu_chau_dir, "trieu_chau_viet_khuyet_ban_han_15_tac.txt")
-    with open(extra_path, "w", encoding="utf-8") as f:
-        for it in unmatched_items:
-            f.write(f"=== MỤC {it['id']} ===\n{it['text']}\n\n")
 
     vi_raw = "\n\n".join(it["text"] for it in matched_items)
     vi_clean = clean_viet_footnotes(vi_raw)
@@ -265,8 +256,8 @@ def main() -> None:
     print(f"\n[+] Xuất TSV:   {tsv_path}")
     print(f"[+] Xuất Excel: {xlsx_path}")
 
-    han_out = os.path.join(trieu_chau_dir, "trieu_chau_aligned_han.txt")
-    viet_out = os.path.join(trieu_chau_dir, "trieu_chau_aligned_viet.txt")
+    han_out = os.path.join(trieu_chau_dir, "trieu_chau_han.txt")
+    viet_out = os.path.join(trieu_chau_dir, "trieu_chau_viet.txt")
     export_clean_text_files(pair_dicts, han_out, viet_out)
 
     report = evaluate_parallel_files(tsv_path, xlsx_path)

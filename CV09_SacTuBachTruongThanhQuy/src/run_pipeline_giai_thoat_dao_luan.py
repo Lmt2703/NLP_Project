@@ -32,6 +32,11 @@ from aligner import (
     split_viet_sentences,
 )
 from evaluate import evaluate_parallel_files, print_evaluation_report
+from extract_giai_thoat_dao_luan import (
+    SECTION_SPECS,
+    extract_chinese_sections,
+    extract_vietnamese_sections,
+)
 from giai_thoat_dao_luan_refiner import refine_gtdl_pairs
 
 
@@ -635,18 +640,25 @@ def postprocess_pair(han: str, viet: str) -> Tuple[str, str]:
 def main() -> None:
     start_time = time.time()
     base_dir = os.path.abspath(os.path.join(SRC_DIR, ".."))
+    nguon_dir = os.path.join(base_dir, "01_nguon")
     text_dir = os.path.join(base_dir, "03_text_sach", "giai_thoat_dao_luan")
     dong_hang_dir = os.path.join(base_dir, "04_dong_hang")
-    docs_dir = os.path.join(base_dir, "docs")
 
-    sections_path = os.path.join(text_dir, "giai_thoat_dao_luan_sections.json")
-    if not os.path.isfile(sections_path):
-        raise FileNotFoundError(
-            f"Không tìm thấy {sections_path}. Hãy chạy extract_giai_thoat_dao_luan.py trước!"
-        )
-
-    with open(sections_path, "r", encoding="utf-8") as f:
-        sections = json.load(f)
+    vi_pdf = os.path.join(nguon_dir, "Giai Thoat Dao Luan_VI_Text_NhuDien.pdf")
+    zh_pdf = os.path.join(nguon_dir, "Giai Thoat Dao Luan_ZH_Text_T1648.pdf")
+    vi_data = extract_vietnamese_sections(vi_pdf)
+    zh_data = extract_chinese_sections(zh_pdf)
+    sections = [
+        {
+            "id": spec["id"],
+            "vol": spec["vol"],
+            "zh_title": spec["zh_title"],
+            "vi_title": spec["vi_title"],
+            "zh_body": zh_data["sections"][spec["id"]]["zh_body"],
+            "vi_body": vi_data["sections"][spec["id"]]["vi_body"],
+        }
+        for spec in SECTION_SPECS
+    ]
 
     banner = "=" * 72
     print(f"\n{banner}")
@@ -720,8 +732,8 @@ def main() -> None:
     print(f"[+] Xuất Excel: {xlsx_path}")
 
     # Xuất văn bản đơn ngữ đã dóng hàng sạch
-    han_out = os.path.join(text_dir, "giai_thoat_dao_luan_aligned_han.txt")
-    viet_out = os.path.join(text_dir, "giai_thoat_dao_luan_aligned_viet.txt")
+    han_out = os.path.join(text_dir, "giai_thoat_dao_luan_han.txt")
+    viet_out = os.path.join(text_dir, "giai_thoat_dao_luan_viet.txt")
     export_clean_text_files(all_pairs, han_out, viet_out)
     print(f"[+] Xuất đơn ngữ Hán:  {han_out}")
     print(f"[+] Xuất đơn ngữ Việt: {viet_out}")
@@ -752,27 +764,6 @@ def main() -> None:
     print(f"[*] Kiểm định sâu nội bộ:")
     print(f"    - Khớp vai trò Hỏi/Đáp tường minh: {qa_matched}/{qa_total_h} ({qa_acc}%), lệch vai trực tiếp: {qa_mismatch}")
     print(f"    - Số cặp có tỷ lệ độ dài biên (r < 1.5 hoặc r > 8.5): {extreme_ratio_count}/{len(all_pairs)} ({extreme_ratio_count/len(all_pairs)*100:.2f}%)")
-
-    # Lưu thống kê chi tiết dóng hàng
-    align_stats_path = os.path.join(text_dir, "thong_ke_dong_hang_gtdl.json")
-    with open(align_stats_path, "w", encoding="utf-8") as f:
-        json.dump(
-            {
-                "total_h_sents": total_h_sents,
-                "total_v_sents": total_v_sents,
-                "total_pairs": len(all_pairs),
-                "qa_total_han": qa_total_h,
-                "qa_matched": qa_matched,
-                "qa_mismatch": qa_mismatch,
-                "qa_match_rate_pct": qa_acc,
-                "extreme_ratio_count": extreme_ratio_count,
-                "evaluation": report,
-                "sections": sec_stats,
-            },
-            f,
-            ensure_ascii=False,
-            indent=2,
-        )
 
     # Cập nhật ngữ liệu tổng hợp 4 quyển và báo cáo hợp nhất
     from build_master_corpus import build_master_and_report

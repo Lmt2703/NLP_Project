@@ -90,13 +90,6 @@ def main() -> None:
             f"Lỗi: {book_report['error_rate']}% | CJK rò rỉ: {book_report['cjk_in_viet_count']}"
         )
 
-    # Xuất dữ liệu cấp đoạn đối chiếu toàn cục
-    export_parallel_data(
-        all_paragraph_pairs,
-        os.path.join(dong_hang_dir, "SacTuBachTruongThanhQuy_parallel_paragraph.tsv"),
-        os.path.join(dong_hang_dir, "SacTuBachTruongThanhQuy_parallel_paragraph.xlsx"),
-    )
-
     # Xuất dữ liệu cấp câu bàn giao chính thức
     final_tsv = os.path.join(dong_hang_dir, "SacTuBachTruongThanhQuy_parallel.tsv")
     final_xlsx = os.path.join(dong_hang_dir, "SacTuBachTruongThanhQuy_parallel.xlsx")
@@ -105,8 +98,8 @@ def main() -> None:
     # Xuất toàn văn đơn ngữ sạch cho Sắc tu Bách Trượng thanh quy
     export_clean_text_files(
         all_sentence_pairs,
-        os.path.join(text_dir, "bach_truong_aligned_han.txt"),
-        os.path.join(text_dir, "bach_truong_aligned_viet.txt"),
+        os.path.join(text_dir, "bach_truong_han.txt"),
+        os.path.join(text_dir, "bach_truong_viet.txt"),
     )
 
     # Đánh giá và báo cáo tổng hợp

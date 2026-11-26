@@ -42,45 +42,37 @@ NLP_Project/
 │   │   └── README.md
 │   ├── 03_text_sach/                      # Văn bản Hán và Việt đã làm sạch
 │   │   ├── han.txt / viet.txt             # Toàn văn sạch tổng hợp cả 4 quyển (6.886 câu)
-│   │   ├── bach_truong/                   # Thư mục dữ liệu Sắc tu Bách Trượng thanh quy (Q4 & Q7)
+│   │   ├── bach_truong/                   # Sắc tu Bách Trượng thanh quy (Q4 & Q7)
 │   │   │   ├── q4_han.txt / q4_viet.txt   # Riêng Quyển 4 (482 câu)
 │   │   │   ├── q7_han.txt / q7_viet.txt   # Riêng Quyển 7 (404 câu)
-│   │   │   └── bach_truong_aligned_han.txt / _viet.txt # Gộp Q4 & Q7 (886 câu)
-│   │   ├── trieu_chau/                    # Thư mục dữ liệu Triệu Châu Ngữ Lục (Q14)
-│   │   │   ├── trieu_chau_aligned_han.txt # Văn bản Hán sạch đã dóng hàng (1.039 câu)
-│   │   │   ├── trieu_chau_aligned_viet.txt# Văn bản Việt sạch đã dóng hàng (1.039 câu)
-│   │   │   └── trieu_chau_viet_items.json # 525 mục công án JSON cấu trúc hóa
-│   │   └── giai_thoat_dao_luan/           # Thư mục dữ liệu Giải Thoát Đạo Luận (12 Quyển)
-│   │       ├── giai_thoat_dao_luan_aligned_han.txt  # Văn bản Hán sạch đã dóng hàng (4.961 câu)
-│   │       ├── giai_thoat_dao_luan_aligned_viet.txt # Văn bản Việt sạch đã dóng hàng (4.961 câu)
-│   │       ├── giai_thoat_dao_luan_sections.json    # 19 phân đoạn cấu trúc 12 Quyển / 12 Phẩm
-│   │       └── thong_ke_dong_hang_gtdl.json         # Thống kê dóng hàng chi tiết
-│   ├── 04_dong_hang/                      # Dữ liệu kết quả dóng hàng song ngữ
+│   │   │   └── bach_truong_han.txt / _viet.txt # Gộp Q4 & Q7 (886 câu)
+│   │   ├── trieu_chau/                    # Triệu Châu Ngữ Lục (Q14)
+│   │   │   └── trieu_chau_han.txt / _viet.txt  # 1.039 câu Hán & Việt sạch
+│   │   └── giai_thoat_dao_luan/           # Giải Thoát Đạo Luận (12 Quyển)
+│   │       └── giai_thoat_dao_luan_han.txt / _viet.txt # 4.961 câu Hán & Việt sạch
+│   ├── 04_dong_hang/                      # Dữ liệu kết quả dóng hàng song ngữ chuẩn TSV & Excel
 │   │   ├── CV09_TongHop_parallel.tsv / .xlsx              # Ngữ liệu tổng hợp cả 4 quyển (6.886 cặp câu)
 │   │   ├── q4_parallel.* / q7_parallel.*                  # Riêng Quyển 4 (482) & Quyển 7 (404) Bách Trượng
 │   │   ├── SacTuBachTruongThanhQuy_parallel.tsv / .xlsx   # Gộp Bách Trượng Q4+Q7 (886 cặp câu)
 │   │   ├── TrieuChauNguLuc_parallel.tsv / .xlsx           # Kết quả Triệu Châu Q14 (1.039 cặp câu)
 │   │   └── GiaiThoatDaoLuan_parallel.tsv / .xlsx          # Kết quả Giải Thoát Đạo Luận 12Q (4.961 cặp câu)
-│   ├── docs/                              # Tài liệu kỹ thuật và báo cáo hợp nhất
-│   │   ├── Guideline.pdf                  # Quy chuẩn và tiêu chí nghiệm thu đồ án
-│   │   ├── HUONG_DAN.docx                 # Hướng dẫn trích xuất văn bản từ PDF
+│   ├── docs/                              # Báo cáo kiểm kê nguồn và báo cáo chất lượng hợp nhất
 │   │   ├── Bang_kiem_ke_nguon.xlsx        # Bảng kiểm kê nguồn Excel (4 quyển / 3 tác phẩm)
 │   │   ├── Bang_kiem_ke_nguon.md          # Báo cáo kiểm kê nguồn chi tiết (Markdown)
 │   │   └── Bao_cao_chat_luong_dong_hang.md# Báo cáo hợp nhất kiểm định chất lượng cả 4 quyển
-│   ├── src/                               # Toàn bộ mã nguồn sản xuất
-│   │   ├── vni_converter.py               # Bộ giải mã bảng mã VNI sang Unicode không ghi đè
-│   │   ├── extract_clean.py               # Trích xuất và khử nhiễu sách Bách Trượng
-│   │   ├── extract_trieu_chau.py          # Trích xuất cấu trúc hóa sách Triệu Châu
-│   │   ├── extract_giai_thoat_dao_luan.py # Trích xuất, sửa CMap & Drop-Cap Giải Thoát Đạo Luận
-│   │   ├── aligner.py                     # Thuật toán tách câu & dóng hàng quy hoạch động (DP)
-│   │   ├── evaluate.py                    # Kiểm thử chất lượng và tính tỷ lệ lỗi tự động
-│   │   ├── trieu_chau_refiner.py          # Tinh chỉnh ranh giới công án Triệu Châu
-│   │   ├── giai_thoat_dao_luan_refiner.py # Tinh chỉnh chuẩn xác 30 vùng ranh giới Giải Thoát Đạo Luận
-│   │   ├── run_pipeline.py                # Pipeline điều phối cho Bách Trượng (Q4 & Q7)
-│   │   ├── run_pipeline_trieu_chau.py     # Pipeline điều phối chuyên trách cho Triệu Châu (Q14)
-│   │   ├── run_pipeline_giai_thoat_dao_luan.py # Pipeline điều phối chuyên trách cho Giải Thoát Đạo Luận
-│   │   └── build_master_corpus.py         # Hợp nhất 4 quyển và xuất 1 báo cáo tổng hợp duy nhất
-│   └── legacy/                            # Lưu trữ tệp script và nháp ban đầu
+│   └── src/                               # Toàn bộ mã nguồn tái lập quy trình
+│       ├── vni_converter.py               # Bộ giải mã bảng mã VNI sang Unicode không ghi đè
+│       ├── extract_clean.py               # Trích xuất và khử nhiễu sách Bách Trượng
+│       ├── extract_trieu_chau.py          # Trích xuất cấu trúc hóa sách Triệu Châu
+│       ├── extract_giai_thoat_dao_luan.py # Trích xuất, sửa CMap & Drop-Cap Giải Thoát Đạo Luận
+│       ├── aligner.py                     # Thuật toán tách câu & dóng hàng quy hoạch động (DP)
+│       ├── evaluate.py                    # Kiểm thử chất lượng và tính tỷ lệ lỗi tự động
+│       ├── trieu_chau_refiner.py          # Tinh chỉnh ranh giới công án Triệu Châu
+│       ├── giai_thoat_dao_luan_refiner.py # Tinh chỉnh 4 tầng & vệ sinh văn bản Giải Thoát Đạo Luận
+│       ├── run_pipeline.py                # Pipeline điều phối cho Bách Trượng (Q4 & Q7)
+│       ├── run_pipeline_trieu_chau.py     # Pipeline điều phối chuyên trách cho Triệu Châu (Q14)
+│       ├── run_pipeline_giai_thoat_dao_luan.py # Pipeline điều phối chuyên trách cho Giải Thoát Đạo Luận
+│       └── build_master_corpus.py         # Hợp nhất 4 quyển và xuất 1 báo cáo tổng hợp duy nhất
 ├── requirements.txt                       # Thư viện phụ thuộc (PyMuPDF, pandas, openpyxl)
 ├── .gitignore                             # Cấu hình bỏ qua tệp tạm, môi trường ảo
 └── README.md                              # Thuyết minh chi tiết dự án
@@ -135,7 +127,6 @@ pip install -r requirements.txt
   ```
 - **Chạy pipeline Giải Thoát Đạo Luận:**
   ```bash
-  python CV09_SacTuBachTruongThanhQuy/src/extract_giai_thoat_dao_luan.py
   python CV09_SacTuBachTruongThanhQuy/src/run_pipeline_giai_thoat_dao_luan.py
   ```
 - **Hợp nhất cả 4 quyển và sinh báo cáo tổng hợp (`Bao_cao_chat_luong_dong_hang.md`):**
