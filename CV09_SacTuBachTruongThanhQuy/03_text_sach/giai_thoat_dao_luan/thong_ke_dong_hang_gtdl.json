@@ -1,0 +1,219 @@
+{
+  "total_h_sents": 5354,
+  "total_v_sents": 8710,
+  "total_pairs": 4966,
+  "qa_total_han": 765,
+  "qa_matched": 763,
+  "qa_mismatch": 0,
+  "qa_match_rate_pct": 99.74,
+  "extreme_ratio_count": 11,
+  "evaluation": {
+    "tsv_path": "D:\\3rd\\NLP\\CV09\\NLP_Project\\CV09_SacTuBachTruongThanhQuy\\04_dong_hang\\GiaiThoatDaoLuan_parallel.tsv",
+    "xlsx_path": "D:\\3rd\\NLP\\CV09\\NLP_Project\\CV09_SacTuBachTruongThanhQuy\\04_dong_hang\\GiaiThoatDaoLuan_parallel.xlsx",
+    "total_pairs": 4966,
+    "valid_pairs": 4966,
+    "missing_han_count": 0,
+    "missing_viet_count": 0,
+    "cjk_in_viet_count": 0,
+    "loi_ban_count": 0,
+    "diagram_count": 0,
+    "vni_artifact_count": 0,
+    "error_count": 0,
+    "error_rate": 0.0,
+    "tsv_format_ok": true,
+    "xlsx_format_ok": true,
+    "acceptance_status": "ĐẠT NGHIỆM THU (Pass - Tuyệt đối)"
+  },
+  "sections": [
+    {
+      "id": "Q01_P01",
+      "vol": 1,
+      "zh_title": "因緣品第一",
+      "vi_title": "Phẩm Nhơn Duyên thứ nhất",
+      "h_sents": 75,
+      "v_sents": 114,
+      "pairs": 70,
+      "ratio": 3.89
+    },
+    {
+      "id": "Q01_P02",
+      "vol": 1,
+      "zh_title": "分別戒品第二",
+      "vi_title": "Phẩm Phân Biệt Giới Thứ Hai",
+      "h_sents": 388,
+      "v_sents": 570,
+      "pairs": 368,
+      "ratio": 3.77
+    },
+    {
+      "id": "Q02_P03",
+      "vol": 2,
+      "zh_title": "頭陀品第三",
+      "vi_title": "Phẩm Đầu Đà Thứ Ba",
+      "h_sents": 261,
+      "v_sents": 324,
+      "pairs": 247,
+      "ratio": 3.96
+    },
+    {
+      "id": "Q02_P04",
+      "vol": 2,
+      "zh_title": "分別定品第四",
+      "vi_title": "Phẩm Phân Biệt Định Thứ Tư",
+      "h_sents": 139,
+      "v_sents": 236,
+      "pairs": 132,
+      "ratio": 3.77
+    },
+    {
+      "id": "Q02_P05",
+      "vol": 2,
+      "zh_title": "覓善知識品第五",
+      "vi_title": "Phẩm Mịch Thiện Tri Thức Thứ Năm",
+      "h_sents": 95,
+      "v_sents": 137,
+      "pairs": 79,
+      "ratio": 3.6
+    },
+    {
+      "id": "Q03_P06",
+      "vol": 3,
+      "zh_title": "分別行品第六",
+      "vi_title": "Phẩm Phân Biệt Hạnh (việc làm) Thứ 6",
+      "h_sents": 119,
+      "v_sents": 220,
+      "pairs": 113,
+      "ratio": 3.78
+    },
+    {
+      "id": "Q03_P07",
+      "vol": 3,
+      "zh_title": "分別行處品第七",
+      "vi_title": "Phẩm Phân Biệt Hành Xứ Thứ 7",
+      "h_sents": 138,
+      "v_sents": 205,
+      "pairs": 129,
+      "ratio": 3.55
+    },
+    {
+      "id": "Q04_P08a",
+      "vol": 4,
+      "zh_title": "行門品第八之一",
+      "vi_title": "Phẩm Hành Môn Thứ 8 - Phần một",
+      "h_sents": 511,
+      "v_sents": 743,
+      "pairs": 479,
+      "ratio": 3.74
+    },
+    {
+      "id": "Q05_P08b",
+      "vol": 5,
+      "zh_title": "行門品之二",
+      "vi_title": "Phẩm Hành Môn Thứ 2",
+      "h_sents": 559,
+      "v_sents": 905,
+      "pairs": 514,
+      "ratio": 3.68
+    },
+    {
+      "id": "Q06_P08c",
+      "vol": 6,
+      "zh_title": "行門品之三",
+      "vi_title": "Phẩm Hành Môn Thứ 3",
+      "h_sents": 499,
+      "v_sents": 814,
+      "pairs": 473,
+      "ratio": 3.9
+    },
+    {
+      "id": "Q07_P08d",
+      "vol": 7,
+      "zh_title": "行門品之四",
+      "vi_title": "Phẩm Hành Môn Thứ Tư",
+      "h_sents": 401,
+      "v_sents": 710,
+      "pairs": 371,
+      "ratio": 4.05
+    },
+    {
+      "id": "Q08_P08e1",
+      "vol": 8,
+      "zh_title": "行門品之五",
+      "vi_title": "Phẩm Hành Môn Thứ 5",
+      "h_sents": 244,
+      "v_sents": 407,
+      "pairs": 217,
+      "ratio": 4.09
+    },
+    {
+      "id": "Q08_P08e2",
+      "vol": 8,
+      "zh_title": "重明四無量義。",
+      "vi_title": "Thêm vào để làm rõ nghĩa Tứ Vô Lượng",
+      "h_sents": 272,
+      "v_sents": 434,
+      "pairs": 246,
+      "ratio": 4.22
+    },
+    {
+      "id": "Q09_P09",
+      "vol": 9,
+      "zh_title": "五通品第九",
+      "vi_title": "Phẩm Ngũ Thông Thứ 8",
+      "h_sents": 248,
+      "v_sents": 422,
+      "pairs": 223,
+      "ratio": 4.1
+    },
+    {
+      "id": "Q09_P10",
+      "vol": 9,
+      "zh_title": "解脫道論分別慧品第十",
+      "vi_title": "Phẩm Phân Biệt Huệ thứ 10",
+      "h_sents": 83,
+      "v_sents": 133,
+      "pairs": 77,
+      "ratio": 3.77
+    },
+    {
+      "id": "Q10_P11a",
+      "vol": 10,
+      "zh_title": "五方便品第十一之一",
+      "vi_title": "Phẩm Ngũ Phương Tiện thứ 11 Phần thứ nhất",
+      "h_sents": 589,
+      "v_sents": 964,
+      "pairs": 550,
+      "ratio": 4.04
+    },
+    {
+      "id": "Q11_P11b",
+      "vol": 11,
+      "zh_title": "五方便品之二",
+      "vi_title": "Năm Phẩm Phương Tiện Phần thứ 2",
+      "h_sents": 156,
+      "v_sents": 273,
+      "pairs": 152,
+      "ratio": 4.0
+    },
+    {
+      "id": "Q11_P12a",
+      "vol": 11,
+      "zh_title": "解脫道論分別諦品第十二之一",
+      "vi_title": "Phẩm Phân Biệt Chân Lý Thứ 11 Phần 1",
+      "h_sents": 196,
+      "v_sents": 412,
+      "pairs": 177,
+      "ratio": 4.06
+    },
+    {
+      "id": "Q12_P12b",
+      "vol": 12,
+      "zh_title": "分別諦品第十二之二",
+      "vi_title": "Phẩm Phân Biệt Chân Lý thứ 12 Phần thứ 2",
+      "h_sents": 381,
+      "v_sents": 687,
+      "pairs": 349,
+      "ratio": 3.81
+    }
+  ]
+}
