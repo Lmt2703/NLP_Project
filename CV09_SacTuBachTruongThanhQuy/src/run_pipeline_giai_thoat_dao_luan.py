@@ -32,6 +32,7 @@ from aligner import (
     split_viet_sentences,
 )
 from evaluate import evaluate_parallel_files, print_evaluation_report
+from giai_thoat_dao_luan_refiner import refine_gtdl_pairs
 
 
 # Bộ từ điển mỏ neo ngữ nghĩa chuyên biệt cho Giải Thoát Đạo Luận (Vimuttimagga)
@@ -698,7 +699,17 @@ def main() -> None:
         print(f"{sid:<10} Q{sec['vol']:<3} {len(h_sents):>7} {len(v_sents):>7} {len(aligned):>7} {sec_ratio:>6.2f} {dt:>5.2f}s")
 
     print("-" * 55)
-    print(f"{'TOTAL':<10} 12Q  {total_h_sents:>7} {total_v_sents:>7} {len(all_pairs):>7}")
+    print(f"{'DP RAW':<10} 12Q  {total_h_sents:>7} {total_v_sents:>7} {len(all_pairs):>7}")
+
+    # Tinh chỉnh chuẩn xác 30 vùng ranh giới câu / hỏi–đáp
+    print("\n>>> Đang áp dụng bộ tinh chỉnh ranh giới câu chuẩn xác (30 vùng)...")
+    raw_tuples = [(p["han"], p["viet"]) for p in all_pairs]
+    refined_tuples = refine_gtdl_pairs(raw_tuples)
+    all_pairs = [
+        {"tag": f"GTDL_s{idx}", "han": h, "viet": v}
+        for idx, (h, v) in enumerate(refined_tuples, start=1)
+    ]
+    print(f"    -> Tổng số cặp câu sau tinh chỉnh: {len(all_pairs):,} cặp")
 
     # Xuất dữ liệu TSV và Excel chuẩn nghiệm thu
     os.makedirs(dong_hang_dir, exist_ok=True)
@@ -831,7 +842,8 @@ def main() -> None:
 3. **Lọc sạch tuyệt đối nhiễu ngoài chính văn:**
    - Bản Hán: loại bỏ 111 số trang CBETA chèn lẫn giữa văn bản, 2 trang quảng bá CBETA cuối sách (trang 116–117), tiêu đề quyển và tên dịch giả lặp lại đầu/cuối mỗi quyển; loại trừ chuỗi ghi chú kết đoạn `(...已竟)` khỏi hàm tính độ dài DP do bản Việt không dịch các chú thích này.
    - Bản Việt: loại bỏ tiêu đề đầu trang lặp lại (`Luận về con đường giải thoát` / `Thích Như Điển dịch`), số trang, 11 trang bìa quyển phụ lục ngày dịch (2005–2006), câu ghi chú ngày dịch cuối Quyển 6, đoạn phiên âm Hán-Việt 6 câu trước nhãn `Nghĩa:` cuối Quyển 12, bài kệ hồi hướng trang 326 và danh sách ấn tống (trang 327–341).
-4. **Kiểm định sâu nội bộ sau dóng hàng:**
+4. **Kiểm định sâu và tinh chỉnh ranh giới hậu xử lý (`giai_thoat_dao_luan_refiner.py`):**
+   - Đã căn chỉnh chuẩn xác **30 vùng ranh giới câu & hỏi–đáp** trên toàn bộ 12 Quyển (gồm 21 vùng lệch ranh giới/trượt dòng tại Q1, Q2, Q3, Q5, Q6, Q7, Q8, Q9, Q12 cùng 9 vùng lỗi đồng dạng phát hiện khi quét toàn cục: 5 điểm `何功德者` tại Q5, 1 lỗi dấu hỏi CBETA `何？處何功德？` tại Q6, 1 chuỗi Từ tâm tại Q8, 1 điểm `幾種天眼者` tại Q9 và 1 khối Thế Đế tại Q11).
    - Tỷ lệ khớp vai trò Hỏi/Đáp tường minh (`問`/`答` $\\leftrightarrow$ `Hỏi`/`Đáp`): **{qa_matched}/{qa_total_h} ({qa_acc}%)**, lệch vai trực tiếp: **{qa_mismatch}**.
    - Tỷ lệ cặp có tỷ lệ độ dài ngoài ngưỡng biên (`r < 1.5` hoặc `r > 8.5`): **{extreme_ratio_count}/{len(all_pairs)} ({extreme_ratio_count/len(all_pairs)*100:.2f}%)**.
 """)

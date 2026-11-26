@@ -49,14 +49,14 @@ NLP_Project/
 │   │   │   ├── trieu_chau_aligned_viet.txt# Văn bản Việt sạch đã dóng hàng (1.039 câu)
 │   │   │   └── trieu_chau_viet_items.json # 525 mục công án JSON cấu trúc hóa
 │   │   └── giai_thoat_dao_luan/           # Thư mục dữ liệu Giải Thoát Đạo Luận
-│   │       ├── giai_thoat_dao_luan_aligned_han.txt  # Văn bản Hán sạch đã dóng hàng (4.966 câu)
-│   │       ├── giai_thoat_dao_luan_aligned_viet.txt # Văn bản Việt sạch đã dóng hàng (4.966 câu)
+│   │       ├── giai_thoat_dao_luan_aligned_han.txt  # Văn bản Hán sạch đã dóng hàng (4.964 câu)
+│   │       ├── giai_thoat_dao_luan_aligned_viet.txt # Văn bản Việt sạch đã dóng hàng (4.964 câu)
 │   │       ├── giai_thoat_dao_luan_sections.json    # 19 phân đoạn cấu trúc 12 Quyển / 12 Phẩm
 │   │       └── thong_ke_dong_hang_gtdl.json         # Thống kê dóng hàng chi tiết
 │   ├── 04_dong_hang/                      # Dữ liệu kết quả dóng hàng song ngữ
 │   │   ├── SacTuBachTruongThanhQuy_parallel.tsv / .xlsx   # Kết quả Bách Trượng (886 cặp câu)
 │   │   ├── TrieuChauNguLuc_parallel.tsv / .xlsx           # Kết quả Triệu Châu (1.039 cặp câu)
-│   │   ├── GiaiThoatDaoLuan_parallel.tsv / .xlsx          # Kết quả Giải Thoát Đạo Luận (4.966 cặp câu)
+│   │   ├── GiaiThoatDaoLuan_parallel.tsv / .xlsx          # Kết quả Giải Thoát Đạo Luận (4.964 cặp câu)
 │   │   └── q4_parallel.* / q7_parallel.*                  # Kết quả chi tiết từng quyển Bách Trượng
 │   ├── docs/                              # Tài liệu kỹ thuật và báo cáo
 │   │   ├── Guideline.pdf                  # Quy chuẩn và tiêu chí nghiệm thu đồ án
@@ -75,6 +75,7 @@ NLP_Project/
 │   │   ├── evaluate.py                    # Kiểm thử chất lượng và tính tỷ lệ lỗi tự động
 │   │   ├── run_pipeline.py                # Pipeline điều phối cho Bách Trượng
 │   │   ├── run_pipeline_trieu_chau.py     # Pipeline điều phối chuyên trách cho Triệu Châu
+│   │   ├── giai_thoat_dao_luan_refiner.py # Tinh chỉnh chuẩn xác 30 vùng ranh giới câu Giải Thoát Đạo Luận
 │   │   └── run_pipeline_giai_thoat_dao_luan.py # Pipeline điều phối chuyên trách cho Giải Thoát Đạo Luận
 │   └── legacy/                            # Lưu trữ tệp script và nháp ban đầu
 ├── requirements.txt                       # Thư viện phụ thuộc (PyMuPDF, pandas, openpyxl)
@@ -143,8 +144,8 @@ Toàn bộ dữ liệu được kiểm thử tự động bởi module [evaluate
 
 | Chỉ số kiểm tra | Sắc Tu Bách Trượng | Triệu Châu Ngữ Lục | Giải Thoát Đạo Luận | TỔNG CỘNG | Ngưỡng nghiệm thu | Đánh giá |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: |
-| **Tổng số cặp câu song ngữ** | **886 cặp** | **1.039 cặp** | **4.966 cặp** | **6.891 cặp câu** | - | Cấp câu hoàn chỉnh |
-| **Số cặp hợp lệ** | **886 / 886** | **1.039 / 1.039** | **4.966 / 4.966** | **6.891 / 6.891** | - | Khớp nghĩa 100% |
+| **Tổng số cặp câu song ngữ** | **886 cặp** | **1.039 cặp** | **4.964 cặp** | **6.889 cặp câu** | - | Cấp câu hoàn chỉnh |
+| **Số cặp hợp lệ** | **886 / 886** | **1.039 / 1.039** | **4.964 / 4.964** | **6.889 / 6.889** | - | Khớp nghĩa 100% |
 | **Khuyết vế Hán (Missing Han)** | **0 câu** | **0 câu** | **0 câu** | **0 câu** | 0 | Đạt chuẩn |
 | **Khuyết vế Việt (Missing Viet)** | **0 câu** | **0 câu** | **0 câu** | **0 câu** | 0 | Đạt chuẩn |
 | **Lẫn chữ Hán trong vế Việt** | **0** | **0** | **0** | **0** | 0 | Đạt chuẩn |

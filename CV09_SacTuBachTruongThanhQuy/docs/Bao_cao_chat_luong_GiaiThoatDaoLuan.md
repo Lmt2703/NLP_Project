@@ -6,7 +6,7 @@
 - **Nguồn Hán:** Đại Chánh Tân Tu Đại Tạng Kinh CBETA `T32n1648` (A-la-hán Ưu-ba-đề-sa tạo, Tam tạng Tăng-già-bà-la dịch đời Lương, 117 trang PDF)
 - **Nguồn Việt:** Bản dịch HT. Thích Như Điển (*Luận về con đường giải thoát*, Chùa Viên Giác Hannover ấn tống năm 2006, 341 trang PDF)
 - **Phương pháp:** Neo cấu trúc 19 phân đoạn (12 Quyển / 12 Phẩm) + Tách câu bảo vệ ranh giới đoạn + Dóng hàng Quy hoạch động đa tín hiệu (Độ dài hiệu dụng + Vai trò Hỏi/Đáp + 220+ Mỏ neo thuật ngữ A-tỳ-đạt-ma + Mỏ neo con số)
-- **Thời gian lập:** 26/11/2026 19:28:07
+- **Thời gian lập:** 26/11/2026 20:04:49
 
 ---
 
@@ -17,8 +17,8 @@
 | Số phân đoạn cấu trúc đồng bộ | 19 phân đoạn (12 Quyển) | - | Khớp 100% đầu–cuối |
 | Số câu Hán đầu vào | 5,354 câu | - | Đầy đủ nguyên tác 12 quyển |
 | Số câu Việt đầu vào | 8,710 câu | - | Đầy đủ bản dịch 12 quyển |
-| **Tổng số cặp dóng hàng** | **4,966 cặp** | - | Cấp câu hoàn chỉnh |
-| **Số cặp hợp lệ đầy đủ** | **4,966 / 4,966** | - | Không khuyết vế |
+| **Tổng số cặp dóng hàng** | **4,964 cặp** | - | Cấp câu hoàn chỉnh |
+| **Số cặp hợp lệ đầy đủ** | **4,964 / 4,964** | - | Không khuyết vế |
 | Khuyết vế Hán (Missing Han) | 0 câu | 0 | Không bị khuyết |
 | Khuyết vế Việt (Missing Viet) | 0 câu | 0 | Không bị khuyết |
 | Lẫn chữ Hán trong cột Việt | 0 câu | 0 | Khử sạch triệt để |
@@ -63,7 +63,7 @@
 | `Q11_P11b` | Quyển 11 | 五方便品之二 | Năm Phẩm Phương Tiện Phần thứ 2 | 156 | 273 | **152** | 4.0 |
 | `Q11_P12a` | Quyển 11 | 解脫道論分別諦品第十二之一 | Phẩm Phân Biệt Chân Lý Thứ 11 Phần 1 | 196 | 412 | **177** | 4.06 |
 | `Q12_P12b` | Quyển 12 | 分別諦品第十二之二 | Phẩm Phân Biệt Chân Lý thứ 12 Phần thứ 2 | 381 | 687 | **349** | 3.81 |
-| **TỔNG** | **12 Quyển** | **Toàn văn T32n1648** | **Toàn văn Thích Như Điển** | **5,354** | **8,710** | **4,966** | **3.89** |
+| **TỔNG** | **12 Quyển** | **Toàn văn T32n1648** | **Toàn văn Thích Như Điển** | **5,354** | **8,710** | **4,964** | **3.89** |
 
 ---
 
@@ -76,6 +76,7 @@
 3. **Lọc sạch tuyệt đối nhiễu ngoài chính văn:**
    - Bản Hán: loại bỏ 111 số trang CBETA chèn lẫn giữa văn bản, 2 trang quảng bá CBETA cuối sách (trang 116–117), tiêu đề quyển và tên dịch giả lặp lại đầu/cuối mỗi quyển; loại trừ chuỗi ghi chú kết đoạn `(...已竟)` khỏi hàm tính độ dài DP do bản Việt không dịch các chú thích này.
    - Bản Việt: loại bỏ tiêu đề đầu trang lặp lại (`Luận về con đường giải thoát` / `Thích Như Điển dịch`), số trang, 11 trang bìa quyển phụ lục ngày dịch (2005–2006), câu ghi chú ngày dịch cuối Quyển 6, đoạn phiên âm Hán-Việt 6 câu trước nhãn `Nghĩa:` cuối Quyển 12, bài kệ hồi hướng trang 326 và danh sách ấn tống (trang 327–341).
-4. **Kiểm định sâu nội bộ sau dóng hàng:**
+4. **Kiểm định sâu và tinh chỉnh ranh giới hậu xử lý (`giai_thoat_dao_luan_refiner.py`):**
+   - Đã căn chỉnh chuẩn xác **30 vùng ranh giới câu & hỏi–đáp** trên toàn bộ 12 Quyển (gồm 21 vùng lệch ranh giới/trượt dòng tại Q1, Q2, Q3, Q5, Q6, Q7, Q8, Q9, Q12 cùng 9 vùng lỗi đồng dạng phát hiện khi quét toàn cục: 5 điểm `何功德者` tại Q5, 1 lỗi dấu hỏi CBETA `何？處何功德？` tại Q6, 1 chuỗi Từ tâm tại Q8, 1 điểm `幾種天眼者` tại Q9 và 1 khối Thế Đế tại Q11).
    - Tỷ lệ khớp vai trò Hỏi/Đáp tường minh (`問`/`答` $\leftrightarrow$ `Hỏi`/`Đáp`): **763/765 (99.74%)**, lệch vai trực tiếp: **0**.
-   - Tỷ lệ cặp có tỷ lệ độ dài ngoài ngưỡng biên (`r < 1.5` hoặc `r > 8.5`): **11/4966 (0.22%)**.
+   - Tỷ lệ cặp có tỷ lệ độ dài ngoài ngưỡng biên (`r < 1.5` hoặc `r > 8.5`): **8/4964 (0.16%)**.
