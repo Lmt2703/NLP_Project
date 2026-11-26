@@ -41,31 +41,32 @@ NLP_Project/
 │   ├── 02_ocr_tho/                        # Thuyết minh nguồn Hướng A (PDF Text)
 │   │   └── README.md
 │   ├── 03_text_sach/                      # Văn bản Hán và Việt đã làm sạch
-│   │   ├── han.txt / viet.txt             # Toàn văn Bách Trượng (886 câu)
-│   │   ├── q4_han.txt / q4_viet.txt       # Riêng Quyển 4 Bách Trượng
-│   │   ├── q7_han.txt / q7_viet.txt       # Riêng Quyển 7 Bách Trượng
-│   │   ├── trieu_chau/                    # Thư mục dữ liệu Triệu Châu Ngữ Lục
+│   │   ├── han.txt / viet.txt             # Toàn văn sạch tổng hợp cả 4 quyển (6.886 câu)
+│   │   ├── bach_truong/                   # Thư mục dữ liệu Sắc tu Bách Trượng thanh quy (Q4 & Q7)
+│   │   │   ├── q4_han.txt / q4_viet.txt   # Riêng Quyển 4 (482 câu)
+│   │   │   ├── q7_han.txt / q7_viet.txt   # Riêng Quyển 7 (404 câu)
+│   │   │   └── bach_truong_aligned_han.txt / _viet.txt # Gộp Q4 & Q7 (886 câu)
+│   │   ├── trieu_chau/                    # Thư mục dữ liệu Triệu Châu Ngữ Lục (Q14)
 │   │   │   ├── trieu_chau_aligned_han.txt # Văn bản Hán sạch đã dóng hàng (1.039 câu)
 │   │   │   ├── trieu_chau_aligned_viet.txt# Văn bản Việt sạch đã dóng hàng (1.039 câu)
 │   │   │   └── trieu_chau_viet_items.json # 525 mục công án JSON cấu trúc hóa
-│   │   └── giai_thoat_dao_luan/           # Thư mục dữ liệu Giải Thoát Đạo Luận
-│   │       ├── giai_thoat_dao_luan_aligned_han.txt  # Văn bản Hán sạch đã dóng hàng (4.964 câu)
-│   │       ├── giai_thoat_dao_luan_aligned_viet.txt # Văn bản Việt sạch đã dóng hàng (4.964 câu)
+│   │   └── giai_thoat_dao_luan/           # Thư mục dữ liệu Giải Thoát Đạo Luận (12 Quyển)
+│   │       ├── giai_thoat_dao_luan_aligned_han.txt  # Văn bản Hán sạch đã dóng hàng (4.961 câu)
+│   │       ├── giai_thoat_dao_luan_aligned_viet.txt # Văn bản Việt sạch đã dóng hàng (4.961 câu)
 │   │       ├── giai_thoat_dao_luan_sections.json    # 19 phân đoạn cấu trúc 12 Quyển / 12 Phẩm
 │   │       └── thong_ke_dong_hang_gtdl.json         # Thống kê dóng hàng chi tiết
 │   ├── 04_dong_hang/                      # Dữ liệu kết quả dóng hàng song ngữ
-│   │   ├── SacTuBachTruongThanhQuy_parallel.tsv / .xlsx   # Kết quả Bách Trượng (886 cặp câu)
-│   │   ├── TrieuChauNguLuc_parallel.tsv / .xlsx           # Kết quả Triệu Châu (1.039 cặp câu)
-│   │   ├── GiaiThoatDaoLuan_parallel.tsv / .xlsx          # Kết quả Giải Thoát Đạo Luận (4.964 cặp câu)
-│   │   └── q4_parallel.* / q7_parallel.*                  # Kết quả chi tiết từng quyển Bách Trượng
-│   ├── docs/                              # Tài liệu kỹ thuật và báo cáo
+│   │   ├── CV09_TongHop_parallel.tsv / .xlsx              # Ngữ liệu tổng hợp cả 4 quyển (6.886 cặp câu)
+│   │   ├── q4_parallel.* / q7_parallel.*                  # Riêng Quyển 4 (482) & Quyển 7 (404) Bách Trượng
+│   │   ├── SacTuBachTruongThanhQuy_parallel.tsv / .xlsx   # Gộp Bách Trượng Q4+Q7 (886 cặp câu)
+│   │   ├── TrieuChauNguLuc_parallel.tsv / .xlsx           # Kết quả Triệu Châu Q14 (1.039 cặp câu)
+│   │   └── GiaiThoatDaoLuan_parallel.tsv / .xlsx          # Kết quả Giải Thoát Đạo Luận 12Q (4.961 cặp câu)
+│   ├── docs/                              # Tài liệu kỹ thuật và báo cáo hợp nhất
 │   │   ├── Guideline.pdf                  # Quy chuẩn và tiêu chí nghiệm thu đồ án
 │   │   ├── HUONG_DAN.docx                 # Hướng dẫn trích xuất văn bản từ PDF
-│   │   ├── Bang_kiem_ke_nguon.xlsx        # Bảng kiểm kê nguồn (Excel 3 tác phẩm)
+│   │   ├── Bang_kiem_ke_nguon.xlsx        # Bảng kiểm kê nguồn Excel (4 quyển / 3 tác phẩm)
 │   │   ├── Bang_kiem_ke_nguon.md          # Báo cáo kiểm kê nguồn chi tiết (Markdown)
-│   │   ├── Bao_cao_chat_luong_dong_hang.md# Báo cáo kiểm thử chất lượng Bách Trượng
-│   │   ├── Bao_cao_chat_luong_TrieuChau.md# Báo cáo kiểm thử chất lượng Triệu Châu
-│   │   └── Bao_cao_chat_luong_GiaiThoatDaoLuan.md # Báo cáo kiểm thử chất lượng Giải Thoát Đạo Luận
+│   │   └── Bao_cao_chat_luong_dong_hang.md# Báo cáo hợp nhất kiểm định chất lượng cả 4 quyển
 │   ├── src/                               # Toàn bộ mã nguồn sản xuất
 │   │   ├── vni_converter.py               # Bộ giải mã bảng mã VNI sang Unicode không ghi đè
 │   │   ├── extract_clean.py               # Trích xuất và khử nhiễu sách Bách Trượng
@@ -73,10 +74,12 @@ NLP_Project/
 │   │   ├── extract_giai_thoat_dao_luan.py # Trích xuất, sửa CMap & Drop-Cap Giải Thoát Đạo Luận
 │   │   ├── aligner.py                     # Thuật toán tách câu & dóng hàng quy hoạch động (DP)
 │   │   ├── evaluate.py                    # Kiểm thử chất lượng và tính tỷ lệ lỗi tự động
-│   │   ├── run_pipeline.py                # Pipeline điều phối cho Bách Trượng
-│   │   ├── run_pipeline_trieu_chau.py     # Pipeline điều phối chuyên trách cho Triệu Châu
-│   │   ├── giai_thoat_dao_luan_refiner.py # Tinh chỉnh chuẩn xác 30 vùng ranh giới câu Giải Thoát Đạo Luận
-│   │   └── run_pipeline_giai_thoat_dao_luan.py # Pipeline điều phối chuyên trách cho Giải Thoát Đạo Luận
+│   │   ├── trieu_chau_refiner.py          # Tinh chỉnh ranh giới công án Triệu Châu
+│   │   ├── giai_thoat_dao_luan_refiner.py # Tinh chỉnh chuẩn xác 30 vùng ranh giới Giải Thoát Đạo Luận
+│   │   ├── run_pipeline.py                # Pipeline điều phối cho Bách Trượng (Q4 & Q7)
+│   │   ├── run_pipeline_trieu_chau.py     # Pipeline điều phối chuyên trách cho Triệu Châu (Q14)
+│   │   ├── run_pipeline_giai_thoat_dao_luan.py # Pipeline điều phối chuyên trách cho Giải Thoát Đạo Luận
+│   │   └── build_master_corpus.py         # Hợp nhất 4 quyển và xuất 1 báo cáo tổng hợp duy nhất
 │   └── legacy/                            # Lưu trữ tệp script và nháp ban đầu
 ├── requirements.txt                       # Thư viện phụ thuộc (PyMuPDF, pandas, openpyxl)
 ├── .gitignore                             # Cấu hình bỏ qua tệp tạm, môi trường ảo
@@ -135,21 +138,23 @@ pip install -r requirements.txt
   python CV09_SacTuBachTruongThanhQuy/src/extract_giai_thoat_dao_luan.py
   python CV09_SacTuBachTruongThanhQuy/src/run_pipeline_giai_thoat_dao_luan.py
   ```
+- **Hợp nhất cả 4 quyển và sinh báo cáo tổng hợp (`Bao_cao_chat_luong_dong_hang.md`):**
+  ```bash
+  python CV09_SacTuBachTruongThanhQuy/src/build_master_corpus.py
+  ```
 
 ---
 
-## 5. Kết quả đánh giá nghiệm thu tổng hợp
+## 5. Kết quả đánh giá nghiệm thu tổng hợp cả 4 quyển
 
-Toàn bộ dữ liệu được kiểm thử tự động bởi module [evaluate.py](file:///d:/3rd/NLP/CV09/NLP_Project/CV09_SacTuBachTruongThanhQuy/src/evaluate.py):
+Toàn bộ dữ liệu được kiểm thử tự động bởi module [evaluate.py](file:///d:/3rd/NLP/CV09/NLP_Project/CV09_SacTuBachTruongThanhQuy/src/evaluate.py) và tổng hợp trong báo cáo duy nhất [Bao_cao_chat_luong_dong_hang.md](file:///d:/3rd/NLP/CV09/NLP_Project/CV09_SacTuBachTruongThanhQuy/docs/Bao_cao_chat_luong_dong_hang.md):
 
-| Chỉ số kiểm tra | Sắc Tu Bách Trượng | Triệu Châu Ngữ Lục | Giải Thoát Đạo Luận | TỔNG CỘNG | Ngưỡng nghiệm thu | Đánh giá |
+| Chỉ số kiểm tra | Bách Trượng Q4 | Bách Trượng Q7 | Triệu Châu Q14 | Giải Thoát Đạo Luận (12Q) | TỔNG CỘNG (4 QUYỂN) | Đánh giá |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: |
-| **Tổng số cặp câu song ngữ** | **886 cặp** | **1.039 cặp** | **4.964 cặp** | **6.889 cặp câu** | - | Cấp câu hoàn chỉnh |
-| **Số cặp hợp lệ** | **886 / 886** | **1.039 / 1.039** | **4.964 / 4.964** | **6.889 / 6.889** | - | Khớp nghĩa 100% |
-| **Khuyết vế Hán (Missing Han)** | **0 câu** | **0 câu** | **0 câu** | **0 câu** | 0 | Đạt chuẩn |
-| **Khuyết vế Việt (Missing Viet)** | **0 câu** | **0 câu** | **0 câu** | **0 câu** | 0 | Đạt chuẩn |
-| **Lẫn chữ Hán trong vế Việt** | **0** | **0** | **0** | **0** | 0 | Đạt chuẩn |
-| **Lỗi font VNI / CMap tồn đọng** | **0** | **0** | **0** | **0** | 0 | Đạt chuẩn |
-| **Chuẩn định dạng TSV** | `<HÁN>\t<VIỆT>` | `<HÁN>\t<VIỆT>` | `<HÁN>\t<VIỆT>` | `<HÁN>\t<VIỆT>` | Bắt buộc | **✓ Đạt chuẩn** |
-| **Chuẩn định dạng Excel** | Sheet `DONG_HANG` | Sheet `DONG_HANG` | Sheet `DONG_HANG` | Sheet `DONG_HANG` | Bắt buộc | **✓ Đạt chuẩn** |
-| **Tỷ lệ lỗi (Error Rate)** | **0.0%** | **0.0%** | **0.0%** | **0.0%** | $\le 30\%$ | **✓ ĐẠT NGHIỆM THU TUYỆT ĐỐI** |
+| **Tổng số cặp câu song ngữ** | **482 cặp** | **404 cặp** | **1.039 cặp** | **4.961 cặp** | **6.886 cặp câu** | Cấp câu hoàn chỉnh |
+| **Số cặp hợp lệ** | **482 / 482** | **404 / 404** | **1.039 / 1.039** | **4.961 / 4.961** | **6.886 / 6.886** | Khớp nghĩa 100% |
+| **Khuyết vế Hán / Việt** | **0 / 0** | **0 / 0** | **0 / 0** | **0 / 0** | **0 / 0** | Đạt chuẩn |
+| **Lẫn chữ Hán trong vế Việt** | **0** | **0** | **0** | **0** | **0** | Đạt chuẩn |
+| **Lỗi font VNI / CMap tồn đọng** | **0** | **0** | **0** | **0** | **0** | Đạt chuẩn |
+| **Chuẩn định dạng TSV & Excel** | ✓ Hợp lệ | ✓ Hợp lệ | ✓ Hợp lệ | ✓ Hợp lệ | ✓ `CV09_TongHop_parallel.*` | **✓ Đạt chuẩn** |
+| **Tỷ lệ lỗi (Error Rate)** | **0.0%** | **0.0%** | **0.0%** | **0.0%** | **0.0%** ($\le 30\%$) | **✓ ĐẠT NGHIỆM THU TUYỆT ĐỐI** |

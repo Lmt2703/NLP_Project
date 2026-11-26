@@ -132,29 +132,33 @@ CV09_SacTuBachTruongThanhQuy/
 │   ├── Giai Thoat Dao Luan_VI_Text_NhuDien.pdf        # Giải Thoát Đạo Luận tiếng Việt (341 trang)
 │   └── Giai Thoat Dao Luan_ZH_Text_T1648.pdf          # Giải Thoát Đạo Luận chữ Hán T1648 (117 trang)
 ├── 03_text_sach/                                      # Văn bản đã trích xuất và làm sạch
-│   ├── han.txt / viet.txt                             # Văn bản Bách Trượng (toàn bộ)
-│   ├── q4_han.txt / q4_viet.txt                       # Văn bản Bách Trượng Quyển 4
-│   ├── q7_han.txt / q7_viet.txt                       # Văn bản Bách Trượng Quyển 7
-│   ├── trieu_chau/                                    # Văn bản trích xuất Triệu Châu Ngữ Lục
-│   └── giai_thoat_dao_luan/                           # Văn bản trích xuất Giải Thoát Đạo Luận
+│   ├── han.txt / viet.txt                             # Toàn bộ 6.886 câu Hán & Việt sạch (gộp cả 4 quyển)
+│   ├── bach_truong/                                   # Văn bản Sắc tu Bách Trượng thanh quy (Quyển 4 & 7)
+│   │   ├── q4_han.txt / q4_viet.txt                   # Riêng Quyển 4 (482 câu)
+│   │   ├── q7_han.txt / q7_viet.txt                   # Riêng Quyển 7 (404 câu)
+│   │   └── bach_truong_aligned_han.txt / _viet.txt    # Gộp Quyển 4 & 7 (886 câu)
+│   ├── trieu_chau/                                    # Văn bản trích xuất Triệu Châu Ngữ Lục (1.039 câu)
+│   └── giai_thoat_dao_luan/                           # Văn bản trích xuất Giải Thoát Đạo Luận (4.961 câu)
 │       ├── giai_thoat_dao_luan_han_clean.txt          # Toàn văn Hán sạch 12 quyển
 │       ├── giai_thoat_dao_luan_viet_clean.txt         # Toàn văn Việt sạch 12 quyển
 │       ├── giai_thoat_dao_luan_sections.json          # 19 phân đoạn cấu trúc JSON
-│       ├── giai_thoat_dao_luan_aligned_han.txt        # Văn bản Hán đã dóng hàng (4.964 câu)
-│       ├── giai_thoat_dao_luan_aligned_viet.txt       # Văn bản Việt đã dóng hàng (4.964 câu)
+│       ├── giai_thoat_dao_luan_aligned_han.txt        # Văn bản Hán đã dóng hàng (4.961 câu)
+│       ├── giai_thoat_dao_luan_aligned_viet.txt       # Văn bản Việt đã dóng hàng (4.961 câu)
 │       ├── thong_ke_giai_thoat_dao_luan.json          # Thống kê trích xuất
 │       └── thong_ke_dong_hang_gtdl.json               # Thống kê dóng hàng
 ├── 04_dong_hang/                                      # Kết quả dóng hàng song ngữ chuẩn TSV & Excel
-│   ├── SacTuBachTruongThanhQuy_parallel.tsv / .xlsx   # Bách Trượng (886 cặp)
-│   ├── TrieuChauNguLuc_parallel.tsv / .xlsx           # Triệu Châu (1.039 cặp)
-│   └── GiaiThoatDaoLuan_parallel.tsv / .xlsx          # Giải Thoát Đạo Luận (4.964 cặp)
+│   ├── CV09_TongHop_parallel.tsv / .xlsx              # Tệp tổng hợp cả 4 quyển (6.886 cặp)
+│   ├── q4_parallel.tsv / .xlsx                        # Quyển 1: Bách Trượng Q4 (482 cặp)
+│   ├── q7_parallel.tsv / .xlsx                        # Quyển 2: Bách Trượng Q7 (404 cặp)
+│   ├── SacTuBachTruongThanhQuy_parallel.tsv / .xlsx   # Gộp Bách Trượng Q4+Q7 (886 cặp)
+│   ├── TrieuChauNguLuc_parallel.tsv / .xlsx           # Quyển 3: Triệu Châu Q14 (1.039 cặp)
+│   └── GiaiThoatDaoLuan_parallel.tsv / .xlsx          # Quyển 4: Giải Thoát Đạo Luận 12Q (4.961 cặp)
 └── docs/
     ├── Guideline.pdf                                  # Quy chuẩn đồ án
-    ├── Bang_kiem_ke_nguon.xlsx                        # Bảng kiểm kê Excel (3 tác phẩm)
+    ├── HUONG_DAN.docx                                 # Hướng dẫn trích xuất văn bản
+    ├── Bang_kiem_ke_nguon.xlsx                        # Bảng kiểm kê Excel (4 quyển / 3 tác phẩm)
     ├── Bang_kiem_ke_nguon.md                          # Báo cáo kiểm kê nguồn (tệp này)
-    ├── Bao_cao_chat_luong_dong_hang.md                # Báo cáo đánh giá Bách Trượng
-    ├── Bao_cao_chat_luong_TrieuChau.md                # Báo cáo đánh giá Triệu Châu
-    └── Bao_cao_chat_luong_GiaiThoatDaoLuan.md         # Báo cáo đánh giá Giải Thoát Đạo Luận
+    └── Bao_cao_chat_luong_dong_hang.md                # Báo cáo tổng hợp kiểm tra chất lượng cả 4 quyển
 ```
 
 ---
@@ -164,4 +168,4 @@ CV09_SacTuBachTruongThanhQuy/
 1. Toàn bộ **6 tệp PDF nguồn** trong `01_nguon/` đều thuộc định dạng **PDF Text (Hướng A)**, có sẵn lớp ký tự văn bản rõ ràng, không cần qua bước OCR hình ảnh.
 2. **Tác phẩm 1 (*Sắc tu Bách Trượng thanh qui*):** Bản Hán và bản dịch Việt được tích hợp chung trong cùng tệp PDF, đồng bộ thông qua hệ thống mã dòng CBETA; cần xử lý chuyển đổi bảng mã font VNI-Times và loại bỏ các đoạn bình luận "Lời bàn" của dịch giả.
 3. **Tác phẩm 2 (*Triệu Châu Ngữ Lục*):** Lưu trữ thành hai tệp Hán và Việt độc lập. Bản dịch tiếng Việt đầy đủ 525 mục; bản chữ Hán hiện có chứa Quyển 14 (khớp từ Mục 209 đến 525), đã bóc tách độc lập phần văn bản thừa của Thiền sư Vân Môn (Quyển 15–16) và ghi nhận phần khuyết Quyển 13 (Mục 1–208).
-4. **Tác phẩm 3 (*Giải Thoát Đạo Luận*):** Lưu trữ thành hai tệp Hán (`T32n1648`) và Việt (HT. Thích Như Điển) độc lập, khớp trọn vẹn cả **12/12 Quyển (12 Phẩm)**; đã xử lý triệt để lỗi bảng mã CMap chữ `ẩ`, khôi phục toàn bộ 19 Drop-Cap mở đầu chương và hoàn thiện dóng hàng cấp câu kèm tinh chỉnh 30 vùng ranh giới đạt **4.964 cặp** với tỷ lệ lỗi 0,0%.
+4. **Tác phẩm 3 (*Giải Thoát Đạo Luận*):** Lưu trữ thành hai tệp Hán (`T32n1648`) và Việt (HT. Thích Như Điển) độc lập, khớp trọn vẹn cả **12/12 Quyển (12 Phẩm)**; đã xử lý triệt để lỗi bảng mã CMap chữ `ẩ`, khôi phục toàn bộ 19 Drop-Cap mở đầu chương, hoàn thiện dóng hàng cấp câu kèm tinh chỉnh 4 tầng (30 vùng hỏi–đáp, 10 cụm trượt chéo nhiều dòng, 65 cặp lệch 1 vế và vệ sinh chính tả) đạt **4.961 cặp** với tỷ lệ lỗi 0,0%.

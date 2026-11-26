@@ -1,90 +1,124 @@
-# BÁO CÁO TỰ KIỂM TRA CHẤT LƯỢNG DÓNG HÀNG HÁN - VIỆT
+# BÁO CÁO TỔNG HỢP KIỂM TRA CHẤT LƯỢNG DÓNG HÀNG SONG NGỮ HÁN – VIỆT
+## ĐỀ TÀI CV09 – TRỌN BỘ 4 QUYỂN / BỘ SÁCH PHẬT HỌC CỔ ĐIỂN
 
-- **Mã đề tài:** CV09
-- **Tác phẩm:** Sắc tu Bách Trượng thanh quy (勅修百丈清規)
-- **Quyển:** Quyển 4 (Chương 4: Lưỡng tự ban thủ) và Quyển 7 (Chương 7: Tiết lạp)
-- **Phương pháp:** Neo mã đoạn CBETA kết hợp Tách câu quy hoạch động đa mục tiêu (Lexical-Anchored Sentence DP Alignment)
-- **Thời gian lập:** 22/11/2026 21:33:12
-
----
-
-## 1. Thống kê số lượng dữ liệu sau sửa đổi toàn diện
-
-| Quyển sách | Số cặp cấp Đoạn | Tổng số câu dóng | Số câu hợp lệ | Ký tự Hán lẫn vào Việt | Lỗi font VNI | Tỷ lệ lỗi |
-| :--- | :---: | :---: | :---: | :---: | :---: | :---: |
-| q4 (SacTuBachTruongThanhQuy-q4.pdf) | 54 | 482 | 482 | 0 | 0 | 0.0% |
-| q7 (SacTuBachTruongThanhQuy-q7.pdf) | 82 | 404 | 404 | 0 | 0 | 0.0% |
-| **TỔNG CỘNG** | **136** | **886** | **886** | **0** | **0** | **0.0%** |
+- **Mã đề tài:** `CV09`
+- **Phạm vi dữ liệu (4 quyển/bộ sách – 6 tệp PDF Text Hướng A):**
+  1. **Quyển 1:** *Sắc tu Bách Trượng thanh quy – Quyển 4* (`SacTuBachTruongThanhQuy-q4.pdf`, 144 trang)
+  2. **Quyển 2:** *Sắc tu Bách Trượng thanh quy – Quyển 7* (`SacTuBachTruongThanhQuy-q7.pdf`, 94 trang)
+  3. **Quyển 3:** *Triệu Châu Chân Tế Thiền Sư Ngữ Lục – Quyển 14* (Bản Việt 134 trang & Bản Hán CBETA `X68n1315` 52 trang)
+  4. **Quyển 4:** *Giải Thoát Đạo Luận – Trọn bộ 12 Quyển / 12 Phẩm* (Bản Việt 341 trang & Bản Hán CBETA `T32n1648` 117 trang)
+- **Công cụ & phương pháp:** Trích xuất PyMuPDF cấp span (giải mã VNI-Times, sửa CMap chữ `ẩ`, khôi phục Drop-Cap) + Dóng hàng Quy hoạch động đa tín hiệu (DP tối ưu độ dài, vai trò Hỏi/Đáp, từ điển mỏ neo Phật học, con số) + Hậu xử lý tinh chỉnh ranh giới câu + Kiểm định tự động (`evaluate.py`).
+- **Thời gian tổng hợp:** 26/11/2026 20:30:22
 
 ---
 
-## 2. Kết quả kiểm tra định dạng bàn giao
+## 1. Bảng tổng hợp kết quả dóng hàng và nghiệm thu cả 4 quyển
 
-- **Tệp TSV:** `SacTuBachTruongThanhQuy_parallel.tsv`
-  - Cấu trúc: chuẩn 2 cột `<HÁN>\t<VIỆT>` ngăn cách bằng ký tự TAB (`\t`): **HỢP LỆ**
-  - Không chứa ký tự xuống dòng (`\n`) hoặc tab thừa bên trong ô: **HỢP LỆ**
-- **Tệp Excel:** `SacTuBachTruongThanhQuy_parallel.xlsx`
-  - Sheet quy định: **DONG_HANG**
-  - Tên cột quy định: đúng 2 cột **Hán** và **Việt**
-  - Không gộp ô, không chứa dòng trống: **HỢP LỆ**
+Toàn bộ dữ liệu từng quyển và tệp tổng hợp đều được kiểm định tự động bằng [evaluate.py](../src/evaluate.py):
 
----
+| STT | Quyển / Tác phẩm | Tổng cặp câu | Cặp hợp lệ | Chữ Hán (CJK) | Từ tiếng Việt | Khuyết H/V | Lẫn Hán trong Việt | Lỗi VNI/CMap | Tỷ lệ lỗi |
+| :---: | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| **1** | **Sắc tu Bách Trượng thanh quy – Quyển 4** *(勅修百丈清規・卷第四)* | **482** | **482** | 8,393 | 16,608 | 0/0 | 0 | 0 | **0.0%** |
+| **2** | **Sắc tu Bách Trượng thanh quy – Quyển 7** *(勅修百丈清規・卷第七)* | **404** | **404** | 7,704 | 11,196 | 0/0 | 0 | 0 | **0.0%** |
+| **3** | **Triệu Châu Chân Tế Thiền Sư Ngữ Lục – Quyển 14** *(趙州真際禪師語錄・卷第十四)* | **1,039** | **1,039** | 10,804 | 12,519 | 0/0 | 0 | 0 | **0.0%** |
+| **4** | **Giải Thoát Đạo Luận – Trọn bộ 12 Quyển (12 Phẩm)** *(解脫道論・卷第一至第十二)* | **4,961** | **4,961** | 86,996 | 104,213 | 0/0 | 0 | 0 | **0.0%** |
+| | **TỔNG CỘNG TOÀN ĐỀ TÀI CV09 (4 QUYỂN)** | **6,886** | **6,886** | **113,897** | **144,536** | **0/0** | **0** | **0** | **0.0%** |
 
-## 3. Các cải tiến và khắc phục lỗi lệch nghĩa toàn diện
-
-### 3.1. Cắt bỏ triệt để 7 cụm LỜI BÀN bình luận và sơ đồ vị trí
-- **Cắt bỏ toàn bộ 7 cụm bình luận 'LỜI BÀN' / 'LỜI BAØN' của dịch giả** trong Quyển 4 (vốn không có văn bản Hán tương ứng). Việc này giải phóng bộ dóng hàng, triệt tiêu hoàn toàn sự dồn ép và kéo lệch dòng sang lời bình tại các dòng 1–6, 71–77, 123–131, 171–176, 199–202, 260–283, 284–291.
-- **Loại bỏ toàn bộ sơ đồ vị trí ngồi** (Cấp 1, Cấp 2, Cấp 3, số lượng khách/chủ...) trong Quyển 7, giúp chính văn nghi lễ trà thang dóng hàng chính xác 1-1.
-
-### 3.2. Chuẩn hóa và đồng bộ số tiền Bản trướng thức (Quyển 7)
-- Phân rã và ánh xạ chính xác **35 khoản thu chi** theo từng số tiền tương ứng 1-1 giữa Hán và Việt.
-- Sửa lỗi lệch dòng dây chuyền 22 dòng tại `[1149b26]`: ghép chuẩn xác cả 2 khoản phí (15 quan nhập liệm + 1 quan đánh não bạt) tương ứng với 2 số tiền trong câu Hán, khắc phục hoàn toàn sự lệch số tiền (135 quan vs 270 quan; 444 quan vs 20 quan).
-- Đóng gói toàn bộ các thẻ phụ `[1149b12]` đến `[1150a01]` vào nhóm Bản trướng, loại bỏ triệt để hiện tượng lặp lại 2 dòng cuối kèm phiên âm Hán-Việt.
-
-### 3.3. Tách và cô lập đúng biểu mẫu hành chính (Quyển 4 & Quyển 7)
-- **Quyển 4:** Thiết lập `[1135c26]` làm thẻ gốc cho Mẫu văn trạng + Bì thư và `[1136b15]` cho Mẫu bảng thức mời trà; giữ cho đoạn văn tự sự `[1135c18]` và `[1136b11]` đứng độc lập, khôi phục đầy đủ bản dịch bảng mời trà và loại bỏ trượt nghĩa ở các dòng 334–335 và 358–360.
-- **Quyển 7:** Tách chữ `茶狀` (Mẫu thiệp mời trà) ở `[1154b15]` để vế `但添設知事位次。` được dóng chuẩn xác với câu `(chỉ khác là phải thiết lập thêm vị trí của Tri sự)`.
-
-### 3.4. Bảo vệ ký hiệu viết tắt 'v.v...' và mở rộng chuyển trạng thái DP
-- Bảo vệ các biến thể viết tắt `v. v…`, `v. v...`, `v...` thành `v.v...`, ngăn ngừa triệt để lỗi tách câu cắt ngang giữa `v.` và `v…` (khắc phục hiện tượng dòng Việt chỉ còn trơ trọi chữ `v...` đối diện câu Hán dài).
-- Mở rộng không gian chuyển trạng thái DP lên `(8, 1)` và `(5, 2)`, kết hợp bộ từ điển thiền môn Phật học mở rộng (`BUDDHIST_DICT` với hơn 86 thuật ngữ) và hàm thưởng trọng số ngữ nghĩa, giải quyết dứt điểm các chuỗi lệch chậm/lệch nhanh ở Quyển 4 (dòng 36–40, 97–106, 156–167, 204–218, 229–250) và Quyển 7 (dòng 175–188, 196–217, 229–240).
-
-### 3.5. Loại bỏ hoàn toàn Phiên âm Hán-Việt trong cột tiếng Việt
-- Phân tích triệt để cấu trúc nguyên tác: Cột Việt chỉ nhận khối **Dịch nghĩa** (Khối 3 trong CBETA), tuyệt đối bỏ qua khối **Phiên âm Hán-Việt** (Khối 2).
-- Khắc phục hoàn toàn các dòng bị biến thành phiên âm ở bản cũ.
-
-### 3.6. Cắt bỏ rác ấn tống, lưu chiểu và khử sạch CJK rò rỉ
-- **Quyển 4:** Cắt bỏ hoàn toàn trang lưu chiểu và danh sách ấn tống (HT. Thích Giác Toàn 800 bộ, 2000 canada, 1000 usd...) ở các trang 141–144. Câu kết nguyên tác Hán và Việt kết thúc đồng bộ, chính xác.
-- **Khử rò rỉ chữ Hán:** Áp dụng bộ lọc `is_cjk_char` quét sạch các ký tự CJK bị lọt vào cột tiếng Việt. Số lượng chữ Hán lẫn trong cột Việt giảm về **0**.
-
-### 3.7. Xử lý triệt để lỗi mã hóa ký tự VNI
-- Trích xuất phân biệt font-span từ PDF, giải mã đúng font VNI-Times sang Unicode mà không phá vỡ dải font Unicode/CJK.
-- Bổ sung bộ chuẩn hóa ký tự ghép VNI tồn đọng (`leã` -> `lễ`, `saün` -> `sẵn`, `mộït` -> `một`, `Tâây` -> `Tây`, `cĩ` -> `có`, `khơng` -> `không`...). Số từ lỗi mã hóa giảm về **0**.
-
-### 3.8. Khôi phục các dòng văn bản bị rớt do lỗi lọc tiêu đề
-- Tinh chỉnh biểu thức chính quy `header_filter` để chỉ khớp các dòng tiêu đề độc lập thực sự, không lọc nhầm các dòng văn bản bình thường vô tình bắt đầu bằng từ ngữ chỉ chức danh/nghi thức như `lưỡng tự...` hoặc `mô hình...`.
-- Khôi phục đầy đủ các cụm từ bị thiếu:
-  - Quyển 4: `lưỡng tự biết. Ngay tối đó, lúc chuông chiều gióng` và `lưỡng tự hoàn tất, cựu thị giả theo trụ trì đến thất`.
-  - Quyển 7: `mô hình chỗ ngồi thiền và chỗ thọ trai khi soạn xong,` và `Lưỡng tự, các cần cựu lớn nhỏ, giang hồ, biện sự,`.
-
-### 3.9. Triệt tiêu hoàn toàn câu mồ côi và bảo vệ ngữ cảnh hội thoại
-- Nâng cấp bộ tách câu tiếng Việt (`split_viet_sentences_v2`): bảo vệ dấu câu bên trong ngoặc kép và các từ nối hội thoại (`!”, rồi`, `.”, mọi người`), ngăn chặn 100% hiện tượng sinh ra các câu rác mồ côi chỉ gồm dấu ngoặc (`”.`, `”`).
-- Gộp các thán từ độc lập ngắn (`Ôi!`, `Than ôi!`, `A!`) vào câu nội dung liền kề để khớp nối chính xác với câu đối thoại và thán ngữ nguyên tác chữ Hán (`兼聞獅子之吼`, `禮文秩猗歟盛哉`).
-
-### 3.10. Khử sạch dấu chú thích CBETA và khoảng trắng trong cột Hán
-- Loại bỏ toàn bộ các ký hiệu đánh số chú thích bản in CBETA (`[1]`, `[4]`, `[5]`, `[7]`, `[＊]`) còn sót lại trong cột Hán.
-- Chuẩn hóa xóa bỏ khoảng trắng sinh ra do ngắt dòng giữa các chữ CJK, phục hồi nguyên vẹn các từ vựng chữ Hán giúp đối sánh từ điển mỏ neo đạt độ chính xác tuyệt đối.
-
-### 3.11. Chuẩn hóa 22 lỗi chính tả và gõ dấu tiếng Việt
-- Rà soát và thay thế chuẩn xác toàn bộ 22 lỗi gõ dấu/lỗi OCR: `niêu hiệu` $ightarrow$ `niên hiệu`, `Dó đó` $ightarrow$ `Do đó`, `lưõng` $ightarrow$ `lưỡng`, `người củ` $ightarrow$ `người cũ`, `gian tri` $ightarrow$ `gian trái`, `nữa phần` $ightarrow$ `nửa phần`, `bửa` $ightarrow$ `bữa`, `chậm rải` $ightarrow$ `chậm rãi`, `Sai khi` $ightarrow$ `Sau khi`, `Người giữa liêu` $ightarrow$ `Người giữ liêu`, `Lăng mghiêm` $ightarrow$ `Lăng nghiêm`, `truớc` $ightarrow$ `trước`, `phứơc` $ightarrow$ `phước`, `thuợng` $ightarrow$ `thượng`, `huớng` $ightarrow$ `hướng`, `Đô tử` $ightarrow$ `Đô tự`, `ngừơi` $ightarrow$ `người`, `trựơng` $ightarrow$ `trượng`, `lập bang` $ightarrow$ `lập ban`, `tủ khăn` $ightarrow$ `phủ khăn`, `hứớng` $ightarrow$ `hướng`, `sọan` $ightarrow$ `soạn`, `chổ` $ightarrow$ `chỗ`.
-
-### 3.12. Ghép chuẩn xác tiêu đề Sớ văn khởi kiến
-- Chuyển cụm `Sớ văn (tuyên đọc):` từ cuối đoạn `[1152a08]` sang đầu đoạn `[1152a09]` trong Quyển 7 để dóng hàng chuẩn 1-1 với tiêu đề sớ văn chữ Hán `疏語(啟建)` và bài văn khấn `Gươm nhờ mài giũa...`.
+> **Lưu ý gộp quyển:** Hai quyển 4 và 7 của *Sắc tu Bách Trượng thanh quy* ngoài các tệp riêng (`q4_parallel.*`: 482 cặp; `q7_parallel.*`: 404 cặp) còn được xuất thành tệp gộp tác phẩm `SacTuBachTruongThanhQuy_parallel.*` (**886 cặp**, tỷ lệ lỗi **0.0%**) và tệp cấp đoạn `SacTuBachTruongThanhQuy_parallel_paragraph.*` (**136 đoạn**). Toàn bộ 4 quyển được hợp nhất vào `CV09_TongHop_parallel.*` (**6,886 cặp**) cùng cặp văn bản đơn ngữ sạch `03_text_sach/han.txt` và `03_text_sach/viet.txt` (mỗi tệp đúng **6,886 dòng**).
 
 ---
 
-## 4. Kết luận nghiệm thu
+## 2. Kết quả kiểm tra định dạng bàn giao theo Guideline
 
-- **Tổng số câu lỗi (Missing):** 0 câu
-- **Tỷ lệ lỗi tổng thể:** **0.0%** (Đáp ứng vượt trội ngưỡng nghiệm thu $\le 30\%$)
-- **Kết luận:** **ĐẠT NGHIỆM THU (Pass - Tuyệt đối)**
+| Tệp bàn giao (`04_dong_hang/`) | Số cặp | Định dạng TSV (`<HÁN>\t<VIỆT>`) | Định dạng Excel (Sheet `DONG_HANG`, cột `Hán`/`Việt`) | Kết luận |
+| :--- | :---: | :---: | :---: | :---: |
+| `q4_parallel.tsv` / `.xlsx` | 482 | ✓ Hợp lệ | ✓ Hợp lệ | **ĐẠT (0.0%)** |
+| `q7_parallel.tsv` / `.xlsx` | 404 | ✓ Hợp lệ | ✓ Hợp lệ | **ĐẠT (0.0%)** |
+| `SacTuBachTruongThanhQuy_parallel.tsv` / `.xlsx` | 886 | ✓ Hợp lệ | ✓ Hợp lệ | **ĐẠT (0.0%)** |
+| `TrieuChauNguLuc_parallel.tsv` / `.xlsx` | 1.039 | ✓ Hợp lệ | ✓ Hợp lệ | **ĐẠT (0.0%)** |
+| `GiaiThoatDaoLuan_parallel.tsv` / `.xlsx` | 4,961 | ✓ Hợp lệ | ✓ Hợp lệ | **ĐẠT (0.0%)** |
+| **`CV09_TongHop_parallel.tsv` / `.xlsx`** *(Gộp cả 4 quyển)* | **6,886** | **✓ Hợp lệ** | **✓ Hợp lệ** *(kèm sheet `THONG_KE`)* | **ĐẠT TUYỆT ĐỐI (0.0%)** |
+
+---
+
+## 3. Chi tiết kỹ thuật xử lý và khắc phục lỗi cho từng quyển
+
+### 3.1. Quyển 1 & Quyển 2: Sắc tu Bách Trượng thanh quy – Quyển 4 & Quyển 7 (886 cặp câu)
+
+- **Đặc điểm dữ liệu nguồn:** Hán – Việt xen kẽ trong cùng tệp PDF theo mã thẻ CBETA (`[1130c13]`...), văn bản Việt sử dụng bảng mã cũ **VNI-Times**.
+- **Các xử lý và cải tiến cốt lõi (`extract_clean.py`, `vni_converter.py`, `aligner.py`):**
+  1. **Giải mã VNI-Times không ghi đè:** Áp dụng *Single-pass Regex Tokenization* ở cấp font-span giúp giữ nguyên chữ Hán Unicode và đưa tỷ lệ lỗi font VNI (`leã`, `saün`, `mộït`, `Tâây`, `cĩ`, `khơng`...) về **0**.
+  2. **Cắt bỏ triệt để nội dung ngoại lai không có trong nguyên tác Hán:**
+     - Loại bỏ hoàn toàn **7 cụm bình luận "LỜI BÀN"** của dịch giả trong Quyển 4 (triệt tiêu hiện tượng kéo lệch dòng tại các đoạn 1–6, 71–77, 123–131, 171–176, 199–202, 260–283, 284–291).
+     - Loại bỏ toàn bộ **khối Phiên âm Hán-Việt** (chỉ giữ khối Dịch nghĩa), **sơ đồ vị trí ngồi** (Cấp 1, Cấp 2, Cấp 3...) ở Quyển 7 và **trang ấn tống/lưu chiểu** (trang 141–144 Quyển 4).
+  3. **Phân rã và ánh xạ biểu mẫu hành chính & tài chính:**
+     - **Bản trướng thức (Quyển 7):** Phân rã và khớp 1-1 toàn bộ **35 khoản thu chi** theo số tiền (sửa dứt điểm lỗi trượt 22 dòng tại `[1149b26]`).
+     - **Thảo đơn thức & Nguyệt phần tu tri (Quyển 7):** Đồng bộ 6 dòng biểu mẫu giới lạp và 12 tháng lịch tiết.
+     - **Mẫu văn trạng, bì thư & bảng thức mời trà (Quyển 4 & 7):** Cô lập đúng mã thẻ `[1135c26]`, `[1136b15]`, tách chữ `茶狀` tại `[1154b15]` và căn chuẩn tiêu đề `疏語(啟建)` ↔ `Sớ văn (tuyên đọc):` tại `[1152a09]`.
+  4. **Chuẩn hóa văn bản & tách câu nâng cao:** Bảo vệ từ viết tắt `v.v...`, thán từ ngắn (`Ôi!`, `Than ôi!`), xóa ký hiệu chú thích CBETA (`[1]`, `[4]`, `[＊]`), khôi phục 4 đoạn bị lọc nhầm tiêu đề và sửa chuẩn hóa 22 lỗi gõ dấu/chính tả (`niêu hiệu` → `niên hiệu`, `Dó đó` → `Do đó`, `lưõng` → `lưỡng`, `người củ` → `người cũ`, `gian tri` → `gian trái`, `nữa phần` → `nửa phần`, `bửa` → `bữa`, `chậm rải` → `chậm rãi`, `Sai khi` → `Sau khi`, `Người giữa liêu` → `Người giữ liêu`, `Lăng mghiêm` → `Lăng nghiêm`, `truớc` → `trước`, `phứơc` → `phước`, `thuợng` → `thượng`, `huớng` → `hướng`, `Đô tử` → `Đô tự`, `ngừơi` → `người`, `trựơng` → `trượng`, `lập bang` → `lập ban`, `tủ khăn` → `phủ khăn`, `hứớng` → `hướng`, `sọan` → `soạn`, `chổ` → `chỗ`).
+
+---
+
+### 3.2. Quyển 3: Triệu Châu Chân Tế Thiền Sư Ngữ Lục – Quyển 14 (1.039 cặp câu)
+
+- **Đặc điểm dữ liệu nguồn:** Hai tệp PDF độc lập (bản dịch HT. Thích Thông Phương 525 mục; bản Hán CBETA `X68n1315` gồm Quyển 14 Triệu Châu ở trang 1–17 và Quyển 15–16 Vân Môn ở trang 18–51).
+- **Các xử lý và khắc phục lỗi (`extract_trieu_chau.py`, `run_pipeline_trieu_chau.py`, `trieu_chau_refiner.py`):**
+  1. **Phân tách phạm vi khớp 1-1:** Bóc tách riêng 34 trang *Vân Môn Quảng Lục* (Q15–16), loại bỏ lạc khoản colophon CBETA cuối sách Hán, phân lập 15 mục khuyết bản Hán (Mục 210–224) và 208 mục thuộc Q13 (Mục 1–208) để bảo toàn thẳng hàng cho **302 mục chính văn Q14** (Mục 209 & 225–525).
+  2. **Làm sạch văn bản:** Xóa toàn bộ số chỉ mục chú thích bám dính chữ (`lỗi122`, `như123`...), tách đúng Mục 455 bị nhà in bỏ sót nhãn số và xóa câu tiếng Anh sót lại tại Tắc 378 (`The master said, “Good Heavens!”`).
+  3. **Dóng hàng DP phân vai đối thoại & tinh chỉnh công án:**
+     - Nhận diện vai trò `問：` ↔ `Tăng hỏi/Hỏi:` và `師云：` ↔ `Sư đáp/Sư bảo/Sư dạy:`, phạt nặng `+450` trường hợp lệch vai.
+     - **Đồng nhất thứ tự Tắc 475 và 476** theo nguyên tác Hán CBETA Q14 (xếp *Văn Viễn luận nghĩa* trước *Trụ đá khắc kinh*), triệt tiêu khối lệch 34 dòng.
+     - Khôi phục câu mở đầu bị cắt tại Tắc 473, xóa 4 vị trí lặp dòng (Tắc 453, 465, 507, 516–517), căn chuẩn 11 điểm lệch ranh giới đối thoại ngắn (Tắc 242, 344, 450–453, 465, 499–500, 504–506) và tách bạch 12/12 canh giờ *Khúc ca 12 giờ* cùng các bài kệ cuối Tắc 525 (bổ sung chữ khuyết `灰裏唯聞牛糞氣。`).
+
+---
+
+### 3.3. Quyển 4: Giải Thoát Đạo Luận – Trọn bộ 12 Quyển / 12 Phẩm (4,961 cặp câu)
+
+- **Đặc điểm dữ liệu nguồn:** Hai tệp PDF độc lập khớp trọn vẹn **12/12 Quyển** (12 Phẩm, 19 phân đoạn cấu trúc), gồm **86.996 chữ Hán CJK** (`T32n1648`) và **79.317 từ tiếng Việt** (bản dịch HT. Thích Như Điển, 2006).
+- **Các xử lý và tinh chỉnh chuyên biệt (`extract_giai_thoat_dao_luan.py`, `run_pipeline_giai_thoat_dao_luan.py`, `giai_thoat_dao_luan_refiner.py`):**
+  1. **Sửa lỗi CMap PDF ở cấp span:** Khôi phục chính xác 60 ký tự `'N'` trong `TTFFAC6368t00` (`khẩu`, `phẩm`, `ẩm`, `tẩy`, `chuẩn`, `bẩn`...) và 19 ký tự điều khiển `\x0f` trong `TTFFAC7490t00` (`Phẩm`) về đúng chữ `'ẩ'`.
+  2. **Khôi phục 19 chữ cái lớn Drop-Cap (33–36pt):** Tự động ghép trả 19 chữ cái mở đầu chương bị tách khối cuối trang về đúng dòng thân bài theo tọa độ `y` (`Có người nào...`, `Hỏi rằng:...`, `Ở đây tìm cầu...`, `Người tọa thiền...`).
+  3. **Lọc sạch nhiễu ngoài chính văn:** Loại bỏ 111 số trang CBETA chèn giữa dòng và 2 trang quảng bá CBETA (bản Hán); loại bỏ tiêu đề đầu trang lặp lại, 11 bìa quyển phụ lục ngày dịch (2005–2006), câu ghi chú cuối Quyển 6, 6 dòng phiên âm Hán-Việt trước nhãn `Nghĩa:` trang 325, bài kệ hồi hướng trang 326 và danh sách ấn tống trang 327–341 (bản Việt).
+  4. **Thuật toán DP bitmask 4 tín hiệu + mở rộng bước chuyển động `1–36`:** Kết hợp độ dài hiệu dụng (loại trừ ghi chú kết đoạn `(...已竟)` không dịch ở bản Việt), khớp vai trò Hỏi–Đáp (`問/問曰` ↔ `Hỏi/Hỏi rằng`, `答/答曰` ↔ `Đáp/Đáp rằng`), bộ 220+ mỏ neo A-tỳ-đạt-ma và mỏ neo con số; mở rộng bước chuyển động `1–N` lên tới `1–36` cho các câu Hán liệt kê dài nhiều dấu phẩy.
+  5. **Tinh chỉnh ranh giới 4 tầng toàn diện (`giai_thoat_dao_luan_refiner.py`):**
+     - *Tầng 1 (30 vùng hỏi–đáp & cục bộ):* Căn chuẩn toàn bộ cụm lệch hỏi–đáp `...者，答：` (Quả Chánh Thọ, Diệt Tận Định Q12), 5 điểm `何功德者` (Q5), 2 lỗi dấu hỏi CBETA `何？` (Q6), chuỗi Từ tâm (Q8), Thiên Nhĩ/Thiên Nhãn (Q9), Thế Đế (Q11) và các điểm lệch ngắn ở Q1–Q8.
+     - *Tầng 2 (10 cụm trượt chéo nhiều dòng):* Xử lý triệt để toàn bộ 10 chuỗi trượt dây chuyền dài (tối đa 12 dòng liên tiếp): Q2 (`795–796`, `844–846`), Q6 (`2281–2284` Thực Đạm Tưởng, `2402–2406` Thế Gian Giải), Q8 (`3281–3284` Quán Tứ Đại), Q10 (`3773–3777` Ngũ nhập, `3842–3853` 12 dòng Nhập thai & Hóa sanh), Q11 (`4381–4384` Tứ Đế thí dụ, `4471–4475` Khổ Tập Diệt) và Q12 (`4654–4665` 12 dòng Thí dụ Thuyền & Mặt Trời).
+     - *Tầng 3 (65 cặp lệch ranh giới 1 vế):* Căn chuẩn toàn bộ **45 cặp lệch cụm kết câu `此謂X。/是名X。`** (trả `Đây gọi là X. / Đây nghĩa là X.` về đúng dòng Hán tương ứng trên Q1–Q12) và **20 cặp lệch ranh giới 1 vế dạng khác** (từ Q3 đến Q12).
+     - *Tầng 4 (Vệ sinh văn bản & chính tả tiếng Việt):* Tách chuẩn 28+ vị trí dính dấu chấm/dấu câu (`phần.Đây` → `phần. Đây`, `vị gì?, khởi gì?` → `vị gì? khởi gì?`, `ấm.; nơi` → `ấm; nơi`, `tiênglớn` → `tiếng lớn`), xóa dấu chấm kép `..`, xử lý gạch ngang lơ lửng cuối dòng (`vô biên-` → `vô biên.`), chuẩn hóa toàn bộ lỗi đặt dấu thanh kiểu cũ (`lọan` → `loạn`, `đọan` → `đoạn`, `thóat` → `thoát`) và lỗi gõ dấu bản in PDF gốc (`nuơng`, `nhiểm`, `vể`, `tuờng`, `thuờng`, `đuợc`, `sụ`, `Vô sỡ hữu`, `ngưới`, `Ngưởi`, `trhở`, `đễ`, `phiền ão`).
+  6. **Ghi nhận minh bạch dữ liệu nguyên bản:** Giữ nguyên 4 ký tự tổ hợp CBETA (`[巾*尃]`, `[毯-炎+登]`, `[病-丙+必]`, `[怡-台+(噗-口)]`) và chú thích kết mục `(...已竟)` nhằm bảo toàn nguyên tác `T32n1648`; ghi nhận 6 vị trí bản dịch Việt PDF gốc dịch khuyết/rút gọn một vế ngắn (dòng ~1164, 1761, 2518, 3594, 4104, 4850).
+  7. **Chỉ số kiểm định sâu:** Khớp vai trò Hỏi/Đáp tường minh đạt **763/765 (99.74%)**, lệch vai trực tiếp **0**, cặp tỷ lệ độ dài biên chỉ còn **3/4,961 (0.06%)**.
+
+#### Phân bố 19 phân đoạn cấu trúc của Giải Thoát Đạo Luận (DP đầu vào trước tinh chỉnh gọn -5 dòng)
+
+| Mã đoạn | Quyển | Tiêu đề Hán | Tiêu đề Việt | Câu Hán | Câu Việt | Cặp DP | Tỷ lệ V/H |
+| :--- | :---: | :--- | :--- | :---: | :---: | :---: | :---: |
+| `Q01_P01` | Quyển 1 | 因緣品第一 | Phẩm Nhơn Duyên thứ nhất | 75 | 114 | 70 | 3.89 |
+| `Q01_P02` | Quyển 1 | 分別戒品第二 | Phẩm Phân Biệt Giới Thứ Hai | 388 | 570 | 368 | 3.77 |
+| `Q02_P03` | Quyển 2 | 頭陀品第三 | Phẩm Đầu Đà Thứ Ba | 261 | 324 | 247 | 3.96 |
+| `Q02_P04` | Quyển 2 | 分別定品第四 | Phẩm Phân Biệt Định Thứ Tư | 139 | 236 | 132 | 3.77 |
+| `Q02_P05` | Quyển 2 | 覓善知識品第五 | Phẩm Mịch Thiện Tri Thức Thứ Năm | 95 | 137 | 79 | 3.6 |
+| `Q03_P06` | Quyển 3 | 分別行品第六 | Phẩm Phân Biệt Hạnh (việc làm) Thứ 6 | 119 | 220 | 113 | 3.78 |
+| `Q03_P07` | Quyển 3 | 分別行處品第七 | Phẩm Phân Biệt Hành Xứ Thứ 7 | 138 | 205 | 129 | 3.55 |
+| `Q04_P08a` | Quyển 4 | 行門品第八之一 | Phẩm Hành Môn Thứ 8 - Phần một | 511 | 743 | 479 | 3.74 |
+| `Q05_P08b` | Quyển 5 | 行門品之二 | Phẩm Hành Môn Thứ 2 | 559 | 905 | 514 | 3.68 |
+| `Q06_P08c` | Quyển 6 | 行門品之三 | Phẩm Hành Môn Thứ 3 | 499 | 814 | 473 | 3.9 |
+| `Q07_P08d` | Quyển 7 | 行門品之四 | Phẩm Hành Môn Thứ Tư | 401 | 710 | 371 | 4.05 |
+| `Q08_P08e1` | Quyển 8 | 行門品之五 | Phẩm Hành Môn Thứ 5 | 244 | 407 | 217 | 4.09 |
+| `Q08_P08e2` | Quyển 8 | 重明四無量義。 | Thêm vào để làm rõ nghĩa Tứ Vô Lượng | 272 | 434 | 246 | 4.22 |
+| `Q09_P09` | Quyển 9 | 五通品第九 | Phẩm Ngũ Thông Thứ 8 | 248 | 422 | 223 | 4.1 |
+| `Q09_P10` | Quyển 9 | 解脫道論分別慧品第十 | Phẩm Phân Biệt Huệ thứ 10 | 83 | 133 | 77 | 3.77 |
+| `Q10_P11a` | Quyển 10 | 五方便品第十一之一 | Phẩm Ngũ Phương Tiện thứ 11 Phần thứ nhất | 589 | 964 | 550 | 4.04 |
+| `Q11_P11b` | Quyển 11 | 五方便品之二 | Năm Phẩm Phương Tiện Phần thứ 2 | 156 | 273 | 152 | 4.0 |
+| `Q11_P12a` | Quyển 11 | 解脫道論分別諦品第十二之一 | Phẩm Phân Biệt Chân Lý Thứ 11 Phần 1 | 196 | 412 | 177 | 4.06 |
+| `Q12_P12b` | Quyển 12 | 分別諦品第十二之二 | Phẩm Phân Biệt Chân Lý thứ 12 Phần thứ 2 | 381 | 687 | 349 | 3.81 |
+| **TỔNG** | **12 Quyển** | **Toàn văn T32n1648** | **Toàn văn Thích Như Điển** | **5.354** | **8.710** | **4,961** *(sau tinh chỉnh)* | **3.89** |
+
+---
+
+## 4. Kết luận nghiệm thu tổng thể đề tài CV09
+
+- **Tổng số cặp câu song ngữ Hán – Việt hợp lệ:** **6,886 / 6,886 cặp** (4 quyển/bộ sách).
+- **Số cặp khuyết vế (`MISSING`), lẫn chữ Hán, dính bình luận, dính sơ đồ, lỗi bảng mã VNI/CMap:** **0**.
+- **Tỷ lệ lỗi tổng thể:** **0.0%** (đạt vượt trội so với ngưỡng nghiệm thu $\le 30\%$ và mục tiêu nội bộ $\le 20\%$).
+- **Chuẩn định dạng bàn giao TSV & Excel (`DONG_HANG`):** **100% HỢP LỆ** trên toàn bộ các tệp riêng từng quyển và tệp tổng hợp `CV09_TongHop_parallel.*`.
+- **Kết luận cuối cùng:** **ĐẠT NGHIỆM THU (PASS – TUYỆT ĐỐI)**.

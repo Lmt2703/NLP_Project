@@ -701,8 +701,8 @@ def main() -> None:
     print("-" * 55)
     print(f"{'DP RAW':<10} 12Q  {total_h_sents:>7} {total_v_sents:>7} {len(all_pairs):>7}")
 
-    # Tinh chỉnh chuẩn xác 30 vùng ranh giới câu / hỏi–đáp
-    print("\n>>> Đang áp dụng bộ tinh chỉnh ranh giới câu chuẩn xác (30 vùng)...")
+    # Tinh chỉnh 4 tầng (30 vùng hỏi–đáp, 10 cụm trượt chéo, 65 cặp 1 vế và vệ sinh chính tả)
+    print("\n>>> Đang áp dụng bộ tinh chỉnh 4 tầng (ranh giới câu + trượt chéo + vệ sinh văn bản)...")
     raw_tuples = [(p["han"], p["viet"]) for p in all_pairs]
     refined_tuples = refine_gtdl_pairs(raw_tuples)
     all_pairs = [
@@ -774,83 +774,12 @@ def main() -> None:
             indent=2,
         )
 
-    # Xuất báo cáo chất lượng Markdown
-    os.makedirs(docs_dir, exist_ok=True)
-    report_md_path = os.path.join(docs_dir, "Bao_cao_chat_luong_GiaiThoatDaoLuan.md")
-    sec_rows_md = "\n".join(
-        f"| `{s['id']}` | Quyển {s['vol']} | {s['zh_title']} | {s['vi_title']} | {s['h_sents']} | {s['v_sents']} | **{s['pairs']}** | {s['ratio']} |"
-        for s in sec_stats
-    )
-    with open(report_md_path, "w", encoding="utf-8") as f:
-        f.write(f"""# BÁO CÁO TỰ KIỂM TRA CHẤT LƯỢNG DÓNG HÀNG HÁN - VIỆT
-## Tác phẩm: Giải Thoát Đạo Luận (解脫道論 - Vimuttimagga)
-
-- **Mã đề tài:** CV09
-- **Tác phẩm:** Giải Thoát Đạo Luận – Toàn bộ 12 Quyển (12 Phẩm)
-- **Nguồn Hán:** Đại Chánh Tân Tu Đại Tạng Kinh CBETA `T32n1648` (A-la-hán Ưu-ba-đề-sa tạo, Tam tạng Tăng-già-bà-la dịch đời Lương, 117 trang PDF)
-- **Nguồn Việt:** Bản dịch HT. Thích Như Điển (*Luận về con đường giải thoát*, Chùa Viên Giác Hannover ấn tống năm 2006, 341 trang PDF)
-- **Phương pháp:** Neo cấu trúc 19 phân đoạn (12 Quyển / 12 Phẩm) + Tách câu bảo vệ ranh giới đoạn + Dóng hàng Quy hoạch động đa tín hiệu (Độ dài hiệu dụng + Vai trò Hỏi/Đáp + 220+ Mỏ neo thuật ngữ A-tỳ-đạt-ma + Mỏ neo con số)
-- **Thời gian lập:** {datetime.now().strftime('%d/%m/%Y %H:%M:%S')}
-
----
-
-## 1. Thống kê kết quả kiểm định nghiệm thu
-
-| Chỉ số kiểm tra | Kết quả đạt được | Ngưỡng nghiệm thu | Đánh giá |
-| :--- | :---: | :---: | :---: |
-| Số phân đoạn cấu trúc đồng bộ | 19 phân đoạn (12 Quyển) | - | Khớp 100% đầu–cuối |
-| Số câu Hán đầu vào | {total_h_sents:,} câu | - | Đầy đủ nguyên tác 12 quyển |
-| Số câu Việt đầu vào | {total_v_sents:,} câu | - | Đầy đủ bản dịch 12 quyển |
-| **Tổng số cặp dóng hàng** | **{report['total_pairs']:,} cặp** | - | Cấp câu hoàn chỉnh |
-| **Số cặp hợp lệ đầy đủ** | **{report['valid_pairs']:,} / {report['total_pairs']:,}** | - | Không khuyết vế |
-| Khuyết vế Hán (Missing Han) | {report['missing_han_count']} câu | 0 | Không bị khuyết |
-| Khuyết vế Việt (Missing Viet) | {report['missing_viet_count']} câu | 0 | Không bị khuyết |
-| Lẫn chữ Hán trong cột Việt | {report['cjk_in_viet_count']} câu | 0 | Khử sạch triệt để |
-| Dính LỜI BÀN dịch giả | {report['loi_ban_count']} câu | 0 | Không bị lẫn |
-| Dính sơ đồ vị trí | {report['diagram_count']} câu | 0 | Không có sơ đồ |
-| Lỗi font VNI / CMap tồn đọng | {report['vni_artifact_count']} từ | 0 | Chuẩn Unicode UTF-8 |
-| **Tỷ lệ lỗi (Error Rate)** | **{report['error_rate']}%** | $\\le 30\\%$ | **{report['acceptance_status']}** |
-
----
-
-## 2. Kết quả kiểm tra định dạng bàn giao
-
-- **Tệp TSV:** `{os.path.basename(tsv_path)}`
-  - Cấu trúc: 2 cột chuẩn `<HÁN>\\t<VIỆT>`, không chứa dòng trống hoặc tab thừa: **{'HỢP LỆ' if report['tsv_format_ok'] else 'LỖI'}**
-- **Tệp Excel:** `{os.path.basename(xlsx_path)}`
-  - Sheet quy chuẩn: **DONG_HANG**
-  - Tên cột quy chuẩn: **Hán** và **Việt**
-  - Không gộp ô, không đặt công thức, không chèn dòng trống: **{'HỢP LỆ' if report['xlsx_format_ok'] else 'LỖI'}**
-
----
-
-## 3. Chi tiết dóng hàng theo 19 phân đoạn (12 Quyển)
-
-| Mã đoạn | Quyển | Tiêu đề Hán | Tiêu đề Việt | Câu Hán | Câu Việt | Cặp dóng | Tỷ lệ V/H |
-| :--- | :---: | :--- | :--- | :---: | :---: | :---: | :---: |
-{sec_rows_md}
-| **TỔNG** | **12 Quyển** | **Toàn văn T32n1648** | **Toàn văn Thích Như Điển** | **{total_h_sents:,}** | **{total_v_sents:,}** | **{report['total_pairs']:,}** | **3.89** |
-
----
-
-## 4. Xử lý kỹ thuật đặc thù cho dữ liệu nguồn
-
-1. **Khắc phục triệt để lỗi bảng mã CMap PDF ở cấp span:**
-   - Font `TTFFAC6368t00`: tự động chuyển toàn bộ 60 ký tự `'N'` lỗi bảng mã về đúng chữ `'ẩ'` (`khẩu`, `phẩm`, `ẩm`, `tẩy`, `chuẩn`, `bẩn`, `phẩn`, `tẩm`, `thẩm`, `Cẩu`, `Đẩu`).
-   - Font `TTFFAC7490t00` (tiêu đề in đậm): chuyển toàn bộ 19 ký tự điều khiển `\\x0f` về `'ẩ'` (`Phẩm`).
-2. **Khôi phục 19 chữ cái Drop-Cap mở đầu chương:** Toàn bộ 19 chữ cái lớn (`C`, `H`, `L`, `Ở`, `T`, `Đ`, `N`) cỡ 33–36pt nằm tách khối cuối trang PDF đã được ghép trả chính xác về đúng dòng mở đầu từng Phẩm theo tọa độ `y`, loại bỏ hoàn toàn hiện tượng cụt chữ đầu câu (`ó người nào` $\\rightarrow$ `Có người nào`, `ỏi rằng:` $\\rightarrow$ `Hỏi rằng:`, `đây tìm cầu` $\\rightarrow$ `Ở đây tìm cầu`...).
-3. **Lọc sạch tuyệt đối nhiễu ngoài chính văn:**
-   - Bản Hán: loại bỏ 111 số trang CBETA chèn lẫn giữa văn bản, 2 trang quảng bá CBETA cuối sách (trang 116–117), tiêu đề quyển và tên dịch giả lặp lại đầu/cuối mỗi quyển; loại trừ chuỗi ghi chú kết đoạn `(...已竟)` khỏi hàm tính độ dài DP do bản Việt không dịch các chú thích này.
-   - Bản Việt: loại bỏ tiêu đề đầu trang lặp lại (`Luận về con đường giải thoát` / `Thích Như Điển dịch`), số trang, 11 trang bìa quyển phụ lục ngày dịch (2005–2006), câu ghi chú ngày dịch cuối Quyển 6, đoạn phiên âm Hán-Việt 6 câu trước nhãn `Nghĩa:` cuối Quyển 12, bài kệ hồi hướng trang 326 và danh sách ấn tống (trang 327–341).
-4. **Kiểm định sâu và tinh chỉnh ranh giới hậu xử lý (`giai_thoat_dao_luan_refiner.py`):**
-   - Đã căn chỉnh chuẩn xác **30 vùng ranh giới câu & hỏi–đáp** trên toàn bộ 12 Quyển (gồm 21 vùng lệch ranh giới/trượt dòng tại Q1, Q2, Q3, Q5, Q6, Q7, Q8, Q9, Q12 cùng 9 vùng lỗi đồng dạng phát hiện khi quét toàn cục: 5 điểm `何功德者` tại Q5, 1 lỗi dấu hỏi CBETA `何？處何功德？` tại Q6, 1 chuỗi Từ tâm tại Q8, 1 điểm `幾種天眼者` tại Q9 và 1 khối Thế Đế tại Q11).
-   - Tỷ lệ khớp vai trò Hỏi/Đáp tường minh (`問`/`答` $\\leftrightarrow$ `Hỏi`/`Đáp`): **{qa_matched}/{qa_total_h} ({qa_acc}%)**, lệch vai trực tiếp: **{qa_mismatch}**.
-   - Tỷ lệ cặp có tỷ lệ độ dài ngoài ngưỡng biên (`r < 1.5` hoặc `r > 8.5`): **{extreme_ratio_count}/{len(all_pairs)} ({extreme_ratio_count/len(all_pairs)*100:.2f}%)**.
-""")
+    # Cập nhật ngữ liệu tổng hợp 4 quyển và báo cáo hợp nhất
+    from build_master_corpus import build_master_and_report
+    build_master_and_report()
 
     elapsed = round(time.time() - start_time, 2)
-    print(f"\n[+] Báo cáo nghiệm thu Markdown: {report_md_path}")
-    print(f"[+] Toàn bộ pipeline thực thi xong trong: {elapsed} giây.")
+    print(f"[+] Toàn bộ pipeline Giải Thoát Đạo Luận thực thi xong trong: {elapsed} giây.")
     print(f"{banner}\n")
 
 
