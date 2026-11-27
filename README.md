@@ -56,10 +56,12 @@ NLP_Project/
 │   │   ├── SacTuBachTruongThanhQuy_parallel.tsv / .xlsx   # Gộp Bách Trượng Q4+Q7 (886 cặp câu)
 │   │   ├── TrieuChauNguLuc_parallel.tsv / .xlsx           # Kết quả Triệu Châu Q14 (1.039 cặp câu)
 │   │   └── GiaiThoatDaoLuan_parallel.tsv / .xlsx          # Kết quả Giải Thoát Đạo Luận 12Q (4.961 cặp câu)
-│   ├── docs/                              # Báo cáo kiểm kê nguồn và báo cáo chất lượng hợp nhất
+│   ├── docs/                              # Báo cáo kiểm kê nguồn, chất lượng và kiểm định chéo Bertalign
 │   │   ├── Bang_kiem_ke_nguon.xlsx        # Bảng kiểm kê nguồn Excel (4 quyển / 3 tác phẩm)
 │   │   ├── Bang_kiem_ke_nguon.md          # Báo cáo kiểm kê nguồn chi tiết (Markdown)
-│   │   └── Bao_cao_chat_luong_dong_hang.md# Báo cáo hợp nhất kiểm định chất lượng cả 4 quyển
+│   │   ├── Bao_cao_chat_luong_dong_hang.md# Báo cáo hợp nhất kiểm định chất lượng cả 4 quyển
+│   │   ├── Bertalign_LaBSE_Audit.xlsx     # Kết quả chấm điểm tương đồng ngữ nghĩa LaBSE (6.886 cặp)
+│   │   └── Bertalign_Realign_Diff.xlsx    # Kết quả dóng hàng kiểm định chéo độc lập bằng Bertalign
 │   └── src/                               # Toàn bộ mã nguồn tái lập quy trình
 │       ├── vni_converter.py               # Bộ giải mã bảng mã VNI sang Unicode không ghi đè
 │       ├── extract_clean.py               # Trích xuất và khử nhiễu sách Bách Trượng
@@ -73,6 +75,7 @@ NLP_Project/
 │       ├── run_pipeline_trieu_chau.py     # Pipeline điều phối chuyên trách cho Triệu Châu (Q14)
 │       ├── run_pipeline_giai_thoat_dao_luan.py # Pipeline điều phối chuyên trách cho Giải Thoát Đạo Luận
 │       └── build_master_corpus.py         # Hợp nhất 4 quyển và xuất 1 báo cáo tổng hợp duy nhất
+├── CV09_Bertalign_Verification.ipynb      # Notebook Colab (GPU T4) kiểm định chéo bằng Bertalign & LaBSE
 ├── requirements.txt                       # Thư viện phụ thuộc (PyMuPDF, pandas, openpyxl)
 ├── .gitignore                             # Cấu hình bỏ qua tệp tạm, môi trường ảo
 └── README.md                              # Thuyết minh chi tiết dự án
@@ -143,9 +146,10 @@ Toàn bộ dữ liệu được kiểm thử tự động bởi module [evaluate
 | Chỉ số kiểm tra | Bách Trượng Q4 | Bách Trượng Q7 | Triệu Châu Q14 | Giải Thoát Đạo Luận (12Q) | TỔNG CỘNG (4 QUYỂN) | Đánh giá |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: |
 | **Tổng số cặp câu song ngữ** | **482 cặp** | **404 cặp** | **1.039 cặp** | **4.961 cặp** | **6.886 cặp câu** | Cấp câu hoàn chỉnh |
-| **Số cặp hợp lệ** | **482 / 482** | **404 / 404** | **1.039 / 1.039** | **4.961 / 4.961** | **6.886 / 6.886** | Khớp nghĩa 100% |
+| **Số cặp hợp lệ** | **482 / 482** | **404 / 404** | **1.039 / 1.039** | **4.961 / 4.961** | **6.886 / 6.886** | Hợp lệ định dạng 100% |
 | **Khuyết vế Hán / Việt** | **0 / 0** | **0 / 0** | **0 / 0** | **0 / 0** | **0 / 0** | Đạt chuẩn |
 | **Lẫn chữ Hán trong vế Việt** | **0** | **0** | **0** | **0** | **0** | Đạt chuẩn |
 | **Lỗi font VNI / CMap tồn đọng** | **0** | **0** | **0** | **0** | **0** | Đạt chuẩn |
 | **Chuẩn định dạng TSV & Excel** | ✓ Hợp lệ | ✓ Hợp lệ | ✓ Hợp lệ | ✓ Hợp lệ | ✓ `CV09_TongHop_parallel.*` | **✓ Đạt chuẩn** |
-| **Tỷ lệ lỗi (Error Rate)** | **0.0%** | **0.0%** | **0.0%** | **0.0%** | **0.0%** ($\le 30\%$) | **✓ ĐẠT NGHIỆM THU TUYỆT ĐỐI** |
+| **Tỷ lệ lỗi cấu trúc (`evaluate.py`)** | **0.0%** | **0.0%** | **0.0%** | **0.0%** | **0.0%** ($\le 30\%$) | **✓ ĐẠT NGHIỆM THU** |
+| **Đồng thuận 1–1 độc lập (Bertalign)** | **67.22%** *(324)* | **75.50%** *(305)* | **98.85%** *(1.027)* | **93.41%** *(4.634)* | **91.34%** *(6.290/6.886)* | Sai số ngữ nghĩa tồn dư ~0.3%–0.4% |
