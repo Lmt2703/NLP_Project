@@ -1,0 +1,16 @@
+# Danh sách thư viện phụ thuộc – Đề tài CV09 (MSSV: 24125105)
+# Yêu cầu: Python >= 3.9 (khuyến nghị Python 3.10–3.13)
+
+# --- 1. Pipeline trích xuất PDF, làm sạch, dóng hàng & kiểm định tự động (chạy local) ---
+PyMuPDF>=1.23.0
+pandas>=2.0.0
+openpyxl>=3.1.0
+tqdm>=4.66.0
+
+# --- 2. Tùy chọn: Kiểm định chéo độc lập bằng Bertalign & LaBSE (chạy trong CV09_Bertalign_Verification.ipynb trên Google Colab GPU T4) ---
+# (Các gói dưới đây được cài đặt tự động trong Cell 1 của notebook Colab)
+# sentence-transformers>=2.2.2
+# faiss-cpu>=1.7.4
+# numba>=0.58.0
+# sentence-splitter>=1.4
+# torch>=2.0.0
